@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.jdt.junit.core,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.core",1280169112531
+started,bundle,org.eclipse.jst.server.core,1.2.101.v20100421,"org.eclipse.jst.server.core",1280169112707
+started,bundle,org.eclipse.jst.jee,1.0.300.v201005191301,"org.eclipse.jst.jee",1280169112719
+started,bundle,org.maven.ide.eclipse.launching,0.10.2.20100623-1649,"org.maven.ide.eclipse.launching",1280169112772
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169117667
+opened,editor,com.umlet.plugin,10.4,"com.umlet.plugin.UMLetEditor",1280169135141
+activated,editor,com.umlet.plugin,10.4,"com.umlet.plugin.UMLetEditor",1280169135183
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169135287
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.newWizard",1280169135353
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169154569
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169154796
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169157715
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280169157838
+closed,editor,com.umlet.plugin,10.4,"com.umlet.plugin.UMLetEditor",1280169157840
+activated,view,org.eclipse.ui.navigator.resources,3.4.200.I20100601-0800,"org.eclipse.ui.navigator.ProjectExplorer",1280169158907
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169161393
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169161518
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169163119
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.delete",1280169163160
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169170655
+error,log,,,"Unhandled event loop exception",1280169311162
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169314890
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169322510
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169323792
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280169324382

@@ -1,0 +1,12 @@
+package suncertify.db;
+
+import static org.junit.Assert.*;
+
+public class DataFileFormatReaderTest {
+
+	@Test
+	public void dataFileFormatReaderReadsTheMagicCookie() {
+		
+	}
+	
+}

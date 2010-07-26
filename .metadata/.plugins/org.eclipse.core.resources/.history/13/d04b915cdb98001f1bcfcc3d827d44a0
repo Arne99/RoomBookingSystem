@@ -1,0 +1,17 @@
+package suncertify.db;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DataFileFormatReaderTest {
+
+	private final DataFileFormatReader formatReader = new DataFileFormatReader(); 
+	
+	@Test
+	public void dataFileFormatReaderReadsTheMagicCookie() {
+		
+		
+	}
+	
+}
