@@ -4,24 +4,24 @@ package suncertify.db;
  * A {@code DataFileFormat} contains the relevant Information about the file
  * format of an DataFile. The relevant informations are:
  * <ul>
- * <li>the MagicCookieValue: Identifier for one specific database format</li>
- * <li>the RecordLength: The length in bytes of one single record.</li>
- * <li>the FormatInformationBlockLegth: The length in bytes of the DataFormat
+ * <li>the recordLength: The length in bytes of one single record.</li>
+ * <li>the numberOfFields:the number of specified DataFields in the DataFile</li>
+ * <li>the dataFormatDescriptionLength: The length in bytes of the DataFormat
  * information block.</li>
  * </ul>
  * 
  * @author arnelandwehr
  */
-public class DataFileFormat {
+class DataFileFormat {
 
     /** the length of one record. */
     private final int recordLength;
 
-    /** the number of specified DataField in the DataFile. */
+    /** the number of specified DataFields in the DataFile. */
     private final int numberOfFields;
 
     /** the length in byte of the format description block. */
-    private final int dataFormatHeaderLength;
+    private final int dataFormatDescriptionLength;
 
     /**
      * Constructor for a new {@code DataFileFormat}.
@@ -33,11 +33,11 @@ public class DataFileFormat {
      * @param fileFormatBlockLength
      *            the length in byte of the format description block.
      */
-    public DataFileFormat(final int recordLength, final int numberOfFields,
+    DataFileFormat(final int recordLength, final int numberOfFields,
 	    final int fileFormatBlockLength) {
 	this.recordLength = recordLength;
 	this.numberOfFields = numberOfFields;
-	this.dataFormatHeaderLength = fileFormatBlockLength;
+	this.dataFormatDescriptionLength = fileFormatBlockLength;
     }
 
     /**
@@ -63,15 +63,15 @@ public class DataFileFormat {
      * 
      * @return the length in byte of the format description block.
      */
-    public final int getFileFormatBlockLength() {
-	return dataFormatHeaderLength;
+    public final int getFileFormatDescriptionLength() {
+	return dataFormatDescriptionLength;
     }
 
     @Override
     public final int hashCode() {
 	final int prime = 31;
 	int result = 1;
-	result = prime * result + dataFormatHeaderLength;
+	result = prime * result + dataFormatDescriptionLength;
 	result = prime * result + numberOfFields;
 	result = prime * result + recordLength;
 	return result;
@@ -86,7 +86,7 @@ public class DataFileFormat {
 	if (getClass() != obj.getClass())
 	    return false;
 	DataFileFormat other = (DataFileFormat) obj;
-	if (dataFormatHeaderLength != other.dataFormatHeaderLength)
+	if (dataFormatDescriptionLength != other.dataFormatDescriptionLength)
 	    return false;
 	if (numberOfFields != other.numberOfFields)
 	    return false;
@@ -99,7 +99,8 @@ public class DataFileFormat {
     public final String toString() {
 	return "DataFileFormat [recordLength=" + recordLength
 		+ ", numberOfFields=" + numberOfFields
-		+ ", fileFormatBlockLength=" + dataFormatHeaderLength + "]";
+		+ ", fileFormatBlockLength=" + dataFormatDescriptionLength
+		+ "]";
     }
 
 }

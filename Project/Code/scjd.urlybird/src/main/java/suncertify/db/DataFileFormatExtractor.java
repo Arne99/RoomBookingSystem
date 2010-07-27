@@ -8,20 +8,19 @@ import java.io.IOException;
  * @author arnelandwehr
  * 
  */
-public class DataFileFormatReader {
+class DataFileFormatExtractor {
 
     private final int dataFormatIdentifier;
     private final int dataFormatHeaderLength;
 
-    public DataFileFormatReader(int dataFormatIdentifier,
-	    int dataFormatHeaderLength) {
+    DataFileFormatExtractor(int dataFormatIdentifier, int dataFormatHeaderLength) {
 	super();
 	this.dataFormatIdentifier = dataFormatIdentifier;
 	this.dataFormatHeaderLength = dataFormatHeaderLength;
     }
 
-    public DataFileFormat extractDataFileFormat(DataInput input)
-	    throws IOException, InvalidDataFormatException {
+    DataFileFormat extractDataFileFormat(DataInput input) throws IOException,
+	    InvalidDataFormatException {
 
 	if (dataFormatIdentifier != input.readInt()) {
 	    throw new InvalidDataFormatException();

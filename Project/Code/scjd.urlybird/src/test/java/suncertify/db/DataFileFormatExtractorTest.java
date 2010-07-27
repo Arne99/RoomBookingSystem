@@ -9,14 +9,14 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * Tests for the Class {@link DataFileFormatReader}.
+ * Tests for the Class {@link DataFileFormatExtractor}.
  * 
  * @author arnelandwehr
  */
-public class DataFileFormatReaderTest {
+public class DataFileFormatExtractorTest {
 
     /** the {@code DataFileFormatReader} to test. */
-    private DataFileFormatReader formatReader;
+    private DataFileFormatExtractor formatExtractor;
 
     /**
      * Tests the {@code DataFileFormatReader} for throwing an
@@ -39,9 +39,9 @@ public class DataFileFormatReaderTest {
 	int invalidMagicCookie = 124;
 	when(dataFileStream.readInt()).thenReturn(invalidMagicCookie);
 
-	formatReader = new DataFileFormatReader(expectedMagicCookie,
+	formatExtractor = new DataFileFormatExtractor(expectedMagicCookie,
 		expectedFileFormatBlockLength);
-	formatReader.extractDataFileFormat(dataFileStream);
+	formatExtractor.extractDataFileFormat(dataFileStream);
     }
 
     /**
@@ -77,9 +77,9 @@ public class DataFileFormatReaderTest {
 		(short) expectedNumberOfFields,
 		(short) expectedFileFormatBlockLength);
 
-	formatReader = new DataFileFormatReader(expectedMagicCookie,
+	formatExtractor = new DataFileFormatExtractor(expectedMagicCookie,
 		expectedFileFormatBlockLength);
-	DataFileFormat extractedFormat = formatReader
+	DataFileFormat extractedFormat = formatExtractor
 		.extractDataFileFormat(dataFileStream);
 
 	DataFileFormat expectedFormat = new DataFileFormat(
