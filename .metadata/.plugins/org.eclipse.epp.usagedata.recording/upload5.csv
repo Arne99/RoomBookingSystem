@@ -1,0 +1,201 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177002172
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177002172
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177002173
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177002174
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177002193
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280177003433
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177004691
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.findReplace",1280177004736
+error,log,,,"Build errors for scjd.urlybird",1280177006523
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177007116
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280177007812
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280177009877
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177019808
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280177020385
+error,log,,,"Marker id 808 not found.",1280177020545
+error,log,,,"Marker id 807 not found.",1280177020545
+activated,view,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.PackageExplorer",1280177028487
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280177031675
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177035491
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177036391
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177038741
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177039476
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177039981
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280177041648
+activated,editor,org.maven.ide.eclipse.editor,0.10.2.20100623-1649,"org.maven.ide.eclipse.editor.MavenPomEditor",1280177044905
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177066892
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177066893
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177066894
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177066895
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177066896
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177066896
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.cut",1280177066931
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177068990
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177068990
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177068991
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177068992
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177068993
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177068993
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177068995
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177072417
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177072418
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177072419
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177072420
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177072420
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177072421
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.cut",1280177072466
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177073773
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177075966
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177075967
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177075967
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177075968
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177075969
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177075970
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177075978
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280177077084
+error,log,,,"Failed to read Maven project",1280177077384
+error,log,,,"Unable to read maven project. Dependencies not updated.",1280177077393
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177079799
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.findReplace",1280177079836
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177081174
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.copy",1280177089540
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177091281
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177091282
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177091283
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177091284
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177091285
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177091285
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177091287
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177091287
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177091288
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177091289
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177091290
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177091291
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177091296
+error,log,,,"Failed to read Maven project",1280177091332
+error,log,,,"Failed to read Maven project",1280177091338
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280177092572
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280177096463
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177102739
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280177103526
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177105523
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.findReplace",1280177105562
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177106397
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280177107070
+activated,view,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.PackageExplorer",1280177118191
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280177118462
+activated,view,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.PackageExplorer",1280177122268
+activated,editor,org.maven.ide.eclipse.editor,0.10.2.20100623-1649,"org.maven.ide.eclipse.editor.MavenPomEditor",1280177122582
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177131143
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177137281
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177140396
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177147078
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177148615
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177378892
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177389268
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280177390959
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177392092
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.findReplace",1280177392120
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177393657
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280177395132
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280177395788
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177415814
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177426996
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280177430641
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177439063
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177492827
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177509909
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177511291
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177512022
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177516613
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177517461
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177517462
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177517463
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177517463
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177517464
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177517465
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177517466
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177517467
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177517468
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177517469
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177517470
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177517470
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177517478
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280177519011
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.copy",1280177529536
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280177531480
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177532840
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.findReplace",1280177532881
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177533896
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280177534491
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280177535604
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177553290
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177565031
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177574667
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280177642530
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280177663040
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177671306
+opened,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177678795
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177678863
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177684504
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.navigate.backwardHistory",1280177684512
+opened,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177686403
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177686474
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177693672
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177698701
+closed,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177698702
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177700296
+closed,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177700297
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280177702261
+closed,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280177702262
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280177710208
+activated,editor,org.maven.ide.eclipse.editor,0.10.2.20100623-1649,"org.maven.ide.eclipse.editor.MavenPomEditor",1280177713476
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177717473
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177717984
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718059
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718161
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718287
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177718407
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177718407
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177718426
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177718427
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177718428
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177718429
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177718430
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177718431
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177718432
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177718433
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177718433
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177718434
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718435
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718553
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177718660
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177718661
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177718662
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177718662
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177718663
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177718664
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718665
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718768
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718875
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177718930
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177718931
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177718931
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177718932
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177718933
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177718933
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177718934
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177719045
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177719149
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280177719231
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177719320
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177719320
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177719321
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177719322
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@8614598 threw following exception during adapter notification (ADD )",1280177719322
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@2a200274 threw following exception during adapter notification (ADD )",1280177719323
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177719324
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177719325
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@3ccd3b88 threw following exception during adapter notification (ADD )",1280177719326
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@45ff7ce7 threw following exception during adapter notification (ADD )",1280177719336

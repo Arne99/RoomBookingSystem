@@ -1,0 +1,35 @@
+package suncertify.db;
+
+import java.io.DataInput;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
+public class DataSchemaFormatExtractorTest {
+
+    private DataSchemaFormatExtractor extractor;
+
+    @Test
+    public final void SchemaInformationReaderCreatesValidSchemaInformation() {
+
+	DataFileFormat format = mock(DataFileFormat.class);
+	extractor = new DataSchemaFormatExtractor(format);
+
+	DataInput data = mock(DataInput.class);
+	DataSchemaFormat schema = extractor.extractDataSchema(data);
+
+	int recordLength = 150;
+	String firstFieldName = "name";
+	int dataFieldLength = 64;
+
+	DataFieldFormat<String> firstField = new DataFieldFormat<String>(
+		firstFieldName, dataFieldLength, String.class);
+	List<DataFieldFormat<?>> dataFields = new ArrayList<DataFieldFormat<?>>(
+		Arrays.asList(firstField));
+
+    }
+}

@@ -1,0 +1,31 @@
+package suncertify.db;
+
+import java.io.DataInput;
+import java.io.IOException;
+
+public class DataFileFormatReader {
+
+    private static final int expectedMagicCookie = 124;
+    private static final int dataFormatIdentifierBlockLength =10;
+    
+    public DataFileFormatReader() {
+	
+    }
+
+    public DataFileFormat extractDataFileFormat(DataInput input)
+	    throws IOException, InvalidDataFormatException {
+
+	int magicCookie = input.readInt();
+	if (expectedMagicCookie != magicCookie) {
+	    throw new InvalidDataFormatException();
+	}
+
+	int dataFieldIdentifier = input.readInt();
+	int numberOfFields = input.readShort();
+
+	DataFileFormat formatInformation = new DataFileFormat(magicCookie,
+		dataFieldIdentifier, numberOfFields, );
+
+	return formatInformation;
+    }
+}

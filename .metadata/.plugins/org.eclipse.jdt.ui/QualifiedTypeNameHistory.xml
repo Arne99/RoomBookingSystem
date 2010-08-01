@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.lang.Readable"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="suncertify.db.InvalidDataFormatException"/>
+<fullyQualifiedTypeName name="org.powermock.modules.junit4.PowerMockRunner"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="org.powermock.core.classloader.annotations.PrepareForTest"/>
+<fullyQualifiedTypeName name="org.powermock.api.mockito.PowerMockito"/>
+<fullyQualifiedTypeName name="suncertify.db.DataFormatInformation"/>
 <fullyQualifiedTypeName name="suncertify.db.DataFileFormatReader"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="org.mockito.Mockito"/>
+<fullyQualifiedTypeName name="java.io.DataInput"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="suncertify.util.DesignByContract"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="suncertify.db.DataSchemaFormatExtractor"/>
+<fullyQualifiedTypeName name="suncertify.db.DataSchemaFormatExtractorTest"/>
+<fullyQualifiedTypeName name="java.io.DataInputStream"/>
+<fullyQualifiedTypeName name="java.io.StringReader"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="suncertify.db.DataFileFormat"/>
+<fullyQualifiedTypeName name="suncertify.db.DataFieldFormat"/>
+<fullyQualifiedTypeName name="java.lang.SecurityException"/>
+<fullyQualifiedTypeName name="java.lang.Deprecated"/>
+<fullyQualifiedTypeName name="suncertify.db.RecordNotFoundException"/>
+<fullyQualifiedTypeName name="suncertify.db.SecurityException"/>
+<fullyQualifiedTypeName name="suncertify.db.DuplicateKeyException"/>
 </qualifiedTypeNameHistroy>

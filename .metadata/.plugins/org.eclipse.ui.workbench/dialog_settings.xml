@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="true" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="350" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_WIDTH"/>
+		<item value="false" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION"/>
+		<item value="444" key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_HEIGHT"/>
+		<list key="orderedProviders">
+			<item value="org.eclipse.ui.wizards"/>
+			<item value="org.eclipse.ui.wizards"/>
+			<item value="org.eclipse.ui.wizards"/>
+			<item value="org.eclipse.ui.wizards"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.wizards"/>
+			<item value="org.eclipse.ui.views"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.actions"/>
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
+		</list>
+		<list key="textArray">
+			<item value="new clas"/>
+			<item value="new class"/>
+			<item value="new in"/>
+			<item value="new packa"/>
+			<item value="new jun"/>
+			<item value="check"/>
+			<item value="new file"/>
+			<item value="checkst"/>
+			<item value="form"/>
+			<item value="format"/>
+			<item value="save"/>
+			<item value="typing"/>
+		</list>
+		<list key="orderedElements">
+			<item value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+			<item value="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+			<item value="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+			<item value="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+			<item value="net.sf.eclipsecs.preferences.CheckstylePreferencePage"/>
+			<item value="org.eclipse.ui.wizards.new.file"/>
+			<item value="net.sf.eclipsecs.ui.stats.views.MarkerStatsView"/>
+			<item value="org.eclipse.jdt.ui.preferences.CodeFormatterPreferencePage"/>
+			<item value="org.eclipse.jdt.ui.actions.Format"/>
+			<item value="org.eclipse.jdt.ui.preferences.SaveParticipantPreferencePage"/>
+			<item value="org.eclipse.jdt.ui.preferences.SmartTypingPreferencePage"/>
+		</list>
+		<list key="textEntries">
+			<item value="2"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="331" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="com.umlet.plugin.wizards.UMLetNewWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Other"/>
+		</list>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="308" key="DIALOG_WIDTH"/>
+		<item value="org.eclipse.egit.ui.RepositoriesView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="109" key="DIALOG_Y_ORIGIN"/>
+		<item value="417" key="DIALOG_HEIGHT"/>
+		<item value="486" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.egit.ui.GitCategory"/>
+		</list>
+	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">

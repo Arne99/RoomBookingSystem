@@ -1,0 +1,16 @@
+package suncertify.db;
+
+import java.io.DataInput;
+
+class DataSchemaFormatExtractor {
+
+    DataSchemaFormatExtractor(DataFileFormat format) {
+	// TODO Auto-generated constructor stub
+    }
+
+    DataSchemaFormat readDataSchema(DataInput data) {
+	// TODO Auto-generated method stub
+	return null;
+    }
+
+}

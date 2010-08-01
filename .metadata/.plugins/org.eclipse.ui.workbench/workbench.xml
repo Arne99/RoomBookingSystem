@@ -4,30 +4,35 @@
 <window height="768" maximized="true" width="1024" x="0" y="28">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
-<itemSize x="160"/>
+<itemSize x="212"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="106" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.umlet.plugin.UMLetEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="76" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.egit.ui.gitaction" itemType="typeToolBarContribution" x="148" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="120" y="22"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.maven.ide.eclipse.editor.MavenPomEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page focus="true" label="Workspace - Java EE">
+<page aggregateWorkingSetId="Aggregate for window 1280175922055" focus="true" label="Workspace - Java">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -35,41 +40,229 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFileFormatReaderTest.java" partName="DataFileFormatReaderTest.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReaderTest.java" title="DataFileFormatReaderTest.java" tooltip="scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReaderTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReaderTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="291" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFileFormatExtractorTest.java" partName="DataFileFormatExtractorTest.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatExtractorTest.java" title="DataFileFormatExtractorTest.java" tooltip="scjd.urlybird/src/test/java/suncertify/db/DataFileFormatExtractorTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatExtractorTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1326" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFileFormatReader.java" partName="DataFileFormatReader.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DataFileFormatReader.java" title="DataFileFormatReader.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataFileFormatReader.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DataFileFormatReader.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="63" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFileFormatExtractor.java" partName="DataFileFormatExtractor.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DataFileFormatExtractor.java" title="DataFileFormatExtractor.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataFileFormatExtractor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DataFileFormatExtractor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="696" selectionTopPixel="86"/>
+</editor>
+<editor id="org.maven.ide.eclipse.editor.MavenPomEditor" name="pom.xml" partName="scjd.urlybird/pom.xml" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/pom.xml" title="scjd.urlybird/pom.xml" tooltip="scjd.urlybird/pom.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/pom.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InvalidDataFormatException.java" partName="InvalidDataFormatException.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/InvalidDataFormatException.java" title="InvalidDataFormatException.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/InvalidDataFormatException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/InvalidDataFormatException.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="StringReader.class" partName="StringReader.class" title="StringReader.class" tooltip="java.io.StringReader" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(StringReader.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="364" selectionTopPixel="75"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Reader.class" partName="Reader.class" title="Reader.class" tooltip="java.io.Reader" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(Reader.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="839" selectionTopPixel="75"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFileFormat.java" partName="DataFileFormat.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DataFileFormat.java" title="DataFileFormat.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataFileFormat.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DataFileFormat.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1934" selectionTopPixel="593"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ArrayList.class" partName="ArrayList.class" title="ArrayList.class" tooltip="java.util.ArrayList" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.util(ArrayList.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="4007" selectionTopPixel="990"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="AbstractList.class" partName="AbstractList.class" title="AbstractList.class" tooltip="java.util.AbstractList" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.util(AbstractList.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="16984" selectionTopPixel="7005"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="package-info.java" partName="package-info.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/package-info.java" title="package-info.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/package-info.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/package-info.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="128" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/Main.java" title="Main.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="289" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataSchemaFormatExtractorTest.java" partName="DataSchemaFormatExtractorTest.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/java/suncertify/db/DataSchemaFormatExtractorTest.java" title="DataSchemaFormatExtractorTest.java" tooltip="scjd.urlybird/src/test/java/suncertify/db/DataSchemaFormatExtractorTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/test/java/suncertify/db/DataSchemaFormatExtractorTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1007" selectionTopPixel="242"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataSchemaFormatExtractor.java" partName="DataSchemaFormatExtractor.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormatExtractor.java" title="DataSchemaFormatExtractor.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormatExtractor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormatExtractor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="122" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataSchemaFormat.java" partName="DataSchemaFormat.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormat.java" title="DataSchemaFormat.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormat.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormat.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="54" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFieldFormat.java" partName="DataFieldFormat.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DataFieldFormat.java" title="DataFieldFormat.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataFieldFormat.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DataFieldFormat.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="273" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DesignByContract.java" partName="DesignByContract.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/util/DesignByContract.java" title="DesignByContract.java" tooltip="scjd.urlybird/src/main/java/suncertify/util/DesignByContract.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/util/DesignByContract.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="449" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="DataInput.class" partName="DataInput.class" title="DataInput.class" tooltip="java.io.DataInput" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInput.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="5590" selectionTopPixel="2415"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="DataInputStream.class" partName="DataInputStream.class" title="DataInputStream.class" tooltip="java.io.DataInputStream" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInputStream.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="880" selectionTopPixel="60"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="FilterInputStream.class" partName="FilterInputStream.class" title="FilterInputStream.class" tooltip="java.io.FilterInputStream" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(FilterInputStream.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1166" selectionTopPixel="211"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="InputStream.class" partName="InputStream.class" title="InputStream.class" tooltip="java.io.InputStream" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(InputStream.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="14634" selectionTopPixel="1075"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="File.class" partName="File.class" title="File.class" tooltip="java.io.File" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(File.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="5760" selectionTopPixel="1560"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ByteArrayInputStream.class" partName="ByteArrayInputStream.class" title="ByteArrayInputStream.class" tooltip="java.io.ByteArrayInputStream" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(ByteArrayInputStream.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="4315" selectionTopPixel="1530"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DB.java" partName="DB.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DB.java" title="DB.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DB.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DB.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3654" selectionTopPixel="1152"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RecordNotFoundException.java" partName="RecordNotFoundException.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/RecordNotFoundException.java" title="RecordNotFoundException.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/RecordNotFoundException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/RecordNotFoundException.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="84" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DuplicateKeyException.java" partName="DuplicateKeyException.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/DuplicateKeyException.java" title="DuplicateKeyException.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DuplicateKeyException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/DuplicateKeyException.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="SecurityException.class" partName="SecurityException.class" title="SecurityException.class" tooltip="java.lang.SecurityException" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.lang(SecurityException.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="592" selectionTopPixel="371"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SecurityException.java" partName="SecurityException.java" path="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/SecurityException.java" title="SecurityException.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/SecurityException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/scjd.urlybird/src/main/java/suncertify/db/SecurityException.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="1" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
-</view>
-<view id="org.eclipse.ui.views.AllMarkersView" partName="Markers"/>
-<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<view id="org.eclipse.team.ui.GenericHistoryView" partName="History">
 <viewState/>
 </view>
-<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
+<view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false" time="true"/>
+</view>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
+<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInput.class[DataInput" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" selection="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInputStream.class[DataInputStream" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="org.eclipse.egit.ui.RepositoriesView" partName="Git Repositories">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
+<view id="net.sf.eclipsecs.ui.stats.views.MarkerStatsView" partName="Checkstyle violations">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (76 items)"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="1" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="jdt.external.source.project.filter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.maven.ide.eclipse.MavenModuleFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
-<descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
@@ -86,102 +279,200 @@
 <alwaysOnActionSet id="org.maven.ide.eclipse.ui.navigation"/>
 <alwaysOnActionSet id="org.maven.ide.eclipse.actionSet"/>
 <alwaysOnActionSet id="org.maven.ide.eclipse.help.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.jst.j2ee.J2eeMainActionSet"/>
-<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
 <alwaysOnActionSet id="com.mountainminds.eclemma.ui.CoverageActionSet"/>
-<alwaysOnActionSet id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
-<alwaysOnActionSet id="org.eclipse.wst.ws.explorer.explorer"/>
-<alwaysOnActionSet id="org.eclipse.egit.ui.gitaction"/>
-<show_view_action id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
-<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
-<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
-<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
-<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<show_view_action id="org.eclipse.ui.views.AllMarkersView"/>
-<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
 <show_view_action id="org.eclipse.ui.views.ContentOutline"/>
-<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
-<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
-<show_view_action id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
-<show_view_action id="org.eclipse.wst.server.ui.ServersView"/>
-<new_wizard_action id="org.eclipse.jpt.ui.wizard.newJpaProject"/>
-<new_wizard_action id="org.eclipse.jpt.ui.wizard.newEntity"/>
-<new_wizard_action id="org.eclipse.jst.ejb.ui.project.facet.EjbProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddSessionBeanWizard"/>
-<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddMessageDrivenBeanWizard"/>
-<new_wizard_action id="org.eclipse.jst.j2ee.jca.ui.internal.wizard.ConnectorProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.EarProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.appclient.AppClientProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.ws.creation.ui.wizard.serverwizard"/>
-<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
-<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
-<new_wizard_action id="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.servlet.ui.internal.wizard.AddServletWizard"/>
-<new_wizard_action id="org.eclipse.wst.web.ui.internal.wizards.SimpleWebProjectWizard"/>
-<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.datatools.sqltools.result.resultView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="org.eclipse.datatools.sqltools.sqleditor.perspectives.EditorPerspective"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
-<perspective_action id="org.eclipse.jpt.ui.jpaPerspective"/>
-<perspective_action id="org.eclipse.ui.resourcePerspective"/>
-<perspective_action id="org.eclipse.wst.web.ui.webDevPerspective"/>
-<hide_toolbar_item_id id="org.eclipse.wst.ws.explorer.explorer"/>
-<hide_toolbar_item_id id="org.eclipse.jst.j2ee.internal.actions.NewJavaEEProject"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<hide_toolbar_item_id id="org.eclipse.wst.server.ui.internal.webbrowser.action.open"/>
-<hide_toolbar_item_id id="org.eclipse.jst.j2ee.internal.actions.NewJavaEEArtifact"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<hide_toolbar_item_id id="org.eclipse.jst.j2ee.J2eeMainActionSet"/>
-<hide_toolbar_item_id id="org.eclipse.wst.ws.internal.explorer.action.LaunchWSEAction"/>
-<hide_toolbar_item_id id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.views.AllMarkersView"/>
-<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.wst.server.ui.ServersView"/>
-<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
-<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
-<view id="org.eclipse.egit.ui.RepositoriesView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.PackagesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="topLeft">
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74891144" ratioLeft="516" ratioRight="173" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.datatools.sqltools.result.resultView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.4496124" ratioLeft="232" ratioRight="284" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.team.svn.ui.menu.help"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.ui.navigation"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.actionSet"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.help.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="com.mountainminds.eclemma.ui.CoverageActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.egit.ui.gitaction"/>
+<show_view_action id="de.tobject.findbugs.view.bugtreeview"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="de.tobject.findbugs.FindBugsPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="net.sf.eclipsecs.ui.stats.views.MarkerStatsView"/>
+<view id="org.eclipse.egit.ui.RepositoriesView"/>
+<view id="org.eclipse.team.ui.GenericHistoryView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Type Hierarchy"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="left">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.25925925" ratioLeft="329" ratioRight="940" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.69917357" ratioLeft="423" ratioRight="182" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="318" ratioRight="954" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.680758" ratioLeft="467" ratioRight="219" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.egit.ui.RepositoriesView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.AllMarkersView" label="Markers"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
-<page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="Data Source Explorer"/>
-<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="Snippets"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="net.sf.eclipsecs.ui.stats.views.MarkerStatsView" label="Checkstyle violations"/>
 <page content="org.eclipse.egit.ui.RepositoriesView" label="Git Repositories"/>
-<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="History"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -189,16 +480,23 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="topRight" ratio="0.69947505" ratioLeft="533" ratioRight="229" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2c32b511" ratio="0.7494759" ratioLeft="715" ratioRight="239" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.5" ratioLeft="258" ratioRight="258" relationship="4" relative="org.eclipse.ui.internal.ViewStack@2c32b511">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -209,34 +507,185 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/Users/arnelandwehr/Coden/Sun%20Certified%20Java%20Developer/Project/Code/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReader.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReader.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReaderTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DataFileFormatReader.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DataFieldFormat.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DB.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/RecordNotFoundException.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DuplicateKeyException.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatExtractorTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DataFileFormatExtractor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/InvalidDataFormatException.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(StringReader.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(Reader.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DataFileFormat.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.util(ArrayList.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.util(AbstractList.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/package-info.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/test/java/suncertify/db/DataSchemaFormatExtractorTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormatExtractor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DataSchemaFormat.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DataFieldFormat.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/util/DesignByContract.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInput.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInputStream.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(FilterInputStream.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(InputStream.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(File.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(ByteArrayInputStream.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/RecordNotFoundException.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/DuplicateKeyException.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.lang(SecurityException.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/scjd.urlybird/src/main/java/suncertify/db/SecurityException.java"/>
 </editors>
-<item historyLabel="DataFileFormatReader.java" index="0">
-<position info="not_deleted" x="100" y="0"/>
+<item historyLabel="DataFieldFormat.java" index="0">
+<position info="not_deleted" x="273" y="0"/>
 </item>
-<item historyLabel="DataFileFormatReader.java" index="1">
+<item historyLabel="DB.java" index="1">
+<position/>
+</item>
+<item historyLabel="RecordNotFoundException.java" index="2">
+<position info="not_deleted" x="84" y="0"/>
+</item>
+<item historyLabel="DB.java" index="1">
+<position info="not_deleted" x="1614" y="0"/>
+</item>
+<item historyLabel="DuplicateKeyException.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="DataFileFormatReader.java" index="1">
+<item historyLabel="DataFieldFormat.java" index="0">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="DB.java" index="1">
+<position info="not_deleted" x="1938" y="0"/>
+</item>
+<item historyLabel="DB.java" index="1">
+<position info="not_deleted" x="31" y="0"/>
+</item>
+<item historyLabel="DB.java" index="1">
+<position info="not_deleted" x="586" y="56"/>
+</item>
+<item historyLabel="DB.java" index="1">
 <position/>
 </item>
-<item historyLabel="DataFileFormatReaderTest.java" index="2">
-<position info="not_deleted" x="116" y="0"/>
+<item historyLabel="DataFileFormatExtractorTest.java" index="4">
+<position info="not_deleted" x="1326" y="0"/>
 </item>
-<item historyLabel="DataFileFormatReaderTest.java" index="2">
-<position info="not_deleted" x="232" y="0"/>
+<item historyLabel="DataFileFormatExtractor.java" index="5">
+<position info="not_deleted" x="696" y="0"/>
 </item>
-<item historyLabel="DataFileFormatReaderTest.java" index="2">
-<position/>
+<item historyLabel="InvalidDataFormatException.java" index="6">
+<position info="not_deleted" x="87" y="0"/>
 </item>
-<item historyLabel="DataFileFormatReader.java" index="3">
-<position info="not_deleted" x="63" y="0"/>
+<item historyLabel="StringReader.class" index="7">
+<position info="not_deleted" x="3" y="0"/>
 </item>
-<item active="true" historyLabel="DataFileFormatReaderTest.java" index="2">
-<position info="not_deleted" x="254" y="0"/>
+<item historyLabel="StringReader.class" index="7">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="Reader.class" index="8">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Reader.class" index="8">
+<position info="not_deleted" x="839" y="0"/>
+</item>
+<item historyLabel="DataFileFormat.java" index="9">
+<position info="not_deleted" x="1934" y="0"/>
+</item>
+<item historyLabel="ArrayList.class" index="10">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="ArrayList.class" index="10">
+<position info="not_deleted" x="4007" y="9"/>
+</item>
+<item historyLabel="AbstractList.class" index="11">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="AbstractList.class" index="11">
+<position info="not_deleted" x="16984" y="6"/>
+</item>
+<item historyLabel="package-info.java" index="12">
+<position info="not_deleted" x="128" y="0"/>
+</item>
+<item historyLabel="Main.java" index="13">
+<position info="not_deleted" x="289" y="0"/>
+</item>
+<item historyLabel="DataSchemaFormatExtractorTest.java" index="14">
+<position info="not_deleted" x="1007" y="0"/>
+</item>
+<item historyLabel="DataSchemaFormatExtractor.java" index="15">
+<position info="not_deleted" x="122" y="6"/>
+</item>
+<item historyLabel="DataSchemaFormat.java" index="16">
+<position info="not_deleted" x="54" y="6"/>
+</item>
+<item historyLabel="DataFieldFormat.java" index="17">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="DesignByContract.java" index="18">
+<position info="not_deleted" x="449" y="0"/>
+</item>
+<item historyLabel="DataInput.class" index="19">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="DataInput.class" index="19">
+<position info="not_deleted" x="5590" y="9"/>
+</item>
+<item historyLabel="DataInputStream.class" index="20">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="DataInputStream.class" index="20">
+<position info="not_deleted" x="880" y="0"/>
+</item>
+<item historyLabel="FilterInputStream.class" index="21">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="FilterInputStream.class" index="21">
+<position info="not_deleted" x="1166" y="0"/>
+</item>
+<item historyLabel="InputStream.class" index="22">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="InputStream.class" index="22">
+<position info="not_deleted" x="14634" y="0"/>
+</item>
+<item historyLabel="File.class" index="23">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="File.class" index="23">
+<position info="not_deleted" x="5760" y="4"/>
+</item>
+<item historyLabel="ByteArrayInputStream.class" index="24">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="ByteArrayInputStream.class" index="24">
+<position info="not_deleted" x="4315" y="4"/>
+</item>
+<item historyLabel="RecordNotFoundException.java" index="25">
+<position info="not_deleted" x="84" y="0"/>
+</item>
+<item historyLabel="DuplicateKeyException.java" index="26">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SecurityException.class" index="27">
+<position info="not_deleted" x="592" y="0"/>
+</item>
+<item historyLabel="DuplicateKeyException.java" index="26">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="RecordNotFoundException.java" index="25">
+<position info="not_deleted" x="84" y="0"/>
+</item>
+<item historyLabel="DB.java" index="1">
+<position info="not_deleted" x="1541" y="0"/>
+</item>
+<item historyLabel="SecurityException.java" index="28">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="RecordNotFoundException.java" index="25">
+<position info="not_deleted" x="84" y="0"/>
+</item>
+<item active="true" historyLabel="DB.java" index="1">
+<position info="not_deleted" x="1541" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -251,19 +700,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.intro.impl.presentations.IntroLaunchBar"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFileFormatReader.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataFileFormatReader.java">
-<persistable path="/scjd.urlybird/src/main/java/suncertify/db/DataFileFormatReader.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SecurityException.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/SecurityException.java">
+<persistable path="/scjd.urlybird/src/main/java/suncertify/db/SecurityException.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataFileFormatReader.java" tooltip="scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReader.java">
-<persistable path="/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReader.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="SecurityException.class" tooltip="java.lang.SecurityException">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.lang(SecurityException.class"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="DataFileFormatReader.java" tooltip="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReader.java">
-<persistable uri="file:/Users/arnelandwehr/Coden/Sun%20Certified%20Java%20Developer/Project/Code/scjd.urlybird/src/test/java/suncertify/db/DataFileFormatReader.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DuplicateKeyException.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DuplicateKeyException.java">
+<persistable path="/scjd.urlybird/src/main/java/suncertify/db/DuplicateKeyException.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RecordNotFoundException.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/RecordNotFoundException.java">
+<persistable path="/scjd.urlybird/src/main/java/suncertify/db/RecordNotFoundException.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DB.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DB.java">
+<persistable path="/scjd.urlybird/src/main/java/suncertify/db/DB.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Integer.class" tooltip="java.lang.Integer">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.lang(Integer.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ByteArrayInputStream.class" tooltip="java.io.ByteArrayInputStream">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(ByteArrayInputStream.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="File.class" tooltip="java.io.File">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(File.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="InputStream.class" tooltip="java.io.InputStream">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(InputStream.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="FilterInputStream.class" tooltip="java.io.FilterInputStream">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(FilterInputStream.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DataInputStream.class" tooltip="java.io.DataInputStream">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInputStream.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DataInput.class" tooltip="java.io.DataInput">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=scjd.urlybird/\/System\/Library\/Frameworks\/JavaVM.framework\/Versions\/1.6.0\/Classes\/classes.jar&lt;java.io(DataInput.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DesignByContract.java" tooltip="scjd.urlybird/src/main/java/suncertify/util/DesignByContract.java">
+<persistable path="/scjd.urlybird/src/main/java/suncertify/util/DesignByContract.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataField.java" tooltip="scjd.urlybird/src/test/java/suncertify/db/DataField.java">
+<persistable path="/scjd.urlybird/src/test/java/suncertify/db/DataField.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataSchema.java" tooltip="scjd.urlybird/src/main/java/suncertify/db/DataSchema.java">
+<persistable path="/scjd.urlybird/src/main/java/suncertify/db/DataSchema.java"/>
 </file>
 </mruList>
 </workbench>

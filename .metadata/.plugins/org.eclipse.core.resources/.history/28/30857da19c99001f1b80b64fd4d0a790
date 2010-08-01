@@ -1,0 +1,16 @@
+package suncertify.util;
+
+public class DesignByContract {
+
+    private DesignByContract() {
+
+    }
+
+    public static void notNull(Object schouldBeNotNull, String paramName) {
+
+	if (schouldBeNotNull == null) {
+	    throw new IllegalArgumentException(paramName + " is null!");
+	}
+    }
+
+}

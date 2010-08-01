@@ -1,0 +1,10 @@
+package suncertify.db;
+
+public class DataFieldFormat<T> {
+
+    public DataFieldFormat(String firstFieldName, int dataFieldLength,
+	    Class<String> class1) {
+	// TODO Auto-generated constructor stub
+    }
+
+}

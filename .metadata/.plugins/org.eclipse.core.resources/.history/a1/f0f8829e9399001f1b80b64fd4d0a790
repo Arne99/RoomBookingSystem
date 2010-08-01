@@ -1,0 +1,80 @@
+package suncertify.db;
+
+/**
+ * A {@code DataFileFormat} contains the relevant Information about the file
+ * format of an DataFile. The relevant informations are:
+ * <ul>
+ * <li>the MagicCookieValue: Identifier for one specific database format</li>
+ * <li>the RecordLength: The length in bytes of one single record.</li>
+ * <li>the FormatInformationBlockLegth: The length in bytes of the DataFormat
+ * information block.</li>
+ * </ul>
+ * 
+ * @author arnelandwehr
+ */
+public class DataFileFormat {
+
+    /** the length of one record. */
+    private final int recordLength;
+
+    /** the number of specified DataField in the DataFile. */
+    private final int numberOfFields;
+
+    /** the length in byte of the format description block. */
+    private final int fileFormatBlockLength;
+
+    /**
+     * Constructor for a new {@code DataFileFormat}.
+     * 
+     * @param recordLength
+     * @param fileFormatBlockLength
+     * @param numberOfFields
+     */
+    public DataFileFormat(int recordLength, int numberOfFields,
+	    int fileFormatBlockLength) {
+	this.recordLength = recordLength;
+	this.numberOfFields = numberOfFields;
+	this.fileFormatBlockLength = fileFormatBlockLength;
+    }
+
+    /**
+     * Getter for the MagicCookie value.
+     * 
+     * @return the MagicCookie value.
+     */
+    public final int getMagicCookie() {
+	return magicCookie;
+    }
+
+    @Override
+    public final int hashCode() {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result + recordLength;
+	result = prime * result + magicCookie;
+	return result;
+    }
+
+    @Override
+    public final boolean equals(final Object obj) {
+	if (this == obj)
+	    return true;
+	if (obj == null)
+	    return false;
+	if (getClass() != obj.getClass())
+	    return false;
+	DataFileFormat other = (DataFileFormat) obj;
+	if (recordLength != other.recordLength)
+	    return false;
+	if (magicCookie != other.magicCookie)
+	    return false;
+	return true;
+    }
+
+    @Override
+    public final String toString() {
+	return "DataFileFormat [magicCookie=" + magicCookie
+		+ ", databaseInformation=" + recordLength + "]";
+    }
+
+}

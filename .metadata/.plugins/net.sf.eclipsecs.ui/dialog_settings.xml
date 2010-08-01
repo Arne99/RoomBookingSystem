@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="net.sf.eclipsecs.core.config.GlobalCheckConfigurationWorkingSet">
+		<item value="-1" key="selectedRow"/>
+		<item value="30" key="colWidth3"/>
+		<item value="76" key="colWidth2"/>
+		<item value="0" key="sortColumn"/>
+		<item value="76" key="colWidth1"/>
+		<item value="102" key="colWidth0"/>
+		<item value="1" key="sortDirection"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#CyclomaticComplexity">
+		<item value="false" key="maximized"/>
+		<item value="284" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="624" key="width"/>
+		<item value="183" key="y"/>
+		<item value="360" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.CheckConfigurationConfigureDialog">
+		<item value="161" key="colWidth3"/>
+		<item value="92" key="colWidth2"/>
+		<item value="false" key="minimized"/>
+		<item value="139" key="colWidth1"/>
+		<item value="70" key="colWidth0"/>
+		<item value="710" key="width"/>
+		<item value="-1" key="selectedRow"/>
+		<item value="false" key="maximized"/>
+		<item value="0" key="sortColumn"/>
+		<item value="673" key="height"/>
+		<item value="1" key="sortDirection"/>
+		<item value="22" key="y"/>
+		<item value="418" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#LocalVariableName">
+		<item value="false" key="maximized"/>
+		<item value="435" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="583" key="width"/>
+		<item value="82" key="y"/>
+		<item value="381" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#ClassDataAbstractionCoupling">
+		<item value="false" key="maximized"/>
+		<item value="284" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="777" key="width"/>
+		<item value="183" key="y"/>
+		<item value="284" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.stats.views.MarkerStatsView">
+		<section name="masterView">
+		</section>
+		<section name="detailView">
+		</section>
+		<section name="filter">
+			<item value="true" key="enabled"/>
+			<item value="false" key="selectBySeverity"/>
+			<item value="false" key="selectByRegex"/>
+			<item value="0" key="severity"/>
+			<item value="1" key="onResource"/>
+			<list key="regularExpressions">
+			</list>
+		</section>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#NeedBraces">
+		<item value="false" key="maximized"/>
+		<item value="411" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="583" key="width"/>
+		<item value="98" key="y"/>
+		<item value="381" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#BooleanExpressionComplexity">
+		<item value="false" key="maximized"/>
+		<item value="435" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="713" key="width"/>
+		<item value="82" key="y"/>
+		<item value="316" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#ClassFanOutComplexity">
+		<item value="false" key="maximized"/>
+		<item value="284" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="651" key="width"/>
+		<item value="183" key="y"/>
+		<item value="347" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#NPathComplexity">
+		<item value="false" key="maximized"/>
+		<item value="284" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="583" key="width"/>
+		<item value="183" key="y"/>
+		<item value="381" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#LineLength">
+		<item value="false" key="maximized"/>
+		<item value="311" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="583" key="width"/>
+		<item value="165" key="y"/>
+		<item value="381" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#JavaNCSS">
+		<item value="false" key="maximized"/>
+		<item value="332" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="671" key="width"/>
+		<item value="151" key="y"/>
+		<item value="337" key="x"/>
+	</section>
+</section>

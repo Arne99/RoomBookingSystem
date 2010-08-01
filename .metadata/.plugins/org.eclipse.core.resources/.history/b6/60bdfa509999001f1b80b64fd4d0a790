@@ -1,0 +1,5 @@
+/**
+ * Contains the tests for the package suncertify.db
+ */
+package suncertify.db;
+

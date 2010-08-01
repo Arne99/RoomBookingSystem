@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<checkstyle-configurations file-format-version="5.0.0" default-check-configuration="SCJD_Arne">
+  <check-configuration name="SCJD_Arne" location="internal_config__1280172047147.xml" type="internal" description="Slightly modified version of Sun Checks that better matches the default code formatter setting of Eclipse."/>
+</checkstyle-configurations>

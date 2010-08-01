@@ -1,0 +1,5 @@
+/**
+ * This package contains all needed files for the data file access.
+ */
+package suncertify.db;
+

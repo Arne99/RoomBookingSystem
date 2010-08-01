@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1280174501985
+executed,command,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.junitShortcut.debug",1280174505683
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280174506703
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280174509605
+opened,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1280174509823
+opened,view,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.DebugView",1280174510322
+opened,view,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.VariableView",1280174510494
+activated,perspective,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.DebugPerspective",1280174510551
+started,bundle,org.eclipse.wst.jsdt.debug.core,1.0.0.v201006082045,"org.eclipse.wst.jsdt.debug.core",1280174511807
+opened,view,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.BreakpointView",1280174511815
+activated,view,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.DebugView",1280174514208
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280174514285
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280174515433
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280174532209
+opened,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280174532595
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.Resume",1280174813061
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280174823562
+executed,command,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.junitShortcut.run",1280174827697
+executed,command,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.edit.text.java.source.quickMenu",1280174840136
+executed,command,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.edit.text.java.format",1280174841721
+executed,command,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.edit.text.java.format",1280174843621
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280174941767
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1280175060305
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175060390
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280175062488
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175080946
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1280175114752
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175114844
+activated,view,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.ResultView",1280175121024
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175121302
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280175121399
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175122635
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175123921
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175123955
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175365461
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175384442
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175385968
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175386001
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175907391
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175908982
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175909950
+activated,perspective,org.eclipse.jst.j2ee.ui,1.1.400.v201006030400,"org.eclipse.jst.j2ee.J2EEPerspective",1280175915173
+activated,perspective,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.DebugPerspective",1280175919509
+closed,view,org.eclipse.ui.navigator.resources,3.4.200.I20100601-0800,"org.eclipse.ui.navigator.ProjectExplorer",1280175919525
+closed,view,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.TypeHierarchy",1280175919633
+closed,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.PropertySheet",1280175919642
+closed,view,org.eclipse.egit.ui,0.8.4,"org.eclipse.egit.ui.RepositoriesView",1280175919646
+closed,view,net.sf.eclipsecs.ui,5.1.0.201002232103,"net.sf.eclipsecs.ui.stats.views.MarkerStatsView",1280175919648
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.window.closePerspective",1280175919651
+opened,view,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.PackageExplorer",1280175921975
+opened,view,org.eclipse.ui.ide,3.6.0.I20100601-0800,"org.eclipse.ui.views.ProblemView",1280175922077
+opened,view,org.eclipse.mylyn.tasks.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.tasks.ui.views.tasks",1280175922522
+activated,perspective,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.JavaPerspective",1280175922572
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.perspectives.showPerspective",1280175922628
+executed,command,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.JavaPerspective",1280175922628
+activated,view,org.eclipse.mylyn.tasks.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.tasks.ui.views.tasks",1280175926395
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280175926834
+activated,view,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.PackageExplorer",1280175928439
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.navigate.linkWithEditor",1280175929189
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280175929905
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280175937343
+activated,view,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.PackageExplorer",1280175938999
+activated,editor,org.maven.ide.eclipse.editor,0.10.2.20100623-1649,"org.maven.ide.eclipse.editor.MavenPomEditor",1280175941398
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280175953318
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280175954066
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175955968
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175956676
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175957109
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175962871
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280175974110
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280175975472
+error,log,,,"Plug-in 'org.maven.ide.eclipse.refactoring' contributed an invalid Menu Extension (Path: 'org.eclipse.jdt.ui.refactoring.menu' is invalid): org.maven.ide.eclipse.editor.RenamePomAction",1280175976957
+started,bundle,org.eclipse.wst.validation.ui,1.2.204.v201004150700,"org.eclipse.wst.validation.ui",1280175978797
+started,bundle,org.eclipse.wst.dtd.core,1.1.400.v201004290328,"org.eclipse.wst.dtd.core",1280175978818
+started,bundle,org.eclipse.wst.html.ui,1.0.500.v201006030742,"org.eclipse.wst.html.ui",1280175978833
+started,bundle,org.eclipse.wst.wsdl.validation,1.1.501.v201004201506,"org.eclipse.wst.wsdl.validation",1280175978950
+started,bundle,org.eclipse.wst.wsi.ui,1.0.501.v201004201506,"org.eclipse.wst.wsi.ui",1280175979165
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175979207
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175981790
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175982326
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175987444
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280175994352
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280175995481
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280175996998
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280175998390
+closed,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280175999111
+closed,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280175999157
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176006559
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280176016104
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280176016105
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280176016107
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280176016108
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280176016110
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280176016111
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280176016113
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280176016114
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280176016127
+error,log,,,"Failed to read Maven project",1280176016176
+error,log,,,"Failed to read Maven project",1280176016193
+error,log,,,"Failed to read Maven project",1280176016199
+error,log,,,"Failed to read Maven project",1280176016204
+error,log,,,"Failed to read Maven project",1280176016209
+error,log,,,"Failed to read Maven project",1280176016213
+error,log,,,"Failed to read Maven project",1280176016219
+error,log,,,"Failed to read Maven project",1280176016223
+error,log,,,"Failed to read Maven project",1280176016229
+error,log,,,"Failed to read Maven project",1280176016233
+error,log,,,"Failed to read Maven project",1280176016239
+error,log,,,"Failed to read Maven project",1280176016243
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176016754
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.cut",1280176026395
+error,log,,,"Failed to read Maven project",1280176026501
+error,log,,,"Failed to read Maven project",1280176026507
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280176028212
+error,log,,,"Failed to read Maven project",1280176028311
+error,log,,,"Failed to read Maven project",1280176028315
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280176028773
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280176029110
+error,log,,,"Failed to read Maven project",1280176029202
+error,log,,,"Failed to read Maven project",1280176029206
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280176030297
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1280176037708
+activated,editor,org.maven.ide.eclipse.editor,0.10.2.20100623-1649,"org.maven.ide.eclipse.editor.MavenPomEditor",1280176040144
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280176041219
+error,log,,,"Failed to read Maven project",1280176041272
+error,log,,,"Failed to read Maven project",1280176041284
+error,log,,,"Failed to read Maven project",1280176041291
+error,log,,,"Failed to read Maven project",1280176041294
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176042406
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280176043086
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280176044309
+error,log,,,"Plug-in 'org.maven.ide.eclipse.refactoring' contributed an invalid Menu Extension (Path: 'org.eclipse.jdt.ui.refactoring.menu' is invalid): org.maven.ide.eclipse.editor.RenamePomAction",1280176064655
+error,log,,,"Plug-in 'org.maven.ide.eclipse.refactoring' contributed an invalid Menu Extension (Path: 'org.eclipse.jdt.ui.refactoring.menu' is invalid): org.maven.ide.eclipse.editor.RenamePomAction",1280176068768
+started,bundle,org.eclipse.wst.html.core,1.1.400.v201005261534,"org.eclipse.wst.html.core",1280176074998
+error,log,,,"Unhandled event loop exception",1280176075004
+started,bundle,org.eclipse.draw2d,3.6.0.v20100525-1225,"org.eclipse.draw2d",1280176076941
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176094952
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176100582
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176298354
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176299576
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176308868
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280176316211
+executed,command,org.eclipse.ui.ide,3.6.0.I20100601-0800,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1280176321913
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176325625
+executed,command,org.eclipse.ui.ide,3.6.0.I20100601-0800,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1280176329891
+executed,command,org.eclipse.ui.ide,3.6.0.I20100601-0800,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1280176330704
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176334064
+executed,command,org.eclipse.ui.ide,3.6.0.I20100601-0800,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1280176335602
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.copy",1280176343390
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280176345802
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176348001
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.text.contentAssist.proposals",1280176367919
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.text.contentAssist.proposals",1280176372152
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176379649
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.text.contentAssist.proposals",1280176389263
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176393789
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.delete.line",1280176405668
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176407343
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176416466
+executed,command,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.junitShortcut.run",1280176421176
+activated,view,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.ResultView",1280176435213
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176435482
+opened,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176435744
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176435850
+activated,view,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.ResultView",1280176436893
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176437186
+opened,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176437322
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176437422
+activated,view,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.ResultView",1280176438732
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176438983
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176439068
+activated,view,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.ResultView",1280176441765
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176442053
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176442790
+activated,view,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.ResultView",1280176461474
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176466437
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176471761
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176471860
+executed,command,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.edit.text.java.open.editor",1280176471871
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176478037
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176491888
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176583934
+executed,command,org.eclipse.jdt.junit,3.6.0.v20100526-0800,"org.eclipse.jdt.junit.junitShortcut.debug",1280176587056
+activated,perspective,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.DebugPerspective",1280176588561
+activated,view,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.DebugView",1280176591659
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280176591794
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280176592546
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280176597631
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280176599246
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176602437
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176602539
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1280176606444
+activated,view,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.DebugView",1280176607896
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280176608010
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.StepOver",1280176609225
+executed,command,org.eclipse.debug.ui,3.6.0.v20100601-1530,"org.eclipse.debug.ui.commands.Resume",1280176613264
+activated,perspective,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.JavaPerspective",1280176617555
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176617574
+activated,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.CompilationUnitEditor",1280176620576
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176635160
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176635803
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176638133
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176818203
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176828638
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176836791
+activated,editor,org.maven.ide.eclipse.editor,0.10.2.20100623-1649,"org.maven.ide.eclipse.editor.MavenPomEditor",1280176836933
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176841382
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176841594
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176841763
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176841961
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176842101
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176842230
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176842542
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176842737
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176843303
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176843778
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176844325
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176844771
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176845470
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176852789
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.undo",1280176853472
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280176859903
+closed,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176860300
+closed,editor,org.eclipse.jdt.ui,3.6.0.v20100602-1600,"org.eclipse.jdt.ui.ClassFileEditor",1280176860356
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280176874393
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280176875788
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176880340
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176959075
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280176966881
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176968391
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.findReplace",1280176968422
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176969638
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.select.wordNext",1280176977507
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.select.wordNext",1280176977690
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.0.v20100520-0800,"org.eclipse.ui.edit.text.select.wordNext",1280176978122
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@28678e45 threw following exception during adapter notification (ADD )",1280176979485
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@28678e45 threw following exception during adapter notification (ADD )",1280176979486
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@28678e45 threw following exception during adapter notification (ADD )",1280176979488
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.cut",1280176979499
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.paste",1280176981857
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.saveAll",1280176982339
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176983903
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.edit.findReplace",1280176983940
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176986230
+executed,command,org.eclipse.wst.sse.ui,1.2.0.v201006030742,"org.eclipse.wst.sse.ui.format.document",1280176986776
+executed,command,org.eclipse.ui,3.6.0.I20100603-1100,"org.eclipse.ui.file.save",1280176988184
+deactivated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176988720
+activated,workbench,org.eclipse.ui.workbench,3.6.0.I20100603-1100,"",1280176993087
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@365c8eae threw following exception during adapter notification (ADD )",1280177002170
+error,log,,,"A structured model client, org.maven.ide.components.pom.translators.ListAdapter@769b5d63 threw following exception during adapter notification (ADD )",1280177002171

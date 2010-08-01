@@ -1,0 +1,11 @@
+package suncertify.util;
+
+public class DesignByContract {
+
+    private DesignByContract() {
+	
+    }
+    
+    public static 
+    
+}

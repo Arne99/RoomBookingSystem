@@ -1,0 +1,47 @@
+package suncertify.db;
+
+import java.io.ByteArrayInputStream;
+import java.io.DataInput;
+import java.io.DataInputStream;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
+public class DataSchemaFormatExtractorTest {
+
+    private DataSchemaFormatExtractor extractor;
+
+    @Test
+    public final void DataSchemaFormatExtractorCreatesValidSchemaFormat() {
+
+	byte skipped = 0;
+	byte byteOneNameLength = 0;
+	byte byteTwoNameLength = 2;
+	byte firstNameByte = 'o';
+	byte secondNameByte = 'k';
+
+	byte[] input = new byte[] { skipped, skipped, skipped,
+		byteOneNameLength, byteTwoNameLength, firstNameByte,
+		secondNameByte };
+	DataInputStream dataStream = new DataInputStream(
+		new ByteArrayInputStream(input));
+
+	extractor = new DataSchemaFormatExtractor(dataStream);
+	DataSchemaFormat schema = extractor.extractDataSchemaFormat(data,
+		format);
+	int recordLength = 150;
+	String firstFieldName = "name";
+	int dataFieldLength = 64;
+
+	DataFieldFormat<String> firstField = new DataFieldFormat<String>(
+		firstFieldName, dataFieldLength, String.class);
+	List<DataFieldFormat<?>> dataFields = new ArrayList<DataFieldFormat<?>>(
+		Arrays.asList(firstField));
+
+    }
+}

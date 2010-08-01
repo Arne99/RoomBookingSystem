@@ -1,3 +1,5 @@
-#Mon Jul 26 19:24:46 CEST 2010
+#Tue Jul 27 21:35:24 CEST 2010
+GitRepositoriesView.SyncWithSelection=true
 eclipse.preferences.version=1
-GitRepositoriesView.GitDirectories=/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/.git\:
+org.eclipse.egit.ui.githistorypage.showallfilter=SHOWALLRESOURCE
+GitRepositoriesView.GitDirectories=/Users/arnelandwehr/Coden/Sun Certified Java Developer/.git\:

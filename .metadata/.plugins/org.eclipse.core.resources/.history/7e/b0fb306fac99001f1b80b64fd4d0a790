@@ -1,0 +1,16 @@
+package suncertify.db;
+
+import java.io.DataInput;
+
+public class SchemaInformationReader {
+
+    public SchemaInformationReader(DataFileFormat format) {
+	// TODO Auto-generated constructor stub
+    }
+
+    public DataSchemaFormat readDataSchema(DataInput data) {
+	// TODO Auto-generated method stub
+	return null;
+    }
+
+}
