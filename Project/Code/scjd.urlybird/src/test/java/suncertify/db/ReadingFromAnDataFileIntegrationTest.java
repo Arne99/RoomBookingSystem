@@ -23,6 +23,15 @@ public class ReadingFromAnDataFileIntegrationTest {
     DatabaseHandlerRegistry handlerRegistry = DatabaseHandlerRegistry
 	    .getInstance();
 
+    /**
+     * TODO - Am besten Zugriff direkt Ÿber die Data Klasse - Die Data Klasse
+     * muss wegen threading wohl am betsen auch ein singleton sein (vieleicht
+     * aber ach nicht gut...) - init einbauen - Ÿberlegen was besser als
+     * Singletons ist. - vieleicht Client State mit einem DB Path...sehr
+     * kompliziert :/
+     * 
+     * @throws IOException
+     */
     @Test
     public final void clientCouldReadAValidRecordFromAnDataFile()
 	    throws IOException {
