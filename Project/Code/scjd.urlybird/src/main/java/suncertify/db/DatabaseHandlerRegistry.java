@@ -1,22 +1,52 @@
 package suncertify.db;
 
-import java.io.File;
-import java.util.List;
+import java.io.DataInput;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DatabaseHandlerRegistry {
 
-    public static DatabaseHandlerRegistry getInstance() {
-	// TODO Auto-generated method stub
-	return null;
+    /**
+     * Ein guarded by einführen
+     */
+    private static DatabaseHandlerRegistry INSTANCE = null;
+
+    public static synchronized DatabaseHandlerRegistry getInstance() {
+
+	if (INSTANCE == null) {
+	    throw new IllegalStateException(
+		    "the DatabaseHandlerRegistry has not been inilialised yet!");
+	}
+
+	return INSTANCE;
     }
 
-    public DatabaseHandlerRegistry(final List<DatabaseHandler> validDbHandler) {
-	// TODO Auto-generated constructor stub
+    public synchronized static void init(
+	    final Map<Integer, DatabaseHandler> handlers) {
+
+	if (INSTANCE != null) {
+	    throw new IllegalStateException(
+		    "the DatabaseHandlerRegistry is already initialiesed!");
+	}
+	INSTANCE = new DatabaseHandlerRegistry(handlers);
     }
 
-    public DatabaseHandler createHandlerForDataFile(final File dummyDataFile) {
-	// TODO Auto-generated method stub
-	return null;
+    public static synchronized void reset() {
+	INSTANCE = null;
     }
 
+    private final Map<Integer, DatabaseHandler> handlers;
+
+    private DatabaseHandlerRegistry(final Map<Integer, DatabaseHandler> handlers) {
+	this.handlers = new HashMap<Integer, DatabaseHandler>(handlers);
+
+    }
+
+    public DatabaseHandler findHandlerForDataFile(final DataInput input)
+	    throws IOException {
+
+	final int dataFileIdentifier = input.readInt();
+	return handlers.get(dataFileIdentifier);
+    }
 }

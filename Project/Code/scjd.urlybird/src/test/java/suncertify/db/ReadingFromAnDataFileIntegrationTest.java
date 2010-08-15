@@ -2,7 +2,11 @@ package suncertify.db;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.junit.Test;
 
@@ -20,10 +24,12 @@ public class ReadingFromAnDataFileIntegrationTest {
 	    .getInstance();
 
     @Test
-    public final void clientCouldReadAValidRecordFromAnDataFile() {
+    public final void clientCouldReadAValidRecordFromAnDataFile()
+	    throws IOException {
 
 	final DatabaseHandler databaseHandler = handlerRegistry
-		.createHandlerForDataFile(testDataFile);
+		.findHandlerForDataFile(new DataInputStream(
+			new FileInputStream(testDataFile)));
 
 	final int anyValidIndex = 0;
 	final Record record = databaseHandler.readRecord(anyValidIndex);
