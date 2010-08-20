@@ -7,46 +7,41 @@ import java.util.Map;
 
 public class DatabaseHandlerRegistry {
 
-    /**
-     * Ein guarded by einführen
-     */
-    private static DatabaseHandlerRegistry INSTANCE = null;
+    private static DatabaseHandlerRegistry INSTANCE = new DatabaseHandlerRegistry();
 
-    public static synchronized DatabaseHandlerRegistry getInstance() {
-
-	if (INSTANCE == null) {
-	    throw new IllegalStateException(
-		    "the DatabaseHandlerRegistry has not been inilialised yet!");
-	}
-
+    public static DatabaseHandlerRegistry getInstance() {
 	return INSTANCE;
     }
 
-    public synchronized static void init(
-	    final Map<Integer, DatabaseHandler> handlers) {
+    private Map<Integer, DatabaseHandler> handlers;
 
-	if (INSTANCE != null) {
-	    throw new IllegalStateException(
-		    "the DatabaseHandlerRegistry is already initialiesed!");
-	}
-	INSTANCE = new DatabaseHandlerRegistry(handlers);
-    }
-
-    public static synchronized void reset() {
-	INSTANCE = null;
-    }
-
-    private final Map<Integer, DatabaseHandler> handlers;
-
-    private DatabaseHandlerRegistry(final Map<Integer, DatabaseHandler> handlers) {
-	this.handlers = new HashMap<Integer, DatabaseHandler>(handlers);
-
-    }
+    private boolean isInitialised;
 
     public DatabaseHandler findHandlerForDataFile(final DataInput input)
 	    throws IOException {
 
+	if (!isInitialised) {
+	    throw new IllegalStateException(
+		    "the DatabaseHandlerRegistry has not been inilialised yet!");
+	}
+
 	final int dataFileIdentifier = input.readInt();
 	return handlers.get(dataFileIdentifier);
+    }
+
+    public void init(final Map<Integer, DatabaseHandler> handlers) {
+
+	if (isInitialised) {
+	    throw new IllegalStateException(
+		    "the DatabaseHandlerRegistry has already been inilialised yet!");
+	}
+
+	this.handlers = new HashMap<Integer, DatabaseHandler>(handlers);
+	isInitialised = true;
+    }
+
+    public void reset() {
+	handlers.clear();
+	isInitialised = false;
     }
 }

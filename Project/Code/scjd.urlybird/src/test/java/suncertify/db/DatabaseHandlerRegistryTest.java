@@ -13,6 +13,9 @@ import org.junit.Test;
 
 public class DatabaseHandlerRegistryTest {
 
+    private final DatabaseHandlerRegistry registry = DatabaseHandlerRegistry
+	    .getInstance();
+
     @Test
     public final void registry_finds_dataFile_handler_for_valid_key()
 	    throws IOException {
@@ -21,7 +24,7 @@ public class DatabaseHandlerRegistryTest {
 	final DatabaseHandler dbHandlerMock = mock(DatabaseHandler.class);
 	final DataInput input = createDataInputThatReturnsKey(keyForTheDbHandler);
 
-	DatabaseHandlerRegistry.init(new HashMap<Integer, DatabaseHandler>() {
+	registry.init(new HashMap<Integer, DatabaseHandler>() {
 	    {
 		put(keyForTheDbHandler, dbHandlerMock);
 	    }
@@ -44,7 +47,7 @@ public class DatabaseHandlerRegistryTest {
 	final int invalidKey = keyForTheDbHandler + 1;
 	final DataInput input = createDataInputThatReturnsKey(invalidKey);
 
-	DatabaseHandlerRegistry.init(new HashMap<Integer, DatabaseHandler>() {
+	registry.init(new HashMap<Integer, DatabaseHandler>() {
 	    {
 		put(keyForTheDbHandler, dbHandlerMock);
 	    }
@@ -59,25 +62,27 @@ public class DatabaseHandlerRegistryTest {
 
     @Test(expected = IllegalStateException.class)
     public final void registry_throws_exception_if_already_initiliased() {
-	DatabaseHandlerRegistry.init(new HashMap<Integer, DatabaseHandler>());
-	DatabaseHandlerRegistry.init(new HashMap<Integer, DatabaseHandler>());
+	registry.init(new HashMap<Integer, DatabaseHandler>());
+	registry.init(new HashMap<Integer, DatabaseHandler>());
     }
 
     @Test(expected = IllegalStateException.class)
-    public final void registry_throws_exception_if_not_initiliased() {
-	DatabaseHandlerRegistry.getInstance();
+    public final void registry_throws_exception_if_not_initiliased()
+	    throws IOException {
+	final DataInput input = mock(DataInput.class);
+	registry.findHandlerForDataFile(input);
     }
 
     @Test
     public final void registry_throws_no_exception_if_resetted_between_inits() {
-	DatabaseHandlerRegistry.init(new HashMap<Integer, DatabaseHandler>());
-	DatabaseHandlerRegistry.reset();
-	DatabaseHandlerRegistry.init(new HashMap<Integer, DatabaseHandler>());
+	registry.init(new HashMap<Integer, DatabaseHandler>());
+	registry.reset();
+	registry.init(new HashMap<Integer, DatabaseHandler>());
     }
 
     @After
     public void tearDown() {
-	DatabaseHandlerRegistry.reset();
+	registry.reset();
     }
 
     private DataInput createDataInputThatReturnsKey(final int keyForTheDbHandler)

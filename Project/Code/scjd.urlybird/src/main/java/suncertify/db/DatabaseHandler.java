@@ -1,7 +1,10 @@
 package suncertify.db;
 
+import java.io.File;
+
 public interface DatabaseHandler {
 
-    Record readRecord(int anyValidIndex);
+    void init(File databasePath);
 
+    Record readRecord(int anyValidIndex);
 }
