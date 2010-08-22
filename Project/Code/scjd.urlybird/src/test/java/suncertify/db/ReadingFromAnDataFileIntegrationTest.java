@@ -20,7 +20,7 @@ public class ReadingFromAnDataFileIntegrationTest {
 
     private static final File testDataFile = new File("dummy");
 
-    DatabaseHandlerRegistry handlerRegistry = DatabaseHandlerRegistry
+    DataHandlerFactory handlerRegistry = DataHandlerFactory
 	    .getInstance();
 
     /**
@@ -37,8 +37,7 @@ public class ReadingFromAnDataFileIntegrationTest {
 	    throws IOException {
 
 	final DatabaseHandler databaseHandler = handlerRegistry
-		.findHandlerForDataFile(new DataInputStream(
-			new FileInputStream(testDataFile)));
+		.getHandlerForIdentifier(12);
 
 	final int anyValidIndex = 0;
 	final Record record = databaseHandler.readRecord(anyValidIndex);

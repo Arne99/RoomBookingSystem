@@ -13,7 +13,7 @@ import org.junit.Test;
 
 public class DatabaseHandlerRegistryTest {
 
-    private final DatabaseHandlerRegistry registry = DatabaseHandlerRegistry
+    private final DataHandlerFactory registry = DataHandlerFactory
 	    .getInstance();
 
     @Test
@@ -22,7 +22,6 @@ public class DatabaseHandlerRegistryTest {
 
 	final int keyForTheDbHandler = 13;
 	final DatabaseHandler dbHandlerMock = mock(DatabaseHandler.class);
-	final DataInput input = createDataInputThatReturnsKey(keyForTheDbHandler);
 
 	registry.init(new HashMap<Integer, DatabaseHandler>() {
 	    {
@@ -30,8 +29,8 @@ public class DatabaseHandlerRegistryTest {
 	    }
 	});
 
-	final DatabaseHandler dbHandlerFromRegistry = DatabaseHandlerRegistry
-		.getInstance().findHandlerForDataFile(input);
+	final DatabaseHandler dbHandlerFromRegistry = DataHandlerFactory
+		.getInstance().getHandlerForIdentifier(13);
 
 	assertEquals(
 		"Registry does not find a valid DataFileHandler under the specified key",
@@ -45,7 +44,6 @@ public class DatabaseHandlerRegistryTest {
 	final int keyForTheDbHandler = 13;
 	final DatabaseHandler dbHandlerMock = mock(DatabaseHandler.class);
 	final int invalidKey = keyForTheDbHandler + 1;
-	final DataInput input = createDataInputThatReturnsKey(invalidKey);
 
 	registry.init(new HashMap<Integer, DatabaseHandler>() {
 	    {
@@ -53,8 +51,8 @@ public class DatabaseHandlerRegistryTest {
 	    }
 	});
 
-	final DatabaseHandler dbHandlerFromRegistry = DatabaseHandlerRegistry
-		.getInstance().findHandlerForDataFile(input);
+	final DatabaseHandler dbHandlerFromRegistry = DataHandlerFactory
+		.getInstance().getHandlerForIdentifier(invalidKey);
 
 	assertNull("Registry should not find a handler with an invalid key",
 		dbHandlerFromRegistry);
@@ -69,8 +67,8 @@ public class DatabaseHandlerRegistryTest {
     @Test(expected = IllegalStateException.class)
     public final void registry_throws_exception_if_not_initiliased()
 	    throws IOException {
-	final DataInput input = mock(DataInput.class);
-	registry.findHandlerForDataFile(input);
+	final int anyValue = 2;
+	registry.getHandlerForIdentifier(anyValue);
     }
 
     @Test
@@ -85,10 +83,4 @@ public class DatabaseHandlerRegistryTest {
 	registry.reset();
     }
 
-    private DataInput createDataInputThatReturnsKey(final int keyForTheDbHandler)
-	    throws IOException {
-	final DataInput input = mock(DataInput.class);
-	when(input.readInt()).thenReturn(keyForTheDbHandler);
-	return input;
-    }
 }

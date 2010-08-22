@@ -6,5 +6,5 @@ public interface DatabaseHandler {
 
     void init(File databasePath);
 
-    Record readRecord(int anyValidIndex);
+    Record readRecord(int index);
 }
