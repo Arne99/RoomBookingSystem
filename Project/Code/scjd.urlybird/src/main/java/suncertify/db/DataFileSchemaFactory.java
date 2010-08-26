@@ -40,6 +40,6 @@ public class DataFileSchemaFactory {
 	    columns.add(new RawColumnMetaData(sb.toString(), columnSize));
 	}
 
-	return new DataFileSchema(columns);
+	return new DataFileSchema(columns, supportedFormat.getRecordLength());
     }
 }

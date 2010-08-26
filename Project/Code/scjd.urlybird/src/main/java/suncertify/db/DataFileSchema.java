@@ -6,8 +6,11 @@ import java.util.List;
 public class DataFileSchema implements DataSchema {
 
     private final ArrayList<ColumnMetaData> columns;
+    private final int recordLength;
 
-    public DataFileSchema(final List<? extends ColumnMetaData> columnMetaData) {
+    public DataFileSchema(final List<? extends ColumnMetaData> columnMetaData,
+	    final int recordLength) {
+	this.recordLength = recordLength;
 	this.columns = new ArrayList<ColumnMetaData>(columnMetaData);
     }
 
@@ -30,6 +33,9 @@ public class DataFileSchema implements DataSchema {
 	} else if (!columns.equals(other.columns)) {
 	    return false;
 	}
+	if (recordLength != other.recordLength) {
+	    return false;
+	}
 	return true;
     }
 
@@ -43,12 +49,14 @@ public class DataFileSchema implements DataSchema {
 	final int prime = 31;
 	int result = 1;
 	result = prime * result + ((columns == null) ? 0 : columns.hashCode());
+	result = prime * result + recordLength;
 	return result;
     }
 
     @Override
     public String toString() {
-	return "DataFileSchema [columns=" + columns + "]";
+	return "DataFileSchema [columns=" + columns + ", recordLength="
+		+ recordLength + "]";
     }
 
 }

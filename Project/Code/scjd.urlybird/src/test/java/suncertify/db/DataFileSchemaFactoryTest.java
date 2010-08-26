@@ -1,11 +1,7 @@
 package suncertify.db;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.DataInput;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -27,10 +23,12 @@ public class DataFileSchemaFactoryTest {
 	final int singleColumn = 1;
 	final String columnName = "Test";
 	final int columnLength = 100;
+	final int recordLength = 100;
 
 	final DataFileFormat supportedFormat = mock(DataFileFormat.class);
 	when(supportedFormat.supports(anyInt())).thenReturn(true);
 	when(supportedFormat.getNumberOfColumns()).thenReturn(singleColumn);
+	when(supportedFormat.getRecordLength()).thenReturn(recordLength);
 
 	final DataInput dataInputMock = mock(DataInput.class);
 	when(dataInputMock.readShort()).thenReturn((short) columnName.length(),
@@ -43,7 +41,7 @@ public class DataFileSchemaFactoryTest {
 
 	final DataSchema expectedSchema = new DataFileSchema(
 		Collections.singletonList(new RawColumnMetaData(columnName,
-			columnLength)));
+			columnLength)), recordLength);
 	assertEquals(expectedSchema, schema);
     }
 
@@ -56,10 +54,12 @@ public class DataFileSchemaFactoryTest {
 	final int firstColumnLength = 100;
 	final String secondColumnName = "Hello";
 	final int secondColumnLenght = 5;
+	final int recordLength = 100;
 
 	final DataFileFormat supportedFormat = mock(DataFileFormat.class);
 	when(supportedFormat.supports(anyInt())).thenReturn(true);
 	when(supportedFormat.getNumberOfColumns()).thenReturn(twoColumns);
+	when(supportedFormat.getRecordLength()).thenReturn(recordLength);
 
 	final DataInput dataInputMock = mock(DataInput.class);
 	when(dataInputMock.readShort()).thenReturn(
@@ -76,7 +76,8 @@ public class DataFileSchemaFactoryTest {
 		new ArrayList<ColumnMetaData>(Arrays.asList(
 			new RawColumnMetaData(firstColumnName,
 				firstColumnLength), new RawColumnMetaData(
-				secondColumnName, secondColumnLenght))));
+				secondColumnName, secondColumnLenght))),
+		recordLength);
 
 	assertEquals(expectedSchema, schema);
     }

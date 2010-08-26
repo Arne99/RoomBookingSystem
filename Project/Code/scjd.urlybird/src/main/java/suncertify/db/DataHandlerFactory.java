@@ -1,23 +1,37 @@
 package suncertify.db;
 
-import java.io.DataInput;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.activation.DataHandler;
 
 public class DataHandlerFactory {
 
-    private static DataHandlerFactory INSTANCE = new DataHandlerFactory();
-
-    public static DataHandlerFactory getInstance() {
-	return INSTANCE;
+    public static DataHandlerFactory getInstance(
+	    final DataFileSchemaFactory schemaFactory,
+	    final DataFileFormatFactory formatFactory) {
+	return new DataHandlerFactory(schemaFactory, formatFactory);
     }
 
-    DataHandler createHandlerForDataSource(final DataInput source)
-	    throws UnsupportedDataSourceException {
+    private final DataFileSchemaFactory schemaFactory;
 
-	source.readInt();
+    private final DataFileFormatFactory formatFactory;
+
+    DataHandlerFactory(final DataFileSchemaFactory schemaFactory,
+	    final DataFileFormatFactory formatFactory) {
+	this.schemaFactory = schemaFactory;
+	this.formatFactory = formatFactory;
+
+    }
+
+    DatabaseAccessHandler createHandlerForDataSource(final File source)
+	    throws UnsupportedDataSourceException, IOException {
+
+	final DataFileFormat format = formatFactory
+		.createFormat(new DataInputStream(new FileInputStream(source)));
+	final DataSchema schema = schemaFactory
+		.createSchema(new DataInputStream(new FileInputStream(source)));
+
+	return new DataFileAccessHandler(schema);
     }
 }

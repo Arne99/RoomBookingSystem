@@ -6,6 +6,8 @@ public interface DataFileFormat {
 
     int getNumberOfColumns();
 
+    int getRecordLength();
+
     boolean supports(int readInt);
 
 }
