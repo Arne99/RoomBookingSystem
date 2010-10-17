@@ -1,8 +1,13 @@
-package suncertify.db;
+package suncertify.datafile;
 
 import java.io.DataInput;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import suncertify.db.ColumnMetaData;
+import suncertify.db.DataSchema;
+import suncertify.db.RawColumnMetaData;
+import suncertify.db.UnsupportedDataSourceException;
 
 public class DataFileSchemaFactory {
 

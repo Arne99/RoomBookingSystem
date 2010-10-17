@@ -10,6 +10,8 @@ import java.io.IOException;
 
 import org.junit.Test;
 
+import suncertify.datafile.DataHandlerFactory;
+
 /**
  * TODO Javadoc
  * 

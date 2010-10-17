@@ -1,6 +1,9 @@
-package suncertify.db;
+package suncertify.datafile;
 
 import java.io.File;
+
+import suncertify.db.DatabaseHandler;
+import suncertify.db.Record;
 
 public class UrlyBirdDataFileHandler implements DatabaseHandler {
 

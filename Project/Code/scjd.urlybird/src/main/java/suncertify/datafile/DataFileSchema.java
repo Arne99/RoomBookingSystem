@@ -1,7 +1,10 @@
-package suncertify.db;
+package suncertify.datafile;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import suncertify.db.ColumnMetaData;
+import suncertify.db.DataSchema;
 
 public class DataFileSchema implements DataSchema {
 

@@ -1,4 +1,4 @@
-package suncertify.db;
+package suncertify.datafile;
 
 public interface DataFileFormat {
 

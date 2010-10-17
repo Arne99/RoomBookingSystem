@@ -5,6 +5,9 @@ import java.io.IOException;
 
 import org.junit.Test;
 
+import suncertify.db.file.DataFileFormat;
+import suncertify.db.file.DataFileFormatFactory;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 

@@ -9,6 +9,10 @@ import java.util.Collections;
 import org.junit.Test;
 import org.mockito.InOrder;
 
+import suncertify.db.file.DataFileFormat;
+import suncertify.db.file.DataFileSchema;
+import suncertify.db.file.DataFileSchemaFactory;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 

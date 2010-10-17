@@ -11,6 +11,8 @@ import java.util.HashMap;
 import org.junit.After;
 import org.junit.Test;
 
+import suncertify.datafile.DataHandlerFactory;
+
 public class DatabaseHandlerRegistryTest {
 
     private final DataHandlerFactory registry = DataHandlerFactory
