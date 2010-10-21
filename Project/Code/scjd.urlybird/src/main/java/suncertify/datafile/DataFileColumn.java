@@ -1,11 +1,12 @@
-package suncertify.db;
+package suncertify.datafile;
 
-public class RawColumnMetaData implements ColumnMetaData {
+
+public class DataFileColumn  {
 
     private final String columnName;
     private final int columnLength;
 
-    public RawColumnMetaData(final String columnName, final int columnLength) {
+    public DataFileColumn(final String columnName, final int columnLength) {
 	this.columnName = columnName;
 	this.columnLength = columnLength;
     }
@@ -21,7 +22,7 @@ public class RawColumnMetaData implements ColumnMetaData {
 	if (getClass() != obj.getClass()) {
 	    return false;
 	}
-	final RawColumnMetaData other = (RawColumnMetaData) obj;
+	final DataFileColumn other = (DataFileColumn) obj;
 	if (columnLength != other.columnLength) {
 	    return false;
 	}

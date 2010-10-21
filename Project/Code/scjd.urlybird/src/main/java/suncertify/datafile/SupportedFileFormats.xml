@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Book SYSTEM "DataFileFormat.dtd">
+<DataFileFormats>
+	<DataFileFormat key="10" offset="120">
+		<Schema>
+			<Column name="Name" size="9" ></Column>
+			<Column name="deleted" size="12" ></Column>
+		</Schema>
+	</DataFileFormat>
+</DataFileFormats>

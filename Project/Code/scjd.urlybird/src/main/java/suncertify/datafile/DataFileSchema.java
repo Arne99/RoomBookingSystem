@@ -3,20 +3,39 @@ package suncertify.datafile;
 import java.util.ArrayList;
 import java.util.List;
 
-import suncertify.db.ColumnMetaData;
 import suncertify.db.DataSchema;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class DataFileSchema.
+ */
 public class DataFileSchema implements DataSchema {
 
-    private final ArrayList<ColumnMetaData> columns;
+    /** The columns. */
+    private final ArrayList<DataFileColumn> columns;
+
+    /** The record length. */
     private final int recordLength;
 
-    public DataFileSchema(final List<? extends ColumnMetaData> columnMetaData,
+    /**
+     * Instantiates a new data file schema.
+     * 
+     * @param columnMetaData
+     *            the column meta data
+     * @param recordLength
+     *            the record length
+     */
+    public DataFileSchema(final List<DataFileColumn> columnMetaData,
 	    final int recordLength) {
 	this.recordLength = recordLength;
-	this.columns = new ArrayList<ColumnMetaData>(columnMetaData);
+	this.columns = new ArrayList<DataFileColumn>(columnMetaData);
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
     @Override
     public boolean equals(final Object obj) {
 	if (this == obj) {
@@ -42,11 +61,21 @@ public class DataFileSchema implements DataSchema {
 	return true;
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see suncertify.db.DataSchema#getNumberOfColumns()
+     */
     @Override
     public Object getNumberOfColumns() {
 	return columns.size();
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#hashCode()
+     */
     @Override
     public int hashCode() {
 	final int prime = 31;
@@ -56,6 +85,11 @@ public class DataFileSchema implements DataSchema {
 	return result;
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#toString()
+     */
     @Override
     public String toString() {
 	return "DataFileSchema [columns=" + columns + ", recordLength="

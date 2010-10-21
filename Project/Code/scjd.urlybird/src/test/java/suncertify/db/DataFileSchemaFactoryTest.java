@@ -9,6 +9,8 @@ import java.util.Collections;
 import org.junit.Test;
 import org.mockito.InOrder;
 
+import suncertify.datafile.ColumnMetaData;
+import suncertify.datafile.DataFileColumn;
 import suncertify.db.file.DataFileFormat;
 import suncertify.db.file.DataFileSchema;
 import suncertify.db.file.DataFileSchemaFactory;
@@ -44,7 +46,7 @@ public class DataFileSchemaFactoryTest {
 	final DataSchema schema = factory.createSchema(dataInputMock);
 
 	final DataSchema expectedSchema = new DataFileSchema(
-		Collections.singletonList(new RawColumnMetaData(columnName,
+		Collections.singletonList(new DataFileColumn(columnName,
 			columnLength)), recordLength);
 	assertEquals(expectedSchema, schema);
     }
@@ -78,8 +80,8 @@ public class DataFileSchemaFactoryTest {
 
 	final DataSchema expectedSchema = new DataFileSchema(
 		new ArrayList<ColumnMetaData>(Arrays.asList(
-			new RawColumnMetaData(firstColumnName,
-				firstColumnLength), new RawColumnMetaData(
+			new DataFileColumn(firstColumnName,
+				firstColumnLength), new DataFileColumn(
 				secondColumnName, secondColumnLenght))),
 		recordLength);
 

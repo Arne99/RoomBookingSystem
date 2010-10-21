@@ -11,11 +11,11 @@ import java.util.HashMap;
 import org.junit.After;
 import org.junit.Test;
 
-import suncertify.datafile.DataHandlerFactory;
+import suncertify.datafile.DataFileHandlerFactory;
 
 public class DatabaseHandlerRegistryTest {
 
-    private final DataHandlerFactory registry = DataHandlerFactory
+    private final DataFileHandlerFactory registry = DataFileHandlerFactory
 	    .getInstance();
 
     @Test
@@ -31,7 +31,7 @@ public class DatabaseHandlerRegistryTest {
 	    }
 	});
 
-	final DatabaseHandler dbHandlerFromRegistry = DataHandlerFactory
+	final DatabaseHandler dbHandlerFromRegistry = DataFileHandlerFactory
 		.getInstance().getHandlerForIdentifier(13);
 
 	assertEquals(
@@ -53,7 +53,7 @@ public class DatabaseHandlerRegistryTest {
 	    }
 	});
 
-	final DatabaseHandler dbHandlerFromRegistry = DataHandlerFactory
+	final DatabaseHandler dbHandlerFromRegistry = DataFileHandlerFactory
 		.getInstance().getHandlerForIdentifier(invalidKey);
 
 	assertNull("Registry should not find a handler with an invalid key",

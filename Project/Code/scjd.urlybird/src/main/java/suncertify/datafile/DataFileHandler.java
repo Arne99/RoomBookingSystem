@@ -5,14 +5,28 @@ import java.io.File;
 import suncertify.db.DatabaseHandler;
 import suncertify.db.Record;
 
-public class UrlyBirdDataFileHandler implements DatabaseHandler {
+// TODO: Auto-generated Javadoc
+/**
+ * The Class UrlyBirdDataFileHandler.
+ */
+public class DataFileHandler implements DatabaseHandler {
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see suncertify.db.DatabaseHandler#init(java.io.File)
+     */
     @Override
     public void init(final File databasePath) {
 	// TODO Auto-generated method stub
 
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see suncertify.db.DatabaseHandler#readRecord(int)
+     */
     @Override
     public Record readRecord(final int index) {
 	// TODO Auto-generated method stub

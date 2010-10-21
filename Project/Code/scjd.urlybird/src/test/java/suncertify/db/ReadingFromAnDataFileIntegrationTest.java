@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import suncertify.datafile.DataHandlerFactory;
+import suncertify.datafile.DataFileHandlerFactory;
 
 /**
  * TODO Javadoc
@@ -22,7 +22,7 @@ public class ReadingFromAnDataFileIntegrationTest {
 
     private static final File testDataFile = new File("dummy");
 
-    DataHandlerFactory handlerRegistry = DataHandlerFactory
+    DataFileHandlerFactory handlerRegistry = DataFileHandlerFactory
 	    .getInstance();
 
     /**
