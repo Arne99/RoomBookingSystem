@@ -10,4 +10,9 @@ class DataFileColumn {
 	this.length = length;
     }
 
+    @Override
+    public String toString() {
+	return "DataFileColumn" + "[" + "name = " + name + "; length = "
+		+ length;
+    }
 }

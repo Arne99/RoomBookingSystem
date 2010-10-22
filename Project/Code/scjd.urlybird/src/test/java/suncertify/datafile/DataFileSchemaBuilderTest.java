@@ -2,6 +2,7 @@ package suncertify.datafile;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -16,6 +17,8 @@ public class DataFileSchemaBuilderTest {
 	final DataFileSchemaBuilder schemaBuilder = new DataFileSchemaBuilder();
 	final InputStream fileInputStream = getClass().getResourceAsStream(
 		"SupportedDataFileSchemas.xml");
-	schemaBuilder.buildDataFileHandler(fileInputStream);
+	final ArrayList<DataFileSchema> schemas = schemaBuilder
+		.buildSchemasFromXmlFixture(fileInputStream);
+	System.out.println(schemas);
     }
 }

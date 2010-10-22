@@ -1,6 +1,5 @@
 package suncertify.datafile;
 
-import suncertify.db.DataFileSchema;
 import suncertify.db.DatabaseHandler;
 import suncertify.db.Record;
 
