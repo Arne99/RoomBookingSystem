@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Book SYSTEM "src/main/java/suncertify/datafile/DataFileSchemas.dtd">
-<DataFileSchemas>
-		<DataFileSchema key="10" offset="120" recordLength="120">
-			<Column name="Name" size="9" ></Column>
-			<Column name="deleted" size="12" ></Column>
-		</DataFileSchema>
-</DataFileSchemas>
