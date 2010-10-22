@@ -1,32 +1,25 @@
 package suncertify.datafile;
 
-import java.io.File;
-
+import suncertify.db.DataFileSchema;
 import suncertify.db.DatabaseHandler;
 import suncertify.db.Record;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class UrlyBirdDataFileHandler.
+ * The Class DataFileAccessHandler.
  */
-public class DataFileHandler implements DatabaseHandler {
+class DataFileHandler implements DatabaseHandler {
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Instantiates a new data file access handler.
      * 
-     * @see suncertify.db.DatabaseHandler#init(java.io.File)
+     * @param schema
+     *            the schema
      */
-    @Override
-    public void init(final File databasePath) {
-	// TODO Auto-generated method stub
-
+    DataFileHandler(final DataFileSchema schema) {
+	// TODO Auto-generated constructor stub
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see suncertify.db.DatabaseHandler#readRecord(int)
-     */
     @Override
     public Record readRecord(final int index) {
 	// TODO Auto-generated method stub

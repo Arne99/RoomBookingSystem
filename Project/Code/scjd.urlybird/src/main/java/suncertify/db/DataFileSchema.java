@@ -1,6 +1,6 @@
 package suncertify.db;
 
-public interface DataSchema {
+public interface DataFileSchema {
 
     Object getNumberOfColumns();
 
