@@ -2,15 +2,7 @@ package suncertify.datafile;
 
 import java.io.IOException;
 
-interface ByteFileReader {
-
-    void closeQuietly();
-
-    boolean isClosed();
-
-    boolean isOpen();
-
-    void open() throws IOException;
+interface ByteFileReader extends QuietlyClosable, Openable {
 
     byte readByte() throws IOException;
 
