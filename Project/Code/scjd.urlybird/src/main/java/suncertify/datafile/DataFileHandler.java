@@ -1,9 +1,7 @@
 package suncertify.datafile;
 
-import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,7 +13,7 @@ import suncertify.db.Record;
  */
 class DataFileHandler implements DatabaseHandler {
 
-    private final DataFileReader reader;
+    private final ByteFileReader reader;
     private final DataOutput writer;
     private final DataFileSchema schema;
 
@@ -25,11 +23,24 @@ class DataFileHandler implements DatabaseHandler {
      * @param schema
      *            the schema
      */
-    DataFileHandler(final DataFileSchema schema, final DataFileReader reader,
+    DataFileHandler(final DataFileSchema schema, final ByteFileReader reader,
 	    final DataOutput writer) {
 	this.schema = schema;
 	this.reader = reader;
 	this.writer = writer;
+    }
+
+    @Override
+    public void deleteRecord(final int index) throws IOException {
+
+	throw new UnsupportedOperationException("not implemented!");
+    }
+
+    @Override
+    public List<Record> findMatchingRecords(final Record queryRecord)
+	    throws IOException {
+
+	throw new UnsupportedOperationException("not implemented!");
     }
 
     @Override
@@ -50,5 +61,11 @@ class DataFileHandler implements DatabaseHandler {
 	}
 
 	return new DataFileRecord(recordValues);
+    }
+
+    @Override
+    public void writeRecord(final Record record) throws IOException {
+
+	throw new UnsupportedOperationException("not implemented!");
     }
 }

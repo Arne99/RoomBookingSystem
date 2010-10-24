@@ -28,18 +28,13 @@ public class DataFileAccessService {
     DatabaseHandler getHandlerForDataFile(final File dataFile)
 	    throws IOException, InvalidDataFileFormatException {
 
-	try {
-	    final DataFileSchema dataFileSchema = schemaBuilder
-		    .buildSchemaForDataFile(new DataFileReader(
-			    new DataInputStream(new FileInputStream(dataFile))));
-	    final DataOutputStream dataOutputStream = new DataOutputStream(
-		    new FileOutputStream(dataFile));
+	final DataFileSchema dataFileSchema = schemaBuilder
+		.buildSchemaForDataFile(new Utf8ByteCountingReader(
+			Utf8FileReader.create(dataFile)));
 
-	    final DataFileHandler dataFileHandler = new DataFileHandler(
-		    dataFileSchema, new DataFileReader(new DataInputStream(
-			    new FileInputStream(dataFile))), dataOutputStream);
-	} finally {
+	final DataFileHandler dataFileHandler = new DataFileHandler(
+		dataFileSchema, Utf8FileReader.create(dataFile), null);
 
-	}
+	return dataFileHandler;
     }
 }

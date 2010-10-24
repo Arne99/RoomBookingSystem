@@ -24,7 +24,7 @@ public class DataFileSchemaBuilderTest {
 	final File db = new File(
 		"/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/ressources/db-1x1.db");
 	final DataFileSchema schema = schemaBuilder
-		.buildSchemaForDataFile(new DataFileReader(new DataInputStream(
+		.buildSchemaForDataFile(new Utf8FileReader(new DataInputStream(
 			new FileInputStream(db))));
 	System.out.println(schema);
     }

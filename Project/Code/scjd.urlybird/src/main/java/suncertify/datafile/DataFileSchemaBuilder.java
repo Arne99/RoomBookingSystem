@@ -30,17 +30,32 @@ class DataFileSchemaBuilder {
      * @throws InvalidDataFileFormatException
      *             the unsupported data source exception
      */
-    public DataFileSchema buildSchemaForDataFile(final DataFileReader input)
+    public DataFileSchema buildSchemaForDataFile(
+	    final Utf8ByteCountingReader reader) throws IOException,
+	    InvalidDataFileFormatException {
+
+	reader.open();
+	DataFileSchema schema = null;
+	try {
+	    schema = createSchema(reader);
+	} finally {
+	    reader.closeQuietly();
+	}
+
+	return schema;
+    }
+
+    private DataFileSchema createSchema(final Utf8ByteCountingReader reader)
 	    throws IOException, InvalidDataFileFormatException {
 
-	final int dataFileFormatidentifier = input.readInt();
-	if (supportedFormat != dataFileFormatidentifier) {
+	final int dataFileFormatIdentifier = reader.readInt();
+	if (supportedFormat != dataFileFormatIdentifier) {
 	    throw new InvalidDataFileFormatException(
-		    "Wrong Data Source Identifier: " + dataFileFormatidentifier
+		    "Wrong Data Source Identifier: " + dataFileFormatIdentifier
 			    + " Ð Supported identifier " + supportedFormat);
 	}
-	final int recordLength = input.readInt();
-	final int numberOfColumns = input.readShort();
+	final int recordLength = reader.readInt();
+	final int numberOfColumns = reader.readShort();
 
 	final ArrayList<DataFileColumn> columns = new ArrayList<DataFileColumn>();
 	final DataFileColumn deletedColumn = new DataFileColumn("deleted", 0, 1);
@@ -48,17 +63,17 @@ class DataFileSchemaBuilder {
 	columns.add(deletedColumn);
 	for (int i = 1; i <= numberOfColumns; i++) {
 
-	    final int columnNameLengthInByte = input.readShort();
-	    final String columnName = input.readString(columnNameLengthInByte);
+	    final int columnNameLengthInByte = reader.readShort();
+	    final String columnName = reader.readString(columnNameLengthInByte);
 
-	    final int columnSize = input.readShort();
+	    final int columnSize = reader.readShort();
 	    final DataFileColumn newColumn = new DataFileColumn(columnName,
 		    startPositionNextColumn, columnSize);
 	    columns.add(newColumn);
 	    startPositionNextColumn += newColumn.size();
 	}
 
-	return new DataFileSchema(supportedFormat, input.getReadBytes(),
+	return new DataFileSchema(supportedFormat, reader.getCount(),
 		recordLength + deletedColumn.size(), columns);
     }
 

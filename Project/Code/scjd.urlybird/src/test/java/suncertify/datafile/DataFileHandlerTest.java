@@ -21,12 +21,12 @@ public class DataFileHandlerTest {
 		"/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/ressources/db-1x1.db");
 	final DataFileSchema schema = DataFileSchemaBuilder.instance()
 		.buildSchemaForDataFile(
-			new DataFileReader(new DataInputStream(
+			new Utf8FileReader(new DataInputStream(
 				new FileInputStream(db))));
 
 	final DataFileHandler handler = new DataFileHandler(
 		schema,
-		new DataFileReader(new DataInputStream(new FileInputStream(db))),
+		new Utf8FileReader(new DataInputStream(new FileInputStream(db))),
 		null);
 
 	final DataFileRecord record = handler.readRecord(0);
