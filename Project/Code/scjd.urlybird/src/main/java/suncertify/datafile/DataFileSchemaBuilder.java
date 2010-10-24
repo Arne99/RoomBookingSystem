@@ -19,32 +19,6 @@ class DataFileSchemaBuilder {
 	super();
     }
 
-    /**
-     * Creates a new DataFileSchema object.
-     * 
-     * @param input
-     *            the input
-     * @return the data schema
-     * @throws IOException
-     *             Signals that an I/O exception has occurred.
-     * @throws InvalidDataFileFormatException
-     *             the unsupported data source exception
-     */
-    public DataFileSchema buildSchemaForDataFile(
-	    final Utf8ByteCountingReader reader) throws IOException,
-	    InvalidDataFileFormatException {
-
-	reader.open();
-	DataFileSchema schema = null;
-	try {
-	    schema = createSchema(reader);
-	} finally {
-	    reader.closeQuietly();
-	}
-
-	return schema;
-    }
-
     private DataFileSchema createSchema(final Utf8ByteCountingReader reader)
 	    throws IOException, InvalidDataFileFormatException {
 
@@ -75,6 +49,31 @@ class DataFileSchemaBuilder {
 
 	return new DataFileSchema(supportedFormat, reader.getCount(),
 		recordLength + deletedColumn.size(), columns);
+    }
+
+    /**
+     * Creates a new DataFileSchema object.
+     * 
+     * @param input
+     *            the input
+     * @return the data schema
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     * @throws InvalidDataFileFormatException
+     *             the unsupported data source exception
+     */
+    DataFileSchema buildSchemaForDataFile(final Utf8ByteCountingReader reader)
+	    throws IOException, InvalidDataFileFormatException {
+
+	reader.open();
+	DataFileSchema schema = null;
+	try {
+	    schema = createSchema(reader);
+	} finally {
+	    reader.closeQuietly();
+	}
+
+	return schema;
     }
 
 }

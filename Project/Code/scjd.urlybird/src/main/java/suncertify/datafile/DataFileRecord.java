@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 import suncertify.db.Record;
 
-public class DataFileRecord implements Record {
+class DataFileRecord implements Record {
 
     private final TreeMap<DataFileColumn, String> columnValues;
 

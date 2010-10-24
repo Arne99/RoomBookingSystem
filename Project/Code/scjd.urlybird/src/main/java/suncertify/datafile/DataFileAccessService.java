@@ -15,13 +15,13 @@ public class DataFileAccessService {
     private static final DataFileAccessService INSTANCE = new DataFileAccessService(
 	    DataFileSchemaBuilder.instance());
 
-    private static final DataFileAccessService instance() {
+    public static final DataFileAccessService instance() {
 	return INSTANCE;
     }
 
     private final DataFileSchemaBuilder schemaBuilder;
 
-    public DataFileAccessService(final DataFileSchemaBuilder schemaBuilder) {
+    private DataFileAccessService(final DataFileSchemaBuilder schemaBuilder) {
 	this.schemaBuilder = schemaBuilder;
     }
 
