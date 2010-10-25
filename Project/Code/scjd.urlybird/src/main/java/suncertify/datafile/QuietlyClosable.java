@@ -2,7 +2,7 @@ package suncertify.datafile;
 
 interface QuietlyClosable {
 
-    void closeQuietly();
+    void closeStream();
 
     boolean isClosed();
 }

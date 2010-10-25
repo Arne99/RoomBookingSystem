@@ -14,8 +14,8 @@ class Utf8ByteCountingReader implements ByteCountingReader {
     }
 
     @Override
-    public void closeQuietly() {
-	reader.closeQuietly();
+    public void closeStream() {
+	reader.closeStream();
     }
 
     @Override
@@ -34,8 +34,8 @@ class Utf8ByteCountingReader implements ByteCountingReader {
     }
 
     @Override
-    public void open() throws IOException {
-	reader.open();
+    public void openStream() throws IOException {
+	reader.openStream();
     }
 
     @Override

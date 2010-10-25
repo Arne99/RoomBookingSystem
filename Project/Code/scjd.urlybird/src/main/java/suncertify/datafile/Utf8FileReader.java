@@ -20,7 +20,7 @@ final class Utf8FileReader implements ByteFileReader {
     private final class Closed implements ReaderState {
 
 	@Override
-	public void closeQuietly() {
+	public void closeStream() {
 	    // nothing to do, reader is already closed.
 	}
 
@@ -35,7 +35,7 @@ final class Utf8FileReader implements ByteFileReader {
 	}
 
 	@Override
-	public void open() throws IOException {
+	public void openStream() throws IOException {
 	    state = new Open(new DataInputStream(new FileInputStream(file)));
 	}
 
@@ -93,7 +93,7 @@ final class Utf8FileReader implements ByteFileReader {
 	}
 
 	@Override
-	public void closeQuietly() {
+	public void closeStream() {
 
 	    try {
 		input.close();
@@ -114,7 +114,7 @@ final class Utf8FileReader implements ByteFileReader {
 	}
 
 	@Override
-	public void open() throws IOException {
+	public void openStream() throws IOException {
 	    // nothing to do, reader is already open.
 	}
 
@@ -174,7 +174,7 @@ final class Utf8FileReader implements ByteFileReader {
     }
 
     @Override
-    public void closeQuietly() {
+    public void closeStream() {
 
     }
 
@@ -189,8 +189,8 @@ final class Utf8FileReader implements ByteFileReader {
     }
 
     @Override
-    public void open() throws IOException {
-	state.open();
+    public void openStream() throws IOException {
+	state.openStream();
     }
 
     @Override

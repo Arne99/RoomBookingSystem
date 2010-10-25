@@ -5,7 +5,9 @@ import java.util.ArrayList;
 
 import suncertify.db.InvalidDataFileFormatException;
 
-class DataFileSchemaBuilder {
+/**
+ */
+final class DataFileSchemaBuilder {
 
     private static final int supportedFormat = 257;
 
@@ -19,7 +21,7 @@ class DataFileSchemaBuilder {
 	super();
     }
 
-    private DataFileSchema createSchema(final Utf8ByteCountingReader reader)
+    private DataFileSchema createSchema(final ByteCountingReader reader)
 	    throws IOException, InvalidDataFileFormatException {
 
 	final int dataFileFormatIdentifier = reader.readInt();
@@ -62,15 +64,15 @@ class DataFileSchemaBuilder {
      * @throws InvalidDataFileFormatException
      *             the unsupported data source exception
      */
-    DataFileSchema buildSchemaForDataFile(final Utf8ByteCountingReader reader)
+    DataFileSchema buildSchemaForDataFile(final ByteCountingReader reader)
 	    throws IOException, InvalidDataFileFormatException {
 
-	reader.open();
+	reader.openStream();
 	DataFileSchema schema = null;
 	try {
 	    schema = createSchema(reader);
 	} finally {
-	    reader.closeQuietly();
+	    reader.closeStream();
 	}
 
 	return schema;

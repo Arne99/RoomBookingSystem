@@ -6,5 +6,5 @@ interface Openable {
 
     boolean isOpen();
 
-    void open() throws IOException;
+    void openStream() throws IOException;
 }
