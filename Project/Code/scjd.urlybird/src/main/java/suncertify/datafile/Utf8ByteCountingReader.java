@@ -74,6 +74,11 @@ class Utf8ByteCountingReader implements ByteCountingReader {
     }
 
     @Override
+    public boolean readyToRead() throws IOException {
+	return reader.readyToRead();
+    }
+
+    @Override
     public void resetCount() {
 	byteCount = 0;
     }
