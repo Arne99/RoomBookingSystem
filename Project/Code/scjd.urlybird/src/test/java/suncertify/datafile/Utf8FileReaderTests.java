@@ -1,9 +1,12 @@
 package suncertify.datafile;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.EOFException;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.junit.After;
@@ -11,7 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The Class Utf8FileReaderTests.
+ * The Tests for the Class Utf8FileReader.
  */
 public final class Utf8FileReaderTests {
 
@@ -22,14 +25,14 @@ public final class Utf8FileReaderTests {
     private File anyFile;
 
     /**
-     * Set up.
+     * Sets the up.
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
     @Before
     public void setUp() throws IOException {
-	anyFile = File.createTempFile("temp", getClass().getSimpleName());
+	anyFile = createTempFile();
     }
 
     /**
@@ -40,8 +43,9 @@ public final class Utf8FileReaderTests {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldAllowAnyClientToCallOpenSteamTwiceWithoutCallingCloseStreamBetween()
+    public void shouldAllowAnyClientToOpenASteamTwiceWithoutCallingCloseStreamBetween()
 	    throws IOException {
+
 	fileReader = Utf8FileReader.create(anyFile);
 	fileReader.openStream();
 	fileReader.openStream();
@@ -53,72 +57,273 @@ public final class Utf8FileReaderTests {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    @Test(expected = IllegalStateException.class)
+    @Test(expected = EOFException.class)
     public void shouldAllowAnyReadOperationIfOpenWasCalledBefore()
 	    throws IOException {
+
 	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
 	fileReader.readInt();
     }
 
     /**
      * Should close the underlying stream so the next read starts at the file
      * beginning.
-     */
-    @Test
-    public void shouldCloseTheUnderlyingStreamSoTheNextReadStartsAtTheFileBeginning() {
-	fail("Not yet implemented");
-    }
-
-    /**
-     * Should return false for is closed if the underlying stream is open.
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldReturnFalseForIsClosedIfTheUnderlyingStreamIsOpen()
+    public void shouldBeAbleToCloseTheUnderlyingStreamSoTheNextReadStartsAtTheFileBeginning()
 	    throws IOException {
+
+	final byte firstByte = 1;
+	final byte secondByte = 3;
+	writeBytesToTestFile(firstByte, secondByte);
+
 	fileReader = Utf8FileReader.create(anyFile);
 	fileReader.openStream();
-	assertFalse(fileReader.isClosed());
+	final byte firstReadByte = fileReader.readByte();
+	fileReader.closeStream();
+
+	fileReader.openStream();
+	final byte secondReadByte = fileReader.readByte();
+
+	assertEquals(firstByte, firstReadByte);
+	assertEquals(firstByte, secondReadByte);
     }
 
     /**
-     * Should return false for is opened if the underlying stream is closed.
+     * Should be able to read bytes and convert them to a string.
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldReturnFalseForIsOpenedIfTheUnderlyingStreamIsClosed()
+    public void shouldBeAbleToReadBytesAndConvertThemToAString()
 	    throws IOException {
+
+	writeBytesToTestFile((byte) 'H', (byte) 'e', (byte) 'l', (byte) 'l',
+		(byte) 'o');
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	final String readString = fileReader.readString("Hello".length());
+
+	assertEquals("Hello", readString);
+
+    }
+
+    /**
+     * Should be able to read the next byte as a char.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldBeAbleToReadTheNextByteAsAChar() throws IOException {
+
+	final byte anyChar = 'z';
+	writeBytesToTestFile(anyChar);
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	final char readChar = fileReader.readChar();
+
+	assertEquals(anyChar, readChar);
+    }
+
+    /**
+     * Should be able to read the next four bytes and convert them to an int.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldBeAbleToReadTheNextFourBytesAndConvertThemToAnInt()
+	    throws IOException {
+
+	writeBytesToTestFile((byte) 1, (byte) 2, (byte) 3, (byte) 4);
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	final int readInt = fileReader.readInt();
+
+	assertEquals(16909060, readInt);
+	assertFalse(fileReader.readyToRead());
+    }
+
+    /**
+     * Should be able to read the next two byte and convert them to a short.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldBeAbleToReadTheNextTwoByteAndConvertThemToAShort()
+	    throws IOException {
+
+	writeBytesToTestFile((byte) 1, (byte) 2);
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	final short readShort = fileReader.readShort();
+
+	assertEquals(258, readShort);
+	assertFalse(fileReader.readyToRead());
+    }
+
+    /**
+     * Should be able to return read the next byte in a file.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldBeAbleToReturnReadTheNextByteInAFile() throws IOException {
+
+	final byte nextByteValue = 1;
+	writeBytesToTestFile(nextByteValue);
+
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	final byte readByte = fileReader.readByte();
+	assertEquals(nextByteValue, readByte);
+    }
+
+    /**
+     * Should be able to skip an fixed number of bytes before it reads the next
+     * bytes.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldBeAbleToSkipAnFixedNumberOfBytesBeforeItReadsTheNextBytes()
+	    throws IOException {
+
+	writeBytesToTestFile((byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5,
+		(byte) 6, (byte) 7);
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	fileReader.skipBytes(6);
+	final byte readByte = fileReader.readByte();
+
+	assertEquals(7, readByte);
+    }
+
+    /**
+     * Should be ready to read if the file contains at least one more byte.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldBeReadyToReadIfTheFileContainsAtLeastOneMoreByte()
+	    throws IOException {
+
+	writeBytesToTestFile((byte) 1);
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+
+	assertTrue(fileReader.readyToRead());
+    }
+
+    /**
+     * Should not be ready to read if the file contains no more bytes.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldNotBeReadyToReadIfTheFileContainsNoMoreBytes()
+	    throws IOException {
+
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+
+	assertFalse(fileReader.readyToRead());
+    }
+
+    /**
+     * Should not say that it is open if the underlying stream is closed.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldNotSayThatItIsOpenIfTheUnderlyingStreamIsClosed()
+	    throws IOException {
+
 	fileReader = Utf8FileReader.create(anyFile);
 	fileReader.closeStream();
 	assertFalse(fileReader.isOpen());
     }
 
     /**
-     * Should return true for is closed if it is closed.
+     * Should not say that its is closed if the underlying stream is open.
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldReturnTrueForIsClosedIfItIsClosed() throws IOException {
+    public void shouldNotSayThatItsIsClosedIfTheUnderlyingStreamIsOpen()
+	    throws IOException {
+
+	writeBytesToTestFile();
 	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	assertFalse(fileReader.isClosed());
+    }
+
+    /**
+     * Should return the next three bytes in the file if the method read byte is
+     * three times in a row.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldReturnTheNextThreeBytesInTheFileIfTheMethodReadByteIsThreeTimesInARow()
+	    throws IOException {
+
+	final byte firstByteValue = 1;
+	final byte secondByteValue = 12;
+	final byte thirdByteValue = 56;
+
+	writeBytesToTestFile(firstByteValue, secondByteValue, thirdByteValue);
+
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	final byte firstReadByte = fileReader.readByte();
+	final byte secondReadByte = fileReader.readByte();
+	final byte thirdReadByte = fileReader.readByte();
+
+	assertEquals(firstByteValue, firstReadByte);
+	assertEquals(secondByteValue, secondReadByte);
+	assertEquals(thirdByteValue, thirdReadByte);
+    }
+
+    /**
+     * Should say that it is closed if it was closed.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldSayThatItIsClosedIfItWasClosed() throws IOException {
+
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
 	fileReader.closeStream();
 	assertTrue(fileReader.isClosed());
     }
 
     /**
-     * Should return true for is opened if it the underlying stream is open.
+     * Should say that it is open if it was opened.
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldReturnTrueForIsOpenedIfItTheUnderlyingStreamIsOpen()
-	    throws IOException {
+    public void shouldSayThatItIsOpenIfItWasOpened() throws IOException {
+
 	fileReader = Utf8FileReader.create(anyFile);
 	fileReader.openStream();
 	assertTrue(fileReader.isOpen());
@@ -131,11 +336,11 @@ public final class Utf8FileReaderTests {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    @Test(expected = EOFException.class)
+    @Test(expected = IllegalStateException.class)
     public void shouldThrowAnExceptionIfAReadMethodIsCalledBeforeOpenStreamWasCalled()
 	    throws IOException {
+
 	fileReader = Utf8FileReader.create(anyFile);
-	fileReader.openStream();
 	fileReader.readInt();
     }
 
@@ -149,45 +354,33 @@ public final class Utf8FileReaderTests {
     }
 
     /**
-     * Test read byte.
+     * Creates the temp file.
+     * 
+     * @return the file
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
      */
-    public void testReadByte() {
-	fail("Not yet implemented");
+    private File createTempFile() throws IOException {
+	return File.createTempFile("temp", getClass().getSimpleName());
     }
 
     /**
-     * Test read char.
+     * Write bytes to test file.
+     * 
+     * @param bytes
+     *            the bytes
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
      */
-    public void testReadChar() {
-	fail("Not yet implemented");
-    }
+    private void writeBytesToTestFile(final byte... bytes) throws IOException {
 
-    /**
-     * Test read int.
-     */
-    public void testReadInt() {
-	fail("Not yet implemented");
-    }
-
-    /**
-     * Test read short.
-     */
-    public void testReadShort() {
-	fail("Not yet implemented");
-    }
-
-    /**
-     * Test read string.
-     */
-    public void testReadString() {
-	fail("Not yet implemented");
-    }
-
-    /**
-     * Test skip bytes.
-     */
-    public void testSkipBytes() {
-	fail("Not yet implemented");
+	FileOutputStream fileOutputStream = null;
+	try {
+	    fileOutputStream = new FileOutputStream(anyFile);
+	    fileOutputStream.write(bytes);
+	} finally {
+	    fileOutputStream.close();
+	}
     }
 
 }

@@ -4,6 +4,8 @@ import java.io.IOException;
 
 interface ByteFileReader extends QuietlyClosable, Openable {
 
+    boolean readyToRead() throws IOException;
+
     byte readByte() throws IOException;
 
     char readChar() throws IOException;
