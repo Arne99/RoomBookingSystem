@@ -13,15 +13,15 @@ import suncertify.db.InvalidDataFileFormatException;
 public class DataFileAccessService {
 
     private static final DataFileAccessService INSTANCE = new DataFileAccessService(
-	    DataFileSchemaBuilder.instance());
+	    DataFileSchemaFactory.instance());
 
     public static final DataFileAccessService instance() {
 	return INSTANCE;
     }
 
-    private final DataFileSchemaBuilder schemaBuilder;
+    private final DataFileSchemaFactory schemaBuilder;
 
-    private DataFileAccessService(final DataFileSchemaBuilder schemaBuilder) {
+    private DataFileAccessService(final DataFileSchemaFactory schemaBuilder) {
 	this.schemaBuilder = schemaBuilder;
     }
 

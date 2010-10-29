@@ -7,17 +7,19 @@ import suncertify.db.InvalidDataFileFormatException;
 
 /**
  */
-final class DataFileSchemaBuilder {
+final class DataFileSchemaFactory {
 
     private static final int supportedFormat = 257;
 
-    private static final DataFileSchemaBuilder INSTANCE = new DataFileSchemaBuilder();
+    private final SchemaExctractionStrategy strategy = new Format257ExtractingStrategy();
 
-    static final DataFileSchemaBuilder instance() {
+    private static final DataFileSchemaFactory INSTANCE = new DataFileSchemaFactory();
+
+    static final DataFileSchemaFactory instance() {
 	return INSTANCE;
     }
 
-    private DataFileSchemaBuilder() {
+    private DataFileSchemaFactory() {
 	super();
     }
 
