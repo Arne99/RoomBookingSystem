@@ -46,7 +46,7 @@ class DataFileHandler implements DatabaseHandler {
     @Override
     public DataFileRecord readRecord(final int index) throws IOException {
 
-	reader.skipBytes(schema.getOffsetSize());
+	reader.skipBytes(schema.getIndexValueColumns());
 	reader.skipBytes(index * schema.getRecordLength());
 
 	final String data = reader.readString(schema.getRecordLength());
@@ -60,7 +60,7 @@ class DataFileHandler implements DatabaseHandler {
 	    recordValues.put(column, valueForColumn);
 	}
 
-	return new DataFileRecord(recordValues);
+	return new DataFileRecord(recordValues, false);
     }
 
     @Override

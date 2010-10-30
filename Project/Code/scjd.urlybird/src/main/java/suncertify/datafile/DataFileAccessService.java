@@ -26,7 +26,7 @@ public class DataFileAccessService {
     }
 
     DatabaseHandler getHandlerForDataFile(final File dataFile)
-	    throws IOException, InvalidDataFileFormatException {
+	    throws IOException, UnsupportedDataFileFormatException {
 
 	final DataFileSchema dataFileSchema = schemaBuilder
 		.buildSchemaForDataFile(new Utf8ByteCountingReader(

@@ -7,35 +7,41 @@ import java.util.List;
 class DataFileSchema {
 
     private final int key;
-    private final int offsetSize;
+    private final int startIndexValueColumns;
     private final int recordLength;
-    private final ArrayList<DataFileColumn> columns;
+    private final ArrayList<DataFileColumn> valueColumns;
+    private final int deletedFlagIndex;
 
-    DataFileSchema(final int key, final int offsetSize, final int recordLength,
-	    final ArrayList<DataFileColumn> columns) {
+    DataFileSchema(final int key, final int startIndexValueColumns, final int recordLength,
+	    final ArrayList<DataFileColumn> columns,
+	    final int deletedFlagIndex) {
 	this.key = key;
-	this.offsetSize = offsetSize;
+	this.startIndexValueColumns = startIndexValueColumns;
 	this.recordLength = recordLength;
-	this.columns = new ArrayList<DataFileColumn>(columns);
+	this.valueColumns = new ArrayList<DataFileColumn>(columns);
+	this.deletedFlagIndex = deletedFlagIndex;
     }
 
     @Override
     public String toString() {
 	return "DataFileSchema" + " [ " + "key = " + key + "; offset = "
-		+ offsetSize + "; recordLength = " + recordLength
-		+ "; columns = " + columns + " ] ";
+		+ startIndexValueColumns + "; recordLength = " + recordLength
+		+ "; columns = " + valueColumns + " ] ";
     }
 
     List<DataFileColumn> getColumns() {
-	return Collections.unmodifiableList(columns);
+	return Collections.unmodifiableList(valueColumns);
     }
 
-    int getOffsetSize() {
-	return offsetSize;
+    int getIndexValueColumns() {
+	return startIndexValueColumns;
     }
 
     int getRecordLength() {
 	return recordLength;
     }
 
+    int getDeletedFlagIndex() {
+	return deletedFlagIndex;
+    }
 }
