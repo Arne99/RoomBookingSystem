@@ -29,7 +29,7 @@ public class DataFileAccessService {
 	    throws IOException, UnsupportedDataFileFormatException {
 
 	final DataFileSchema dataFileSchema = schemaBuilder
-		.buildSchemaForDataFile(new Utf8ByteCountingReader(
+		.createSchemaForDataFile(new Utf8ByteCountingReader(
 			Utf8FileReader.create(dataFile)));
 
 	final DataFileHandler dataFileHandler = new DataFileHandler(

@@ -35,7 +35,7 @@ final class DataFileSchemaFactory {
      * @throws InvalidDataFileFormatException
      *             the unsupported data source exception
      */
-    DataFileSchema buildSchemaForDataFile(final ByteCountingReader reader)
+    DataFileSchema createSchemaForDataFile(final ByteCountingReader reader)
 	    throws IOException, UnsupportedDataFileFormatException {
 
 	reader.openStream();
@@ -76,8 +76,8 @@ final class DataFileSchemaFactory {
 	    startPositionNextColumn += newColumn.size();
 	}
 
-	return new DataFileSchema(SUPPORTED_FORMAT, reader.getCount(),
-		recordLength, columns, DELETED_FLAG_INDEX);
+	return new DataFileSchema(new DataFileHeader(SUPPORTED_FORMAT, reader.getCount(), recordLength), columns,
+		DELETED_FLAG_INDEX);
     }
 
 }

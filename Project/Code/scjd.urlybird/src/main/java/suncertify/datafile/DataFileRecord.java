@@ -11,8 +11,6 @@ class DataFileRecord implements Record {
 
     private final TreeMap<DataFileColumn, String> columnValues;
 
-    private final boolean deleted;
-
     DataFileRecord(final Map<DataFileColumn, String> columnValues,
 	    final boolean deleted) {
 	super();
@@ -28,7 +26,6 @@ class DataFileRecord implements Record {
 		});
 
 	this.columnValues.putAll(columnValues);
-	this.deleted = deleted;
     }
 
     @Override
@@ -48,10 +45,6 @@ class DataFileRecord implements Record {
 	}
 
 	return sb.toString();
-    }
-
-    boolean isDeleted() {
-	return deleted;
     }
 
 }

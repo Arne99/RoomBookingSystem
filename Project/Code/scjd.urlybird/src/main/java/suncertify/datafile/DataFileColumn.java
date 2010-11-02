@@ -1,6 +1,6 @@
 package suncertify.datafile;
 
-class DataFileColumn {
+final class DataFileColumn {
 
     private final String name;
     private final int size;
@@ -18,6 +18,28 @@ class DataFileColumn {
 	return "DataFileColumn" + " [ " + "name = " + name
 		+ "; startPosition = " + startPosition + "; size = " + size
 		+ " ] ";
+    }
+
+    @Override
+    public boolean equals(final Object object) {
+	if (object == this) {
+	    return true;
+	}
+	if (!(object instanceof DataFileColumn)) {
+	    return false;
+	}
+	final DataFileColumn column = (DataFileColumn) object;
+	return this.name.equals(column.name) && this.size == column.size
+		&& this.startPosition == column.startPosition;
+    }
+
+    @Override
+    public int hashCode() {
+	int result = 17;
+	result = 31 * result + name.hashCode();
+	result = 31 * result + size;
+	result = 31 * result + startPosition;
+	return result;
     }
 
     int getEndPosition() {

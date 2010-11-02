@@ -46,20 +46,25 @@ class DataFileHandler implements DatabaseHandler {
     @Override
     public DataFileRecord readRecord(final int index) throws IOException {
 
-	reader.skipBytes(schema.getIndexValueColumns());
-	reader.skipBytes(index * schema.getRecordLength());
-
-	final String data = reader.readString(schema.getRecordLength());
-
+	reader.openStream();
 	final HashMap<DataFileColumn, String> recordValues = new HashMap<DataFileColumn, String>();
-	for (final DataFileColumn column : schema.getColumns()) {
-	    final int startPosition = column.getStartPosition();
-	    final int endPosition = column.getEndPosition();
-	    final String valueForColumn = data.substring(startPosition,
-		    endPosition);
-	    recordValues.put(column, valueForColumn);
-	}
 
+	try {
+	    reader.skipBytes(schema.getOffset()
+		    + (index * schema.getRecordLength()));
+
+	    final String data = reader.readString(schema.getRecordLength());
+
+	    for (final DataFileColumn column : schema.getColumns()) {
+		final int startPosition = column.getStartPosition();
+		final int endPosition = column.getEndPosition();
+		final String valueForColumn = data.substring(startPosition,
+			endPosition);
+		recordValues.put(column, valueForColumn);
+	    }
+	} finally {
+	    reader.closeStream();
+	}
 	return new DataFileRecord(recordValues, false);
     }
 
