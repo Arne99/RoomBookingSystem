@@ -2,6 +2,8 @@ package suncertify.datafile;
 
 import java.io.DataOutput;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -44,28 +46,35 @@ class DataFileHandler implements DatabaseHandler {
     }
 
     @Override
-    public DataFileRecord readRecord(final int index) throws IOException {
+    public List<String> readRecord(final int index) throws IOException {
 
 	reader.openStream();
-	final HashMap<DataFileColumn, String> recordValues = new HashMap<DataFileColumn, String>();
+	final ArrayList<String> values = new ArrayList<String>();
 
 	try {
 	    reader.skipBytes(schema.getOffset()
 		    + (index * schema.getRecordLength()));
 
 	    final String data = reader.readString(schema.getRecordLength());
+	    final boolean valid = "0".equals(data.substring(
+		    schema.getDeletedFlagIndex(),
+		    schema.getDeletedFlagIndex() + 1));
+	    if (!valid) {
+		return Collections.emptyList();
+	    }
 
-	    for (final DataFileColumn column : schema.getColumns()) {
-		final int startPosition = column.getStartPosition();
-		final int endPosition = column.getEndPosition();
-		final String valueForColumn = data.substring(startPosition,
-			endPosition);
-		recordValues.put(column, valueForColumn);
+	    for (final DataFileColumn column : schema
+		    .getColumnsInDatabaseOrder()) {
+		final int startPosition = column.getStartIndex();
+		final int endPosition = column.getEndIndex();
+		final String value = data.substring(startPosition,
+			endPosition + 1).trim();
+		values.add(value);
 	    }
 	} finally {
 	    reader.closeStream();
 	}
-	return new DataFileRecord(recordValues, false);
+	return Collections.unmodifiableList(values);
     }
 
     @Override

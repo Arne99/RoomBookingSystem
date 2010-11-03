@@ -10,7 +10,7 @@ public interface DatabaseHandler {
     List<Record> findMatchingRecords(final Record queryRecord)
 	    throws IOException;
 
-    Record readRecord(int index) throws IOException;
+    List<String> readRecord(int index) throws IOException;
 
     void writeRecord(Record record) throws IOException;
 }

@@ -4,19 +4,28 @@ final class DataFileColumn {
 
     private final String name;
     private final int size;
-    private final int startPosition;
+    private final int startIndex;
+    private final int endIndex;
 
-    DataFileColumn(final String name, final int startPositionInRecord,
-	    final int size) {
+    static DataFileColumn create(final String name,
+	    final int startIndexInRecord, final int size) {
+
+	final int endIndex = startIndexInRecord + size;
+	return new DataFileColumn(name, startIndexInRecord, endIndex, size);
+    }
+
+    private DataFileColumn(final String name, final int startIndexInRecord,
+	    final int endIndexInRecord, final int size) {
 	this.name = name;
-	this.startPosition = startPositionInRecord;
+	this.startIndex = startIndexInRecord;
+	endIndex = endIndexInRecord;
 	this.size = size;
     }
 
     @Override
     public String toString() {
 	return "DataFileColumn" + " [ " + "name = " + name
-		+ "; startPosition = " + startPosition + "; size = " + size
+		+ "; startPosition = " + startIndex + "; size = " + size
 		+ " ] ";
     }
 
@@ -30,7 +39,7 @@ final class DataFileColumn {
 	}
 	final DataFileColumn column = (DataFileColumn) object;
 	return this.name.equals(column.name) && this.size == column.size
-		&& this.startPosition == column.startPosition;
+		&& this.startIndex == column.startIndex;
     }
 
     @Override
@@ -38,20 +47,20 @@ final class DataFileColumn {
 	int result = 17;
 	result = 31 * result + name.hashCode();
 	result = 31 * result + size;
-	result = 31 * result + startPosition;
+	result = 31 * result + startIndex;
 	return result;
     }
 
-    int getEndPosition() {
-	return startPosition + size - 1;
+    int getEndIndex() {
+	return endIndex;
     }
 
     String getName() {
 	return name;
     }
 
-    int getStartPosition() {
-	return startPosition;
+    int getStartIndex() {
+	return startIndex;
     }
 
     int size() {

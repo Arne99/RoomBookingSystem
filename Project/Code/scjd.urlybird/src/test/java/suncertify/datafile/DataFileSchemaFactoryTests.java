@@ -119,13 +119,13 @@ public final class DataFileSchemaFactoryTests {
 		.createSchemaForDataFile(reader);
 
 	final List<DataFileColumn> expectedColumn = new ArrayList<DataFileColumn>(
-		Arrays.asList(new DataFileColumn(firstColumnName, 1,
-			firstColumnLength), new DataFileColumn(
+		Arrays.asList(DataFileColumn.create(firstColumnName, 1,
+			firstColumnLength), DataFileColumn.create(
 			secondColumnName, firstColumnLength + 1,
 			secondColumnLength)));
 
-	final DataFileSchema expectedSchema = new DataFileSchema(
-		new DataFileHeader(SUPPORTED_IDENTIFIER, offset, recordLength),
+	final DataFileSchema expectedSchema = DataFileSchema.create(
+		new DataFileHeader(SUPPORTED_IDENTIFIER, offset),
 		expectedColumn, 0);
 
 	assertEquals(expectedSchema, schema);
@@ -152,8 +152,8 @@ public final class DataFileSchemaFactoryTests {
 	final DataFileSchema schema = schemaFactory
 		.createSchemaForDataFile(reader);
 
-	final DataFileSchema expectedSchema = new DataFileSchema(
-		new DataFileHeader(SUPPORTED_IDENTIFIER, offset, recordLength),
+	final DataFileSchema expectedSchema = DataFileSchema.create(
+		new DataFileHeader(SUPPORTED_IDENTIFIER, offset),
 		Collections.<DataFileColumn> emptyList(), 0);
 	assertEquals(expectedSchema, schema);
     }

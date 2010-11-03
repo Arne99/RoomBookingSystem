@@ -12,7 +12,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ Utf8FileReaderTests.class,
 	Utf8ByteCountingReaderTests.class, DataFileHandlerTests.class,
-	DataFileSchemaFactoryTests.class })
+	DataFileSchemaFactoryTests.class, DataFileHeaderTests.class,
+	DataFileColumnTests.class })
 public class DataFileTestSuite {
 
 }

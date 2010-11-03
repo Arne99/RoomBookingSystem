@@ -70,14 +70,14 @@ final class DataFileSchemaFactory {
 	    final String columnName = reader.readString(columnNameLengthInByte);
 
 	    final int columnSize = reader.readShort();
-	    final DataFileColumn newColumn = new DataFileColumn(columnName,
+	    final DataFileColumn newColumn = DataFileColumn.create(columnName,
 		    startPositionNextColumn, columnSize);
 	    columns.add(newColumn);
 	    startPositionNextColumn += newColumn.size();
 	}
 
-	return new DataFileSchema(new DataFileHeader(SUPPORTED_FORMAT, reader.getCount(), recordLength), columns,
-		DELETED_FLAG_INDEX);
+	return DataFileSchema.create(new DataFileHeader(SUPPORTED_FORMAT,
+		reader.getCount()), columns, DELETED_FLAG_INDEX);
     }
 
 }
