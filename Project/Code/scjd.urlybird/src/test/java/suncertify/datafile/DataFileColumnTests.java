@@ -4,8 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * Tests for the CLass {@link DataFileColumn}.
+ */
 public final class DataFileColumnTests {
 
+    /**
+     * Should be equals to itself.
+     */
     @Test
     public void shouldBeEqualsToItself() {
 
@@ -13,6 +19,9 @@ public final class DataFileColumnTests {
 	assertEquals(column, column);
     }
 
+    /**
+     * Should be symmetric equals.
+     */
     @Test
     public void shouldBeSymmetricEquals() {
 
@@ -28,6 +37,9 @@ public final class DataFileColumnTests {
 	assertEquals(columnTwo, columnOne);
     }
 
+    /**
+     * Should be not equals for different columns.
+     */
     @Test
     public void shouldBeNotEqualsForDifferentColumns() {
 
@@ -42,6 +54,9 @@ public final class DataFileColumnTests {
 	assertFalse(columnOne.equals(columnTwo));
     }
 
+    /**
+     * Should return the same hash code for equal columns.
+     */
     @Test
     public void shouldReturnTheSameHashCodeForEqualColumns() {
 
@@ -58,6 +73,9 @@ public final class DataFileColumnTests {
 	assertEquals(columnOne.hashCode(), columnTwo.hashCode());
     }
 
+    /**
+     * Should return different hash codes for different columns.
+     */
     @Test
     public void shouldReturnDifferentHashCodesForDifferentColumns() {
 
@@ -71,6 +89,20 @@ public final class DataFileColumnTests {
 
 	assertFalse(columnOne.equals(columnTwo));
 	assertTrue(columnOne.hashCode() != columnTwo.hashCode());
+    }
+
+    /**
+     * Should return the start index plus the size as the end index.
+     */
+    @Test
+    public void shouldReturnTheStartIndexPlusTheSizeMinusOneAsTheEndIndex() {
+
+	final int size = 12343;
+	final int startIndexInRecord = 45;
+	final DataFileColumn column = DataFileColumn.create("test",
+		startIndexInRecord, size);
+
+	assertEquals(startIndexInRecord + size - 1, column.getEndIndex());
     }
 
 }

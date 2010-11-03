@@ -9,28 +9,18 @@ import java.util.List;
 final class DataFileSchema {
 
     static DataFileSchema create(final DataFileHeader header,
-	    final Collection<DataFileColumn> columns, final int deletedFlagIndex) {
+	    final List<DataFileColumn> columnsInDbOrder,
+	    final int deletedFlagIndex) {
 
-	if (columns.isEmpty()) {
+	if (columnsInDbOrder.isEmpty()) {
 	    return new DataFileSchema(header,
 		    Collections.<DataFileColumn> emptyList(), deletedFlagIndex,
 		    0);
 	}
 
-	final ArrayList<DataFileColumn> columnsInOrder = new ArrayList<DataFileColumn>(
-		columns);
-	Collections.sort(columnsInOrder, new Comparator<DataFileColumn>() {
-
-	    @Override
-	    public int compare(final DataFileColumn column1,
-		    final DataFileColumn column2) {
-		return column1.getStartIndex() - column2.getStartIndex();
-	    }
-	});
-
-	final int recordLength = columnsInOrder.get(columnsInOrder.size() - 1)
-		.getEndIndex() + 1;
-	return new DataFileSchema(header, columnsInOrder, deletedFlagIndex,
+	final int recordLength = columnsInDbOrder.get(
+		columnsInDbOrder.size() - 1).getEndIndex();
+	return new DataFileSchema(header, columnsInDbOrder, deletedFlagIndex,
 		recordLength);
     }
 

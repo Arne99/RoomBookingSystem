@@ -157,4 +157,11 @@ public final class DataFileSchemaFactoryTests {
 		Collections.<DataFileColumn> emptyList(), 0);
 	assertEquals(expectedSchema, schema);
     }
+
+    /**
+     * Should create a schema with all columns in database order.
+     */
+    public void shouldCreateASchemaWithAllColumnsInDatabaseOrder() {
+	fail();
+    }
 }

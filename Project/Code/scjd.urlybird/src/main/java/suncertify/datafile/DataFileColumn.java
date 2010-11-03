@@ -10,15 +10,16 @@ final class DataFileColumn {
     static DataFileColumn create(final String name,
 	    final int startIndexInRecord, final int size) {
 
-	final int endIndex = startIndexInRecord + size;
-	return new DataFileColumn(name, startIndexInRecord, endIndex, size);
+	final int endIndexInRecord = startIndexInRecord + size - 1;
+	return new DataFileColumn(name, startIndexInRecord, endIndexInRecord,
+		size);
     }
 
     private DataFileColumn(final String name, final int startIndexInRecord,
 	    final int endIndexInRecord, final int size) {
 	this.name = name;
 	this.startIndex = startIndexInRecord;
-	endIndex = endIndexInRecord;
+	this.endIndex = endIndexInRecord;
 	this.size = size;
     }
 
