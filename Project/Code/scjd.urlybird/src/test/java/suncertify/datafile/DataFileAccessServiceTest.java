@@ -11,7 +11,6 @@ import org.junit.Test;
 
 public class DataFileAccessServiceTest {
 
-    @Test
     public void test() throws IOException, UnsupportedDataFileFormatException {
 
 	final File dataFile = new File(
@@ -27,6 +26,7 @@ public class DataFileAccessServiceTest {
 	stream.close();
     }
 
+    @Test
     public void shouldCreateADatabaseHandlerThatCouldReadARecordFromAnDataFile()
 	    throws IOException, UnsupportedDataFileFormatException {
 
@@ -34,14 +34,5 @@ public class DataFileAccessServiceTest {
 		"/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/ressources/db-1x1.db");
 	final DatabaseHandler handler = DataFileAccessService.instance()
 		.getHandlerForDataFile(dataFile);
-	System.out.println(handler.readRecord(0));
-	System.out.println(handler.readRecord(1));
-	System.out.println(handler.readRecord(2));
-	System.out.println(handler.readRecord(3));
-	System.out.println(handler.readRecord(4));
-	System.out.println(handler.readRecord(5));
-	System.out.println(handler.readRecord(6));
-	System.out.println(handler.readRecord(7));
-
     }
 }
