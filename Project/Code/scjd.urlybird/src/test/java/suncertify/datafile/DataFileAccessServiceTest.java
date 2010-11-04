@@ -11,6 +11,7 @@ import org.junit.Test;
 
 public class DataFileAccessServiceTest {
 
+    @Test
     public void test() throws IOException, UnsupportedDataFileFormatException {
 
 	final File dataFile = new File(
