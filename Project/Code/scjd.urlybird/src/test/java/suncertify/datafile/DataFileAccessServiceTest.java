@@ -4,6 +4,8 @@ import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
+
 import suncertify.datafile.UnsupportedDataFileFormatException;
 import suncertify.db.DatabaseHandler;
 
@@ -34,5 +36,7 @@ public class DataFileAccessServiceTest {
 		"/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/ressources/db-1x1.db");
 	final DatabaseHandler handler = DataFileAccessService.instance()
 		.getHandlerForDataFile(dataFile);
+	final List<String> record = handler.readRecord(0);
+	System.out.println(record);
     }
 }

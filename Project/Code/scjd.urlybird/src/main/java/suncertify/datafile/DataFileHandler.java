@@ -56,9 +56,10 @@ class DataFileHandler implements DatabaseHandler {
 		    + (index * schema.getRecordLength()));
 
 	    final String data = reader.readString(schema.getRecordLength());
-	    final boolean valid = "0".equals(data.substring(
+	    final String validityIdentifier = data.substring(
 		    schema.getDeletedFlagIndex(),
-		    schema.getDeletedFlagIndex() + 1));
+		    schema.getDeletedFlagIndex() + 1);
+	    final boolean valid = "0".equals(validityIdentifier);
 	    if (!valid) {
 		return Collections.emptyList();
 	    }

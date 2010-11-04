@@ -155,7 +155,12 @@ final class Utf8FileReader implements ByteFileReader {
 
 	    final StringBuilder sb = new StringBuilder();
 	    for (int i = 0; i < numberOfBytes; i++) {
-		sb.append(readChar());
+		final byte readByte = readByte();
+		if (readByte <= 9) {
+		    sb.append(readByte);
+		} else {
+		    sb.append((char) readByte);
+		}
 	    }
 	    return sb.toString();
 	}
