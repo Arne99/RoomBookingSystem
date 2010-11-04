@@ -4,7 +4,7 @@
 
 	<groupId>arne.landwehr</groupId>
 	<artifactId>scjd.urlybird</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${BUILD_NUMBER}</version>
 	<packaging>jar</packaging>
 
 	<name>scjd.urlybird</name>
