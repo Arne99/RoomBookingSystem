@@ -19,7 +19,7 @@ final class DataFileSchema {
 	}
 
 	final int recordLength = columnsInDbOrder.get(
-		columnsInDbOrder.size() - 1).getEndIndex();
+		columnsInDbOrder.size() - 1).getEndIndex() + 1;
 	return new DataFileSchema(header, columnsInDbOrder, deletedFlagIndex,
 		recordLength);
     }

@@ -59,7 +59,7 @@ class DataFileHandler implements DatabaseHandler {
 	    final boolean valid = "0".equals(data.substring(
 		    schema.getDeletedFlagIndex(),
 		    schema.getDeletedFlagIndex() + 1));
-	    if (valid) {
+	    if (!valid) {
 		return Collections.emptyList();
 	    }
 
