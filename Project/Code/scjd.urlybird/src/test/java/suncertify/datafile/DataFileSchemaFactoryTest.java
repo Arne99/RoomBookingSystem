@@ -15,7 +15,7 @@ import org.mockito.InOrder;
 /**
  * The Tests for the Class DataFileSchemaFactory.
  */
-public final class DataFileSchemaFactoryTests {
+public final class DataFileSchemaFactoryTest {
 
     /** The Constant SUPPORTED_IDENTIFIER. */
     private static final int SUPPORTED_IDENTIFIER = 257;
@@ -160,8 +160,46 @@ public final class DataFileSchemaFactoryTests {
 
     /**
      * Should create a schema with all columns in database order.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     * @throws UnsupportedDataFileFormatException
+     *             the unsupported data file format exception
      */
-    public void shouldCreateASchemaWithAllColumnsInDatabaseOrder() {
-	fail();
+    @Test
+    public void shouldCreateASchemaWithAllColumnsInDatabaseOrder()
+	    throws IOException, UnsupportedDataFileFormatException {
+
+	final int recordLength = 12;
+	final short firstColumnNameLength = (short) 5;
+	final String firstColumnName = "Hello";
+	final short firstColumnLength = (short) 10;
+	final short secondColumnNameLength = (short) 4;
+	final String secondColumnName = "Name";
+	final short secondColumnLength = (short) 64;
+	final int offset = 100;
+
+	final ByteCountingReader reader = SchemaReaderTestBuilder
+		.instance()
+		.createHeader(SUPPORTED_IDENTIFIER, offset, recordLength)
+		.addColumn(firstColumnNameLength, firstColumnName,
+			firstColumnLength)
+		.addColumn(secondColumnNameLength, secondColumnName,
+			secondColumnLength).build();
+
+	final DataFileSchema schema = schemaFactory
+		.createSchemaForDataFile(reader);
+
+	final List<DataFileColumn> expectedColumn = new ArrayList<DataFileColumn>(
+		Arrays.asList(DataFileColumn.create(firstColumnName, 1,
+			firstColumnLength), DataFileColumn.create(
+			secondColumnName, firstColumnLength + 1,
+			secondColumnLength)));
+
+	final DataFileSchema expectedSchema = DataFileSchema.create(
+		new DataFileHeader(SUPPORTED_IDENTIFIER, offset),
+		expectedColumn, 0);
+
+	assertEquals(expectedSchema, schema);
     }
 }

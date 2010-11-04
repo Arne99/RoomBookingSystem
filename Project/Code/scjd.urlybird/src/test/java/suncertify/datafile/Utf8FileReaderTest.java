@@ -16,7 +16,7 @@ import org.junit.Test;
 /**
  * The Tests for the Class Utf8FileReader.
  */
-public final class Utf8FileReaderTests {
+public final class Utf8FileReaderTest {
 
     /** The file reader. */
     private Utf8FileReader fileReader;

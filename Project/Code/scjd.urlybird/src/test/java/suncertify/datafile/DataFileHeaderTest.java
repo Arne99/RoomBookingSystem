@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Test for the Class DataFileHeaderTest.
  */
-public final class DataFileHeaderTests {
+public final class DataFileHeaderTest {
 
     /**
      * Should be equals to iteself.

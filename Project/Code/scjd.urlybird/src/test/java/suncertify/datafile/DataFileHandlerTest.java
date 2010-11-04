@@ -15,7 +15,7 @@ import com.google.common.collect.Lists;
 /**
  * Test for the Class {@link DataFileHandler}.
  */
-public final class DataFileHandlerTests {
+public final class DataFileHandlerTest {
 
     /** The Constant STRING_OF_SIZE_20. */
     private static final String STRING_OF_SIZE_20 = "12345678901234567890";
@@ -37,9 +37,6 @@ public final class DataFileHandlerTests {
 
     /** The Constant ANY_OFFSET. */
     private static final int ANY_OFFSET = 0;
-
-    /** The Constant RECORD_LENGTH_20. */
-    private static final int RECORD_LENGTH_20 = 20;
 
     /** The handler. */
     private DataFileHandler handler;

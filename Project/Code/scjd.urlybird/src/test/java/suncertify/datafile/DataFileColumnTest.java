@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Tests for the CLass {@link DataFileColumn}.
  */
-public final class DataFileColumnTests {
+public final class DataFileColumnTest {
 
     /**
      * Should be equals to itself.

@@ -9,10 +9,11 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
+// TODO: Auto-generated Javadoc
 /**
  * Tests for the Class {@link DataFileSchema}.
  */
-public final class DataFileSchemaTests {
+public final class DataFileSchemaTest {
 
     /**
      * Should be equals to itself.
@@ -103,6 +104,9 @@ public final class DataFileSchemaTests {
 	assertThat(schemaOne.hashCode(), is(not(equalTo(schemaTwo.hashCode()))));
     }
 
+    /**
+     * Should return the sum of all column sizes as the record length.
+     */
     @Test
     public void shouldReturnTheSumOfAllColumnSizesAsTheRecordLength() {
 

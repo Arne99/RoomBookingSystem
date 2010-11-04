@@ -1,14 +1,9 @@
 package suncertify.datafile;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 import suncertify.db.DatabaseHandler;
-import suncertify.db.InvalidDataFileFormatException;
 
 public class DataFileAccessService {
 
@@ -25,7 +20,7 @@ public class DataFileAccessService {
 	this.schemaBuilder = schemaBuilder;
     }
 
-    DatabaseHandler getHandlerForDataFile(final File dataFile)
+    public DatabaseHandler getHandlerForDataFile(final File dataFile)
 	    throws IOException, UnsupportedDataFileFormatException {
 
 	final DataFileSchema dataFileSchema = schemaBuilder

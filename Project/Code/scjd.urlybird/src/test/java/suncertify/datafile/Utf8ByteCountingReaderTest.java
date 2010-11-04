@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * The Test for the Class Utf8ByteCountingReaderTest.
  */
-public final class Utf8ByteCountingReaderTests {
+public final class Utf8ByteCountingReaderTest {
 
     /** The file reader. */
     private final ByteFileReader fileReader = mock(ByteFileReader.class);
