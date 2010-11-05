@@ -1,9 +1,9 @@
 package suncertify.util;
 
-public class DesignByContract {
+public final class DesignByContract {
 
     private DesignByContract() {
-
+	super();
     }
 
     public static void checkNotNull(final Object schouldBeNotNull,

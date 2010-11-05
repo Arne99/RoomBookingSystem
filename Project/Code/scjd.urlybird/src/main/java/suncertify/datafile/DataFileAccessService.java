@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import suncertify.db.DatabaseHandler;
 
-public class DataFileAccessService {
+public final class DataFileAccessService {
 
     private static final DataFileAccessService INSTANCE = new DataFileAccessService(
 	    DataFileSchemaFactory.instance());

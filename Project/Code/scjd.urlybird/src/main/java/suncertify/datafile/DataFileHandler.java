@@ -19,7 +19,6 @@ import suncertify.db.RecordNotFoundException;
 class DataFileHandler implements DatabaseHandler {
 
     private final ByteFileReader reader;
-    private final DataOutput writer;
     private final DataFileSchema schema;
 
     /**
@@ -32,7 +31,6 @@ class DataFileHandler implements DatabaseHandler {
 	    final DataOutput writer) {
 	this.schema = schema;
 	this.reader = reader;
-	this.writer = writer;
     }
 
     @Override
@@ -76,7 +74,7 @@ class DataFileHandler implements DatabaseHandler {
 	} catch (final EOFException eof) {
 	    throw new RecordNotFoundException(
 		    "The datafile does not contain any record at the index: "
-			    + index);
+			    + index, eof);
 	}
     }
 
@@ -84,9 +82,7 @@ class DataFileHandler implements DatabaseHandler {
 	    throws IOException, RecordNotFoundException {
 	if (reader.availableBytes() < schema.getOffset()
 		+ (index + 1 * schema.getRecordLength())) {
-	    throw new RecordNotFoundException(
-		    "The datafile does not contain any record at the index: "
-			    + index);
+	    throwRecordNotFoundException(index);
 	}
     }
 
@@ -112,11 +108,16 @@ class DataFileHandler implements DatabaseHandler {
 	final String data = reader.readString(schema.getRecordLength());
 
 	if (data.isEmpty()) {
-	    throw new RecordNotFoundException(
-		    "The datafile does not contain any record at the index: "
-			    + index);
+	    throwRecordNotFoundException(index);
 	}
 	return data;
+    }
+
+    private void throwRecordNotFoundException(final int index)
+	    throws RecordNotFoundException {
+	throw new RecordNotFoundException(
+		"The datafile does not contain any record at the index: "
+			+ index);
     }
 
     private void checkIfRecordIsValid(final int index, final String data)
@@ -125,9 +126,7 @@ class DataFileHandler implements DatabaseHandler {
 		schema.getDeletedFlagIndex(), schema.getDeletedFlagIndex() + 1);
 	final boolean valid = "0".equals(validityIdentifier);
 	if (!valid) {
-	    throw new RecordNotFoundException(
-		    "The datafile does not contain any record at the index: "
-			    + index);
+	    throwRecordNotFoundException(index);
 	}
     }
 

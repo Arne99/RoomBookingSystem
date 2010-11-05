@@ -7,6 +7,7 @@ import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 /**
  * 
@@ -21,6 +22,9 @@ final class Utf8FileReader implements ByteFileReader {
      * 
      */
     private final class Closed implements ReaderState {
+
+	private static final String CANNOT_SKIP_IN_THE_STATE_CLOSED = "This DataFileReader cannot skip in the State \"closed\"! ";
+	private static final String CANNOT_READ_IN_THE_STATE_CLOSED = "This DataFileReader cannot read in the State \"closed\"! ";
 
 	@Override
 	public boolean readyToRead() {
@@ -49,45 +53,38 @@ final class Utf8FileReader implements ByteFileReader {
 
 	@Override
 	public byte readByte() throws IOException {
-	    throw new IllegalStateException(
-		    "This DataFileReader cannot read in the State \"closed\"! ");
+	    throw new IllegalStateException(CANNOT_READ_IN_THE_STATE_CLOSED);
 	}
 
 	@Override
 	public char readChar() throws IOException {
-	    throw new IllegalStateException(
-		    "This DataFileReader cannot read in the State \"closed\"! ");
+	    throw new IllegalStateException(CANNOT_READ_IN_THE_STATE_CLOSED);
 	}
 
 	@Override
 	public int readInt() throws IOException {
-	    throw new IllegalStateException(
-		    "This DataFileReader cannot read in the State \"closed\"! ");
+	    throw new IllegalStateException(CANNOT_READ_IN_THE_STATE_CLOSED);
 	}
 
 	@Override
 	public short readShort() throws IOException {
-	    throw new IllegalStateException(
-		    "This DataFileReader cannot read in the State \"closed\"! ");
+	    throw new IllegalStateException(CANNOT_READ_IN_THE_STATE_CLOSED);
 	}
 
 	@Override
 	public String readString(final int numberOfBytes) throws IOException {
-	    throw new IllegalStateException(
-		    "This DataFileReader cannot read in the State \"closed\"! ");
+	    throw new IllegalStateException(CANNOT_READ_IN_THE_STATE_CLOSED);
 	}
 
 	@Override
 	public void skipFully(final int numberOfBytes) throws IOException {
-	    throw new IllegalStateException(
-		    "This DataFileReader cannot skip in the State \"closed\"! ");
+	    throw new IllegalStateException(CANNOT_SKIP_IN_THE_STATE_CLOSED);
 
 	}
 
 	@Override
 	public int availableBytes() throws IOException {
-	    throw new IllegalStateException(
-		    "This DataFileReader cannot skip in the State \"closed\"! ");
+	    throw new IllegalStateException(CANNOT_SKIP_IN_THE_STATE_CLOSED);
 	}
 
     }

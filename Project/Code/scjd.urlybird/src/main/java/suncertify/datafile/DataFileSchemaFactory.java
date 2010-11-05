@@ -57,7 +57,8 @@ final class DataFileSchemaFactory {
 		    "Wrong Data Source Identifier: " + dataFileFormatIdentifier
 			    + " Ð Supported identifier " + SUPPORTED_FORMAT);
 	}
-	final int recordLength = reader.readInt();
+
+	reader.readInt();
 	final int numberOfColumns = reader.readShort();
 
 	final ArrayList<DataFileColumn> columns = new ArrayList<DataFileColumn>();
