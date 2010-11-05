@@ -13,7 +13,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({ Utf8FileReaderTest.class,
 	Utf8ByteCountingReaderTest.class, DataFileHandlerTest.class,
 	DataFileSchemaFactoryTest.class, DataFileHeaderTest.class,
-	DataFileColumnTest.class, DataFileSchemaTest.class })
+	DataFileColumnTest.class, DataFileSchemaTest.class,
+	DataFileAccessServiceTest.class })
 public class DataFileTestSuite {
 
 }

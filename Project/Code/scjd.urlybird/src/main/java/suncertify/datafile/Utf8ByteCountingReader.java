@@ -84,8 +84,13 @@ class Utf8ByteCountingReader implements ByteCountingReader {
     }
 
     @Override
-    public void skipBytes(final int numberOfBytes) throws IOException {
-	reader.skipBytes(numberOfBytes);
+    public void skipFully(final int numberOfBytes) throws IOException {
+	reader.skipFully(numberOfBytes);
+    }
+
+    @Override
+    public int availableBytes() throws IOException {
+	return reader.availableBytes();
     }
 
 }

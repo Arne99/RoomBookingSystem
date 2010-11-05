@@ -77,7 +77,7 @@ public final class Utf8ByteCountingReaderTest {
 
 	final Utf8ByteCountingReader countingReader = new Utf8ByteCountingReader(
 		fileReader);
-	countingReader.skipBytes(12);
+	countingReader.skipFully(12);
 
 	assertEquals(0, countingReader.getCount());
     }
@@ -145,7 +145,7 @@ public final class Utf8ByteCountingReaderTest {
 	final int numberOfBytesToSkip = 10;
 	final int stringLength = 24;
 
-	countingReader.skipBytes(numberOfBytesToSkip);
+	countingReader.skipFully(numberOfBytesToSkip);
 	countingReader.readString(stringLength);
 	countingReader.readByte();
 	countingReader.readChar();

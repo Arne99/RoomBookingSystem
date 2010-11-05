@@ -16,6 +16,8 @@ interface ByteFileReader extends QuietlyClosable, Openable {
 
     String readString(int numberOfBytes) throws IOException;
 
-    void skipBytes(int numberOfBytes) throws IOException;
+    void skipFully(int numberOfBytes) throws IOException;
+
+    int availableBytes() throws IOException;
 
 }

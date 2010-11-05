@@ -3,8 +3,6 @@ package suncertify.datafile;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import suncertify.db.InvalidDataFileFormatException;
-
 /**
  */
 final class DataFileSchemaFactory {

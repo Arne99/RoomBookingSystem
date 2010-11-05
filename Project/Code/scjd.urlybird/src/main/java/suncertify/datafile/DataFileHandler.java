@@ -1,14 +1,15 @@
 package suncertify.datafile;
 
 import java.io.DataOutput;
+import java.io.EOFException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 import suncertify.db.DatabaseHandler;
 import suncertify.db.Record;
+import suncertify.db.RecordNotFoundException;
 
 /**
  * The Class DataFileAccessHandler.
@@ -46,22 +47,40 @@ class DataFileHandler implements DatabaseHandler {
     }
 
     @Override
-    public List<String> readRecord(final int index) throws IOException {
+    public List<String> readRecord(final int index) throws IOException,
+	    RecordNotFoundException {
 
 	reader.openStream();
 	final ArrayList<String> values = new ArrayList<String>();
 
 	try {
-	    reader.skipBytes(schema.getOffset()
+	    if (reader.availableBytes() < schema.getOffset()
+		    + (index + 1 * schema.getRecordLength())) {
+		throw new RecordNotFoundException(
+			"The datafile does not contain any record at the index: "
+				+ index);
+	    }
+
+	    reader.skipFully(schema.getOffset()
 		    + (index * schema.getRecordLength()));
 
 	    final String data = reader.readString(schema.getRecordLength());
+
+	    if (data.isEmpty()) {
+
+		throw new RecordNotFoundException(
+			"The datafile does not contain any record at the index: "
+				+ index);
+	    }
+
 	    final String validityIdentifier = data.substring(
 		    schema.getDeletedFlagIndex(),
 		    schema.getDeletedFlagIndex() + 1);
 	    final boolean valid = "0".equals(validityIdentifier);
 	    if (!valid) {
-		return Collections.emptyList();
+		throw new RecordNotFoundException(
+			"The datafile does not contain any record at the index: "
+				+ index);
 	    }
 
 	    for (final DataFileColumn column : schema
@@ -72,6 +91,10 @@ class DataFileHandler implements DatabaseHandler {
 			endPosition + 1).trim();
 		values.add(value);
 	    }
+	} catch (final EOFException eof) {
+	    throw new RecordNotFoundException(
+		    "The datafile does not contain any record at the index: "
+			    + index);
 	} finally {
 	    reader.closeStream();
 	}

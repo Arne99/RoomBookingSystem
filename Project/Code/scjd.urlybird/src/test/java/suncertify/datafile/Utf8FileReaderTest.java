@@ -7,10 +7,13 @@ import java.io.EOFException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.google.common.io.Files;
 
 /**
  * The Tests for the Class Utf8FileReader.
@@ -73,7 +76,7 @@ public final class Utf8FileReaderTest {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldBeAbleToCloseTheUnderlyingStreamSoTheNextReadStartsAtTheFileBeginning()
+    public void shouldCloseTheUnderlyingStreamSoTheNextReadStartsAtTheFileBeginning()
 	    throws IOException {
 
 	final byte firstByte = 1;
@@ -99,8 +102,7 @@ public final class Utf8FileReaderTest {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldBeAbleToReadBytesAndConvertThemToAString()
-	    throws IOException {
+    public void shouldReadBytesAndConvertThemToAString() throws IOException {
 
 	writeBytesToTestFile((byte) 'H', (byte) 'e', (byte) 'l', (byte) 'l',
 		(byte) 'o');
@@ -137,7 +139,7 @@ public final class Utf8FileReaderTest {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldBeAbleToReadTheNextByteAsAChar() throws IOException {
+    public void shouldReadTheNextByteAsAChar() throws IOException {
 
 	final byte anyChar = 'z';
 	writeBytesToTestFile(anyChar);
@@ -155,7 +157,7 @@ public final class Utf8FileReaderTest {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldBeAbleToReadTheNextFourBytesAndConvertThemToAnInt()
+    public void shouldReadTheNextFourBytesAndConvertThemToAnInt()
 	    throws IOException {
 
 	writeBytesToTestFile((byte) 1, (byte) 2, (byte) 3, (byte) 4);
@@ -174,7 +176,7 @@ public final class Utf8FileReaderTest {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldBeAbleToReadTheNextTwoByteAndConvertThemToAShort()
+    public void shouldReadTheNextTwoByteAndConvertThemToAShort()
 	    throws IOException {
 
 	writeBytesToTestFile((byte) 1, (byte) 2);
@@ -193,7 +195,7 @@ public final class Utf8FileReaderTest {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldBeAbleToReturnReadTheNextByteInAFile() throws IOException {
+    public void shouldReturnReadTheNextByteInAFile() throws IOException {
 
 	final byte nextByteValue = 1;
 	writeBytesToTestFile(nextByteValue);
@@ -212,17 +214,43 @@ public final class Utf8FileReaderTest {
      *             Signals that an I/O exception has occurred.
      */
     @Test
-    public void shouldBeAbleToSkipAnFixedNumberOfBytesBeforeItReadsTheNextBytes()
+    public void shouldSkipAnFixedNumberOfBytesBeforeItReadsTheNextBytes()
 	    throws IOException {
 
 	writeBytesToTestFile((byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5,
 		(byte) 6, (byte) 7);
 	fileReader = Utf8FileReader.create(anyFile);
 	fileReader.openStream();
-	fileReader.skipBytes(6);
+	fileReader.skipFully(6);
 	final byte readByte = fileReader.readByte();
 
 	assertEquals(7, readByte);
+    }
+
+    @Test(expected = EOFException.class)
+    public void shouldThrowAnEOFExceptionIfItShouldSkipMoreBytesThenTheFileContains()
+	    throws IOException {
+
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	fileReader.skipFully(6);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowAnIllegalArgumentExceptionIfItShouldSkipAnNegativNumberOfBytes()
+	    throws IOException {
+
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	fileReader.skipFully(-1);
+    }
+
+    @Test
+    public void shouldDoNothingIfItShouldSkipZeroBytes() throws IOException {
+
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	fileReader.skipFully(0);
     }
 
     /**

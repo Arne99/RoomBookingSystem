@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.util.List;
 
 import suncertify.db.DatabaseHandler;
+import suncertify.db.RecordNotFoundException;
 
+import org.junit.After;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
@@ -19,6 +21,23 @@ import com.google.common.collect.Lists;
  */
 public final class DataFileAccessServiceTest {
 
+    /** The data file. */
+    private final File dataFile = new File(
+	    "/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/ressources/db-1x1.db");
+
+    /** The any file. */
+    private File anyFile;
+
+    /**
+     * Tear down.
+     */
+    @After
+    public void tearDown() {
+	if (anyFile != null && anyFile.exists()) {
+	    anyFile.delete();
+	}
+    }
+
     /**
      * Should create a database handler that could read the first record from an
      * data file.
@@ -27,13 +46,14 @@ public final class DataFileAccessServiceTest {
      *             Signals that an I/O exception has occurred.
      * @throws UnsupportedDataFileFormatException
      *             the unsupported data file format exception
+     * @throws RecordNotFoundException
+     *             the record not found exception
      */
     @Test
     public void shouldCreateADatabaseHandlerThatCouldReadTheFirstRecordFromAnDataFile()
-	    throws IOException, UnsupportedDataFileFormatException {
+	    throws IOException, UnsupportedDataFileFormatException,
+	    RecordNotFoundException {
 
-	final File dataFile = new File(
-		"/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/ressources/db-1x1.db");
 	final DatabaseHandler handler = DataFileAccessService.instance()
 		.getHandlerForDataFile(dataFile);
 	final List<String> record = handler.readRecord(0);
@@ -44,6 +64,27 @@ public final class DataFileAccessServiceTest {
     }
 
     /**
+     * Should throw an record not found exception the given record index is
+     * greater than the number of available records.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     * @throws UnsupportedDataFileFormatException
+     *             the unsupported data file format exception
+     * @throws RecordNotFoundException
+     *             the record not found exception
+     */
+    @Test(expected = RecordNotFoundException.class)
+    public void shouldThrowAnRecordNotFoundExceptionTheGivenRecordIndexIsGreaterThanTheNumberOfAvailableRecords()
+	    throws IOException, UnsupportedDataFileFormatException,
+	    RecordNotFoundException {
+
+	final DatabaseHandler handler = DataFileAccessService.instance()
+		.getHandlerForDataFile(dataFile);
+	handler.readRecord(5000);
+    }
+
+    /**
      * Should create a database handler that could read the10th record from an
      * data file.
      * 
@@ -51,13 +92,14 @@ public final class DataFileAccessServiceTest {
      *             Signals that an I/O exception has occurred.
      * @throws UnsupportedDataFileFormatException
      *             the unsupported data file format exception
+     * @throws RecordNotFoundException
+     *             the record not found exception
      */
     @Test
     public void shouldCreateADatabaseHandlerThatCouldReadThe10thRecordFromAnDataFile()
-	    throws IOException, UnsupportedDataFileFormatException {
+	    throws IOException, UnsupportedDataFileFormatException,
+	    RecordNotFoundException {
 
-	final File dataFile = new File(
-		"/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/test/ressources/db-1x1.db");
 	final DatabaseHandler handler = DataFileAccessService.instance()
 		.getHandlerForDataFile(dataFile);
 	final List<String> record = handler.readRecord(9);
@@ -95,8 +137,7 @@ public final class DataFileAccessServiceTest {
     public void shouldThrowAnExceptionIfTheDataFileIsInvalid()
 	    throws IOException, UnsupportedDataFileFormatException {
 
-	final File anyFile = File.createTempFile("test",
-		"DataFileAccessServiceTest");
+	anyFile = File.createTempFile("test", "DataFileAccessServiceTest");
 	final FileWriter writer = new FileWriter(anyFile);
 	try {
 	    writer.write("This is just a random file with text");

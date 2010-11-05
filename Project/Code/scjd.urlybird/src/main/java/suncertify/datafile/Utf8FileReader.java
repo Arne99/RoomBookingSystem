@@ -1,6 +1,7 @@
 package suncertify.datafile;
 
 import java.io.DataInputStream;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -75,10 +76,16 @@ final class Utf8FileReader implements ByteFileReader {
 	}
 
 	@Override
-	public void skipBytes(final int numberOfBytes) throws IOException {
+	public void skipFully(final int numberOfBytes) throws IOException {
 	    throw new IllegalStateException(
 		    "This DataFileReader cannot skip in the State \"closed\"! ");
 
+	}
+
+	@Override
+	public int availableBytes() throws IOException {
+	    throw new IllegalStateException(
+		    "This DataFileReader cannot skip in the State \"closed\"! ");
 	}
 
     }
@@ -166,8 +173,22 @@ final class Utf8FileReader implements ByteFileReader {
 	}
 
 	@Override
-	public void skipBytes(final int numberOfBytes) throws IOException {
-	    input.skipBytes(numberOfBytes);
+	public void skipFully(final int numberOfBytes) throws IOException {
+
+	    int bytesToSkip = numberOfBytes;
+	    while (bytesToSkip > 0) {
+
+		if (input.available() == 0) {
+		    throw new EOFException();
+		}
+		final int skipped = input.skipBytes(numberOfBytes);
+		bytesToSkip -= skipped;
+	    }
+	}
+
+	@Override
+	public int availableBytes() throws IOException {
+	    return input.available();
 	}
 
     }
@@ -241,7 +262,17 @@ final class Utf8FileReader implements ByteFileReader {
     }
 
     @Override
-    public void skipBytes(final int bytesToSkip) throws IOException {
-	state.skipBytes(bytesToSkip);
+    public void skipFully(final int bytesToSkip) throws IOException {
+	if (bytesToSkip < 0) {
+	    throw new IllegalArgumentException(
+		    "the number of bytes to skip should not be negativ: "
+			    + bytesToSkip);
+	}
+	state.skipFully(bytesToSkip);
+    }
+
+    @Override
+    public int availableBytes() throws IOException {
+	return state.availableBytes();
     }
 }

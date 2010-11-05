@@ -2,13 +2,17 @@ package suncertify.datafile;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
+import static org.hamcrest.Matchers.*;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import suncertify.db.RecordNotFoundException;
 
 import com.google.common.collect.Lists;
 
@@ -18,7 +22,9 @@ import com.google.common.collect.Lists;
 public final class DataFileHandlerTest {
 
     /** The Constant STRING_OF_SIZE_20. */
-    private static final String STRING_OF_SIZE_20 = "12345678901234567890";
+    private static final String VALID_RECORD_OF_SIZE_20 = "01234567890123456789";
+
+    private static final int ENAOUGH_BYTES_AVAILABLE = 50000;
 
     /** The Constant DELETED. */
     private static final byte DELETED = 1;
@@ -45,7 +51,7 @@ public final class DataFileHandlerTest {
     private ByteFileReader reader;
 
     /** The Constant COLUMN_WITH_FROM_0_TO_19. */
-    private static final DataFileColumn COLUMN_WITH_FROM_0_TO_19 = DataFileColumn
+    private static final DataFileColumn COLUMN_FROM_0_TO_19 = DataFileColumn
 	    .create("Name", 0, 20);
 
     /**
@@ -61,22 +67,25 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
     @Test
     public void shouldSkipTheHeaderLengthIfItReadsTheFirstRecord()
-	    throws IOException {
+	    throws IOException, RecordNotFoundException {
 
 	final int headerLength = 100;
 	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
 		ANY_IDENTIFIER, headerLength), Lists
-		.newArrayList(COLUMN_WITH_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
+		.newArrayList(COLUMN_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
 
+	when(reader.availableBytes()).thenReturn(
+		headerLength + VALID_RECORD_OF_SIZE_20.length());
 	when(reader.readString(schema.getRecordLength())).thenReturn(
-		STRING_OF_SIZE_20);
+		VALID_RECORD_OF_SIZE_20);
 	handler = new DataFileHandler(schema, reader, null);
 	handler.readRecord(0);
 
-	verify(reader, times(1)).skipBytes(headerLength);
+	verify(reader, times(1)).skipFully(headerLength);
     }
 
     /**
@@ -85,22 +94,25 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
     @Test
     public void shouldSkipTheHeaderLengthPlusTheFirstRecordLengthIfItReadsTheSecondRecord()
-	    throws IOException {
+	    throws IOException, RecordNotFoundException {
 
 	final int headerLength = 100;
 	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
 		ANY_IDENTIFIER, headerLength), Lists
-		.newArrayList(COLUMN_WITH_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
+		.newArrayList(COLUMN_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
 
+	when(reader.availableBytes()).thenReturn(ENAOUGH_BYTES_AVAILABLE);
 	when(reader.readString(schema.getRecordLength())).thenReturn(
-		STRING_OF_SIZE_20);
+		VALID_RECORD_OF_SIZE_20);
+
 	handler = new DataFileHandler(schema, reader, null);
 	handler.readRecord(1);
 
-	verify(reader, times(1)).skipBytes(
+	verify(reader, times(1)).skipFully(
 		headerLength + schema.getRecordLength());
     }
 
@@ -110,24 +122,27 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
     @Test
     public void shouldSkipTheHeaderLengthPlusTheLengthOfNRecordsIfItReadsTheNPlusOneRecord()
-	    throws IOException {
+	    throws IOException, RecordNotFoundException {
 
 	final int headerLength = 80;
 	final int fourtyOneRecordIndex = 40;
 
 	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
 		ANY_IDENTIFIER, headerLength), Lists
-		.newArrayList(COLUMN_WITH_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
+		.newArrayList(COLUMN_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
 
+	when(reader.availableBytes()).thenReturn(ENAOUGH_BYTES_AVAILABLE);
 	when(reader.readString(schema.getRecordLength())).thenReturn(
-		STRING_OF_SIZE_20);
+		VALID_RECORD_OF_SIZE_20);
+
 	handler = new DataFileHandler(schema, reader, null);
 	handler.readRecord(fourtyOneRecordIndex);
 
-	verify(reader, times(1)).skipBytes(
+	verify(reader, times(1)).skipFully(
 		headerLength
 			+ (schema.getRecordLength() * fourtyOneRecordIndex));
     }
@@ -137,22 +152,25 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
     @Test
     public void shouldOpenTheReaderBeforeItCallsTheFirstReadOperation()
-	    throws IOException {
+	    throws IOException, RecordNotFoundException {
 
 	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
 		ANY_IDENTIFIER, ANY_OFFSET), Lists
-		.newArrayList(COLUMN_WITH_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
+		.newArrayList(COLUMN_FROM_0_TO_19), DELETED_FLAG_INDEX_0);
 
+	when(reader.availableBytes()).thenReturn(ENAOUGH_BYTES_AVAILABLE);
 	when(reader.readString(schema.getRecordLength())).thenReturn(
-		STRING_OF_SIZE_20);
+		VALID_RECORD_OF_SIZE_20);
+
 	handler = new DataFileHandler(schema, reader, null);
 	handler.readRecord(0);
 
 	verify(reader, times(1)).openStream();
-	verify(reader, atLeastOnce()).skipBytes(anyInt());
+	verify(reader, atLeastOnce()).skipFully(anyInt());
     }
 
     /**
@@ -160,23 +178,25 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
     @Test
-    public void shouldAlwaysCloseTheReaderAtTheEnd() throws IOException {
+    public void shouldAlwaysCloseTheReaderAtTheEnd() throws IOException,
+	    RecordNotFoundException {
 
 	final DataFileSchema schema = DataFileSchema
 		.create(new DataFileHeader(ANY_IDENTIFIER, ANY_OFFSET),
 			NONE_COLUMNS, DELETED_FLAG_INDEX_0);
 
 	handler = new DataFileHandler(schema, reader, null);
-	doThrow(new IOException()).when(reader).skipBytes(anyInt());
+	doThrow(new IOException()).when(reader).skipFully(anyInt());
 
 	try {
 	    handler.readRecord(0);
 	} catch (final IOException e) {
 	    System.out.println();
 	}
-	verify(reader, atLeastOnce()).skipBytes(anyInt());
+	verify(reader, atLeastOnce()).skipFully(anyInt());
 	verify(reader, times(1)).closeStream();
     }
 
@@ -186,10 +206,11 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
     @Test
     public void shouldReadADataFileRecordAndConvertItToAnListOfStringsInDatabaseOrdering()
-	    throws IOException {
+	    throws IOException, RecordNotFoundException {
 
 	final String firstColumnName = "ID";
 	final String secondColumnName = "Alter";
@@ -212,6 +233,7 @@ public final class DataFileHandlerTest {
 	final String secondColumnValue = "53";
 	final String thirdColumnValue = "Hans MŸller";
 
+	when(reader.availableBytes()).thenReturn(ENAOUGH_BYTES_AVAILABLE);
 	when(reader.readString(schema.getRecordLength()))
 		.thenReturn(
 			VALID + firstColumnValue + secondColumnValue
@@ -231,9 +253,11 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
-    @Test
-    public void shouldReadAndReturnOnlyValidRecords() throws IOException {
+    @Test(expected = RecordNotFoundException.class)
+    public void shouldThrowARecordNotFoundExceptionIfTheRecordToReadIsNotValid()
+	    throws IOException, RecordNotFoundException {
 
 	final String firstColumnName = "ID";
 	final int firstColumnSize = 5;
@@ -249,11 +273,86 @@ public final class DataFileHandlerTest {
 		DELETED + firstColumnValue);
 
 	handler = new DataFileHandler(schema, reader, null);
-	final List<String> record = handler.readRecord(0);
+	handler.readRecord(0);
+    }
 
-	final List<String> expectedRecord = Lists.newArrayList();
+    @Test(expected = RecordNotFoundException.class)
+    public void shouldThrowARecordNotFoundExceptionIfTheIndexToReadIsBiggerThanTheNumberOfAvailableRecords()
+	    throws IOException, RecordNotFoundException {
 
-	assertEquals(expectedRecord, record);
+	final int firstColumnSize = 46;
+	final int headerLength = 200;
+
+	final DataFileColumn singleColumn = DataFileColumn.create("ID", 1,
+		firstColumnSize);
+	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
+		ANY_IDENTIFIER, headerLength),
+		Lists.newArrayList(singleColumn), 0);
+
+	when(reader.availableBytes()).thenReturn(
+		firstColumnSize + headerLength + 1);
+
+	handler = new DataFileHandler(schema, reader, null);
+	handler.readRecord(1);
+    }
+
+    @Test
+    public void shouldNotThrowARecordNotFoundExceptionIfTheIndexToReadIsEqualThanTheNumberOfAvailableRecords()
+	    throws IOException, RecordNotFoundException {
+
+	final int headerLength = 200;
+
+	final DataFileColumn singleColumn = COLUMN_FROM_0_TO_19;
+	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
+		ANY_IDENTIFIER, headerLength),
+		Lists.newArrayList(singleColumn), 0);
+
+	final int availableBytes = COLUMN_FROM_0_TO_19.size() + headerLength
+		+ 1;
+	when(reader.availableBytes()).thenReturn(availableBytes);
+	when(reader.readString(schema.getRecordLength())).thenReturn(
+		VALID_RECORD_OF_SIZE_20);
+
+	handler = new DataFileHandler(schema, reader, null);
+
+	handler.readRecord(0);
+    }
+
+    @Test(expected = RecordNotFoundException.class)
+    public void shouldThrowARecordNotFoundExceptionIfThereIsNoRecordAtTheSpezifiedIndex()
+	    throws IOException, RecordNotFoundException {
+
+	final String firstColumnName = "ID";
+	final int firstColumnSize = 5;
+
+	final DataFileColumn firstColumn = DataFileColumn.create(
+		firstColumnName, 1, firstColumnSize);
+	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
+		ANY_IDENTIFIER, 0), Lists.newArrayList(firstColumn), 0);
+
+	when(reader.readString(schema.getRecordLength())).thenReturn("");
+
+	handler = new DataFileHandler(schema, reader, null);
+	handler.readRecord(0);
+    }
+
+    @Test(expected = RecordNotFoundException.class)
+    public void shouldThrowARecordNotFoundExceptionIfTheSpezifiedIndexIsGreaterThanTheNumberOfAvailableRecords()
+	    throws IOException, RecordNotFoundException {
+
+	final String firstColumnName = "ID";
+	final int firstColumnSize = 5;
+
+	final DataFileColumn firstColumn = DataFileColumn.create(
+		firstColumnName, 1, firstColumnSize);
+	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
+		ANY_IDENTIFIER, 0), Lists.newArrayList(firstColumn), 0);
+
+	when(reader.readString(schema.getRecordLength())).thenThrow(
+		new EOFException());
+
+	handler = new DataFileHandler(schema, reader, null);
+	handler.readRecord(0);
     }
 
     /**
@@ -261,9 +360,11 @@ public final class DataFileHandlerTest {
      * 
      * @throws IOException
      *             Signals that an I/O exception has occurred.
+     * @throws RecordNotFoundException
      */
     @Test
-    public void shouldTrimTheReturnValues() throws IOException {
+    public void shouldTrimTheReturnValues() throws IOException,
+	    RecordNotFoundException {
 
 	final String firstColumnName = "ID";
 	final String secondColumnName = "Alter";
@@ -286,6 +387,7 @@ public final class DataFileHandlerTest {
 	final String secondColumnValue = "53";
 	final String thirdColumnValue = "Hans MŸller";
 
+	when(reader.availableBytes()).thenReturn(ENAOUGH_BYTES_AVAILABLE);
 	when(reader.readString(schema.getRecordLength())).thenReturn(
 		VALID + firstColumnValue + "     " + secondColumnValue
 			+ "        " + thirdColumnValue + "         ");
