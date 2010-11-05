@@ -1,5 +1,7 @@
 package suncertify.datafile;
 
+import static suncertify.util.DesignByContract.*;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -22,6 +24,8 @@ public class DataFileAccessService {
 
     public DatabaseHandler getHandlerForDataFile(final File dataFile)
 	    throws IOException, UnsupportedDataFileFormatException {
+
+	checkNotNull(dataFile, "dataFile");
 
 	final DataFileSchema dataFileSchema = schemaBuilder
 		.createSchemaForDataFile(new Utf8ByteCountingReader(

@@ -1,5 +1,7 @@
 package suncertify.datafile;
 
+import static suncertify.util.DesignByContract.*;
+
 import java.io.DataOutput;
 import java.io.EOFException;
 import java.io.IOException;
@@ -50,55 +52,83 @@ class DataFileHandler implements DatabaseHandler {
     public List<String> readRecord(final int index) throws IOException,
 	    RecordNotFoundException {
 
+	checkNotNegativ(index);
 	reader.openStream();
-	final ArrayList<String> values = new ArrayList<String>();
+	try {
+	    final List<String> values = readRecordFromDataFile(index);
+	    return Collections.unmodifiableList(values);
+	} finally {
+	    reader.closeStream();
+	}
+
+    }
+
+    private List<String> readRecordFromDataFile(final int index)
+	    throws IOException, RecordNotFoundException {
 
 	try {
-	    if (reader.availableBytes() < schema.getOffset()
-		    + (index + 1 * schema.getRecordLength())) {
-		throw new RecordNotFoundException(
-			"The datafile does not contain any record at the index: "
-				+ index);
-	    }
-
+	    checkIfSearchIndexIsInRange(index);
 	    reader.skipFully(schema.getOffset()
 		    + (index * schema.getRecordLength()));
-
-	    final String data = reader.readString(schema.getRecordLength());
-
-	    if (data.isEmpty()) {
-
-		throw new RecordNotFoundException(
-			"The datafile does not contain any record at the index: "
-				+ index);
-	    }
-
-	    final String validityIdentifier = data.substring(
-		    schema.getDeletedFlagIndex(),
-		    schema.getDeletedFlagIndex() + 1);
-	    final boolean valid = "0".equals(validityIdentifier);
-	    if (!valid) {
-		throw new RecordNotFoundException(
-			"The datafile does not contain any record at the index: "
-				+ index);
-	    }
-
-	    for (final DataFileColumn column : schema
-		    .getColumnsInDatabaseOrder()) {
-		final int startPosition = column.getStartIndex();
-		final int endPosition = column.getEndIndex();
-		final String value = data.substring(startPosition,
-			endPosition + 1).trim();
-		values.add(value);
-	    }
+	    final String data = readRecordAsString(index);
+	    checkIfRecordIsValid(index, data);
+	    return splitStringInSingleValuesInDatabaseOrder(data);
 	} catch (final EOFException eof) {
 	    throw new RecordNotFoundException(
 		    "The datafile does not contain any record at the index: "
 			    + index);
-	} finally {
-	    reader.closeStream();
 	}
-	return Collections.unmodifiableList(values);
+    }
+
+    private void checkIfSearchIndexIsInRange(final int index)
+	    throws IOException, RecordNotFoundException {
+	if (reader.availableBytes() < schema.getOffset()
+		+ (index + 1 * schema.getRecordLength())) {
+	    throw new RecordNotFoundException(
+		    "The datafile does not contain any record at the index: "
+			    + index);
+	}
+    }
+
+    private List<String> splitStringInSingleValuesInDatabaseOrder(
+	    final String data) {
+
+	final List<String> columnValues = new ArrayList<String>();
+
+	for (final DataFileColumn column : schema.getColumnsInDatabaseOrder()) {
+	    final int startPosition = column.getStartIndex();
+	    final int endPosition = column.getEndIndex();
+	    final String value = data.substring(startPosition, endPosition + 1)
+		    .trim();
+	    columnValues.add(value);
+	}
+
+	return columnValues;
+    }
+
+    private String readRecordAsString(final int index) throws IOException,
+	    RecordNotFoundException {
+
+	final String data = reader.readString(schema.getRecordLength());
+
+	if (data.isEmpty()) {
+	    throw new RecordNotFoundException(
+		    "The datafile does not contain any record at the index: "
+			    + index);
+	}
+	return data;
+    }
+
+    private void checkIfRecordIsValid(final int index, final String data)
+	    throws RecordNotFoundException {
+	final String validityIdentifier = data.substring(
+		schema.getDeletedFlagIndex(), schema.getDeletedFlagIndex() + 1);
+	final boolean valid = "0".equals(validityIdentifier);
+	if (!valid) {
+	    throw new RecordNotFoundException(
+		    "The datafile does not contain any record at the index: "
+			    + index);
+	}
     }
 
     @Override

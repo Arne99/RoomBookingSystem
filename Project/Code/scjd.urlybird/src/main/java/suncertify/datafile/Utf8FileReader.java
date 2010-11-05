@@ -1,5 +1,7 @@
 package suncertify.datafile;
 
+import static suncertify.util.DesignByContract.*;
+
 import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.File;
@@ -258,16 +260,13 @@ final class Utf8FileReader implements ByteFileReader {
 
     @Override
     public String readString(final int length) throws IOException {
+	checkNotNegativ(length);
 	return state.readString(length);
     }
 
     @Override
     public void skipFully(final int bytesToSkip) throws IOException {
-	if (bytesToSkip < 0) {
-	    throw new IllegalArgumentException(
-		    "the number of bytes to skip should not be negativ: "
-			    + bytesToSkip);
-	}
+	checkNotNegativ(bytesToSkip);
 	state.skipFully(bytesToSkip);
     }
 

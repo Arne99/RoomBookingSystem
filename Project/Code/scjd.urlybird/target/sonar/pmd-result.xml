@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2010-11-04T15:04:50.309">
+<file name="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/datafile/DataFileHandler.java">
+<violation beginline="19" endline="19" begincolumn="30" endcolumn="35" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="suncertify.datafile" class="DataFileHandler" variable="writer" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'writer'.
+</violation>
+<violation beginline="19" endline="19" begincolumn="19" endcolumn="36" rule="SingularField" ruleset="Design Rules" package="suncertify.datafile" class="DataFileHandler" variable="writer" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SingularField" priority="4">
+Perhaps 'writer' could be replaced by a local variable.
+</violation>
+</file>
+<file name="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/datafile/DataFileSchemaFactory.java">
+<violation beginline="62" endline="62" begincolumn="19" endcolumn="30" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="suncertify.datafile" class="DataFileSchemaFactory" method="extractSchemaWithReader" variable="recordLength" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'recordLength'.
+</violation>
+</file>
+<file name="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/datafile/Utf8FileReader.java">
+<violation beginline="50" endline="50" begincolumn="21" endcolumn="79" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="suncertify.datafile" class="Utf8FileReader$Closed" method="readByte" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;This DataFileReader cannot read in the State \&quot;closed\&quot;! &quot; appears 5 times in this file; the first occurrence is on line 50
+</violation>
+<violation beginline="112" endline="112" begincolumn="17" endcolumn="35" rule="AvoidPrintStackTrace" ruleset="Java Logging Rules" package="suncertify.datafile" class="Utf8FileReader$Open" method="closeStream" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/Users/arnelandwehr/Coden/Sun Certified Java Developer/Project/Code/scjd.urlybird/src/main/java/suncertify/db/Main.java">
+<violation beginline="10" endline="10" begincolumn="14" endcolumn="21" rule="UnusedLocalVariable" ruleset="Unused Code Rules" package="suncertify.db" class="Main" method="main" variable="database" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'database'.
+</violation>
+</file>
+</pmd>
