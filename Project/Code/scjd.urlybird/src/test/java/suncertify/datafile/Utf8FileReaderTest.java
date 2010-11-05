@@ -1,8 +1,7 @@
 package suncertify.datafile;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.*;
 
 import java.io.EOFException;
 import java.io.File;
@@ -111,6 +110,24 @@ public final class Utf8FileReaderTest {
 
 	assertEquals("Hello", readString);
 
+    }
+
+    /**
+     * Should convert a byte between zero and nine to the adequate string.
+     * 
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
+     */
+    @Test
+    public void shouldConvertAByteBetweenZeroAndNineToTheAdequateString()
+	    throws IOException {
+
+	writeBytesToTestFile((byte) 0, (byte) 3, (byte) 9);
+	fileReader = Utf8FileReader.create(anyFile);
+	fileReader.openStream();
+	final String readString = fileReader.readString(3);
+
+	assertThat(readString, is(equalTo("039")));
     }
 
     /**
