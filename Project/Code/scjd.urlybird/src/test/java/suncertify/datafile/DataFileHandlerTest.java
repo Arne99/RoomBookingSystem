@@ -83,7 +83,7 @@ public final class DataFileHandlerTest {
 	when(reader.readString(schema.getRecordLength())).thenReturn(
 		VALID_RECORD_OF_SIZE_20);
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(0);
+	handler.readValidRecord(0);
 
 	verify(reader, times(1)).skipFully(headerLength);
     }
@@ -110,7 +110,7 @@ public final class DataFileHandlerTest {
 		VALID_RECORD_OF_SIZE_20);
 
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(1);
+	handler.readValidRecord(1);
 
 	verify(reader, times(1)).skipFully(
 		headerLength + schema.getRecordLength());
@@ -140,7 +140,7 @@ public final class DataFileHandlerTest {
 		VALID_RECORD_OF_SIZE_20);
 
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(fourtyOneRecordIndex);
+	handler.readValidRecord(fourtyOneRecordIndex);
 
 	verify(reader, times(1)).skipFully(
 		headerLength
@@ -167,7 +167,7 @@ public final class DataFileHandlerTest {
 		VALID_RECORD_OF_SIZE_20);
 
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(0);
+	handler.readValidRecord(0);
 
 	verify(reader, times(1)).openStream();
 	verify(reader, atLeastOnce()).skipFully(anyInt());
@@ -192,7 +192,7 @@ public final class DataFileHandlerTest {
 	doThrow(new IOException()).when(reader).skipFully(anyInt());
 
 	try {
-	    handler.readRecord(0);
+	    handler.readValidRecord(0);
 	} catch (final IOException e) {
 	    System.out.println();
 	}
@@ -240,7 +240,7 @@ public final class DataFileHandlerTest {
 				+ thirdColumnValue);
 
 	handler = new DataFileHandler(schema, reader, null);
-	final List<String> record = handler.readRecord(0);
+	final List<String> record = handler.readValidRecord(0);
 
 	final List<String> expectedRecord = Lists.newArrayList(
 		firstColumnValue, secondColumnValue, thirdColumnValue);
@@ -273,7 +273,7 @@ public final class DataFileHandlerTest {
 		DELETED + firstColumnValue);
 
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(0);
+	handler.readValidRecord(0);
     }
 
     @Test(expected = RecordNotFoundException.class)
@@ -293,7 +293,7 @@ public final class DataFileHandlerTest {
 		firstColumnSize + headerLength + 1);
 
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(1);
+	handler.readValidRecord(1);
     }
 
     @Test
@@ -315,7 +315,7 @@ public final class DataFileHandlerTest {
 
 	handler = new DataFileHandler(schema, reader, null);
 
-	handler.readRecord(0);
+	handler.readValidRecord(0);
     }
 
     @Test(expected = RecordNotFoundException.class)
@@ -333,7 +333,7 @@ public final class DataFileHandlerTest {
 	when(reader.readString(schema.getRecordLength())).thenReturn("");
 
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(0);
+	handler.readValidRecord(0);
     }
 
     @Test(expected = RecordNotFoundException.class)
@@ -352,7 +352,7 @@ public final class DataFileHandlerTest {
 		new EOFException());
 
 	handler = new DataFileHandler(schema, reader, null);
-	handler.readRecord(0);
+	handler.readValidRecord(0);
     }
 
     /**
@@ -393,7 +393,7 @@ public final class DataFileHandlerTest {
 			+ "        " + thirdColumnValue + "         ");
 
 	handler = new DataFileHandler(schema, reader, null);
-	final List<String> record = handler.readRecord(0);
+	final List<String> record = handler.readValidRecord(0);
 
 	final List<String> expectedRecord = Lists.newArrayList(
 		firstColumnValue, secondColumnValue, thirdColumnValue);

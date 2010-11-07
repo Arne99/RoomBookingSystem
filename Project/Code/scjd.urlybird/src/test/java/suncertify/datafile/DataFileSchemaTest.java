@@ -9,11 +9,12 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
-// TODO: Auto-generated Javadoc
 /**
  * Tests for the Class {@link DataFileSchema}.
  */
 public final class DataFileSchemaTest {
+
+    private final DeletedFlag deletedFlag = new DeletedFlag(1, (byte) 1);
 
     /**
      * Should be equals to itself.
@@ -21,9 +22,9 @@ public final class DataFileSchemaTest {
     @Test
     public void shouldBeEqualsToItself() {
 
-	final DataFileSchema schema = DataFileSchema.create(new DataFileHeader(
-		12, 1234), Lists.newArrayList(DataFileColumn.create("Test", 12,
-		100)), 1);
+	final DataFileSchema schema = new DataFileSchema(new DataFileHeader(12,
+		1234), Lists.newArrayList(DataFileColumn
+		.create("Test", 12, 100)), deletedFlag, 12);
 	assertThat(schema, is(equalTo(schema)));
     }
 
@@ -36,12 +37,12 @@ public final class DataFileSchemaTest {
 	final DataFileHeader header = new DataFileHeader(12, 1234);
 	final ArrayList<DataFileColumn> columns = Lists
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
-	final int deletedIndex = 1;
+	final int recordLength = 123;
 
-	final DataFileSchema schemaOne = DataFileSchema.create(header, columns,
-		deletedIndex);
-	final DataFileSchema schemaTwo = DataFileSchema.create(header, columns,
-		deletedIndex);
+	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+		deletedFlag, 123);
+	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+		deletedFlag, recordLength);
 
 	assertThat(schemaOne, is(equalTo(schemaTwo)));
 	assertThat(schemaTwo, is(equalTo(schemaOne)));
@@ -57,10 +58,10 @@ public final class DataFileSchemaTest {
 	final ArrayList<DataFileColumn> columns = Lists
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
 
-	final DataFileSchema schemaOne = DataFileSchema.create(header, columns,
-		1);
-	final DataFileSchema schemaTwo = DataFileSchema.create(header, columns,
-		2);
+	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+		deletedFlag, 1);
+	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+		deletedFlag, 2);
 
 	assertThat(schemaOne, is(not(equalTo(schemaTwo))));
     }
@@ -74,12 +75,12 @@ public final class DataFileSchemaTest {
 	final DataFileHeader header = new DataFileHeader(12, 1234);
 	final ArrayList<DataFileColumn> columns = Lists
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
-	final int deletedIndex = 1;
+	final int recordLength = 123;
 
-	final DataFileSchema schemaOne = DataFileSchema.create(header, columns,
-		deletedIndex);
-	final DataFileSchema schemaTwo = DataFileSchema.create(header, columns,
-		deletedIndex);
+	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+		deletedFlag, 123);
+	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+		deletedFlag, recordLength);
 
 	assertThat(schemaOne, is(equalTo(schemaTwo)));
 	assertThat(schemaTwo.hashCode(), is(equalTo(schemaOne.hashCode())));
@@ -95,46 +96,13 @@ public final class DataFileSchemaTest {
 	final ArrayList<DataFileColumn> columns = Lists
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
 
-	final DataFileSchema schemaOne = DataFileSchema.create(header, columns,
-		1);
-	final DataFileSchema schemaTwo = DataFileSchema.create(header, columns,
-		2);
+	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+		deletedFlag, 1);
+	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+		deletedFlag, 2);
 
 	assertThat(schemaOne, is(not(equalTo(schemaTwo))));
 	assertThat(schemaOne.hashCode(), is(not(equalTo(schemaTwo.hashCode()))));
     }
 
-    /**
-     * Should return the sum of all column sizes as the record length.
-     */
-    @Test
-    public void shouldReturnTheSumOfAllColumnSizesAsTheRecordLength() {
-
-	final int firstColumnSize = 23;
-	final int secondColumnSize = 12;
-	final int thirdColumnSize = 6;
-	final int fourthColumnSize = 156;
-
-	final int firstStartIndex = 0;
-	final int secondStartIndex = firstStartIndex + firstColumnSize;
-	final int thirdStartIndex = secondStartIndex + secondColumnSize;
-	final int fourthStartIndex = thirdStartIndex + thirdColumnSize;
-
-	final DataFileColumn firstColumn = DataFileColumn.create("test",
-		firstStartIndex, firstColumnSize);
-	final DataFileColumn secondColumn = DataFileColumn.create("test",
-		secondStartIndex, secondColumnSize);
-	final DataFileColumn thirdColumn = DataFileColumn.create("test",
-		thirdStartIndex, thirdColumnSize);
-	final DataFileColumn fourthColumn = DataFileColumn.create("test",
-		fourthStartIndex, fourthColumnSize);
-
-	final DataFileHeader header = new DataFileHeader(12, 1234);
-	final DataFileSchema schema = DataFileSchema.create(header, Lists
-		.newArrayList(firstColumn, secondColumn, thirdColumn,
-			fourthColumn), 1);
-
-	assertThat(schema.getRecordLength(), is(equalTo(firstColumnSize
-		+ secondColumnSize + thirdColumnSize + fourthColumnSize)));
-    }
 }

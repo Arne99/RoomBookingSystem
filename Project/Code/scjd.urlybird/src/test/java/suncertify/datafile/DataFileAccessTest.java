@@ -17,9 +17,9 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 /**
- * Test for the class {@link DataFileAccessService}.
+ * Test for the class {@link DataFileAccess}.
  */
-public final class DataFileAccessServiceTest {
+public final class DataFileAccessTest {
 
     /** The data file. */
     private final File dataFile = new File(
@@ -54,9 +54,9 @@ public final class DataFileAccessServiceTest {
 	    throws IOException, UnsupportedDataFileFormatException,
 	    RecordNotFoundException {
 
-	final DatabaseHandler handler = DataFileAccessService.instance()
-		.getHandlerForDataFile(dataFile);
-	final List<String> record = handler.readRecord(0);
+	final DatabaseHandler handler = DataFileAccess.instance()
+		.getDatabaseHandler(dataFile);
+	final List<String> record = handler.readValidRecord(0);
 
 	final List<String> expectedReccord = Lists.newArrayList("Palace",
 		"Smallville", "2", "Y", "$150.00", "2005/07/27", "");
@@ -79,9 +79,9 @@ public final class DataFileAccessServiceTest {
 	    throws IOException, UnsupportedDataFileFormatException,
 	    RecordNotFoundException {
 
-	final DatabaseHandler handler = DataFileAccessService.instance()
-		.getHandlerForDataFile(dataFile);
-	handler.readRecord(5000);
+	final DatabaseHandler handler = DataFileAccess.instance()
+		.getDatabaseHandler(dataFile);
+	handler.readValidRecord(5000);
     }
 
     /**
@@ -100,9 +100,9 @@ public final class DataFileAccessServiceTest {
 	    throws IOException, UnsupportedDataFileFormatException,
 	    RecordNotFoundException {
 
-	final DatabaseHandler handler = DataFileAccessService.instance()
-		.getHandlerForDataFile(dataFile);
-	final List<String> record = handler.readRecord(9);
+	final DatabaseHandler handler = DataFileAccess.instance()
+		.getDatabaseHandler(dataFile);
+	final List<String> record = handler.readValidRecord(9);
 
 	final List<String> expectedReccord = Lists.newArrayList("Dew Drop Inn",
 		"Pleasantville", "6", "N", "$160.00", "2005/03/04", "");
@@ -122,7 +122,7 @@ public final class DataFileAccessServiceTest {
 	    throws IOException, UnsupportedDataFileFormatException {
 
 	final File wrongDataFile = new File("/this/path/does/not/exist");
-	DataFileAccessService.instance().getHandlerForDataFile(wrongDataFile);
+	DataFileAccess.instance().getDatabaseHandler(wrongDataFile);
     }
 
     /**
@@ -145,6 +145,6 @@ public final class DataFileAccessServiceTest {
 	    writer.close();
 	}
 
-	DataFileAccessService.instance().getHandlerForDataFile(anyFile);
+	DataFileAccess.instance().getDatabaseHandler(anyFile);
     }
 }

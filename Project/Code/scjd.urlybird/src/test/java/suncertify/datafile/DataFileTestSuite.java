@@ -10,11 +10,10 @@ import org.junit.runners.Suite;
  * 
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ Utf8FileReaderTest.class,
-	Utf8ByteCountingReaderTest.class, DataFileHandlerTest.class,
-	DataFileSchemaFactoryTest.class, DataFileHeaderTest.class,
-	DataFileColumnTest.class, DataFileSchemaTest.class,
-	DataFileAccessServiceTest.class })
+@Suite.SuiteClasses({ UrlyBirdDataFileReaderTest.class,
+	DataFileHandlerTest.class, DataFileSchemaFactoryTest.class,
+	DataFileHeaderTest.class, DataFileColumnTest.class,
+	DataFileSchemaTest.class, DataFileAccessTest.class })
 public class DataFileTestSuite {
 
 }
