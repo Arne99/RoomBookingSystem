@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -103,6 +104,28 @@ public final class DataFileSchemaTest {
 
 	assertThat(schemaOne, is(not(equalTo(schemaTwo))));
 	assertThat(schemaOne.hashCode(), is(not(equalTo(schemaTwo.hashCode()))));
+    }
+
+    public void shouldReturnTheColumnsInDatabaseOrderAscendingOrderedByTheirStatIndex() {
+
+	final DataFileHeader header = new DataFileHeader(12, 1234);
+	final DataFileColumn firstColumn = DataFileColumn.create("firstColumn",
+		0, 20);
+	final DataFileColumn secondColumn = DataFileColumn.create(
+		"secondColumn", 20, 20);
+	final DataFileColumn thirdColumn = DataFileColumn.create("thirdColumn",
+		40, 20);
+
+	final ArrayList<DataFileColumn> columnsInWrongOrder = Lists
+		.newArrayList(secondColumn, firstColumn, thirdColumn);
+	final DataFileSchema schema = new DataFileSchema(header,
+		columnsInWrongOrder, deletedFlag, 20);
+
+	final List<DataFileColumn> schemaOrder = schema
+		.getColumnsInDatabaseOrder();
+	assertThat(schemaOrder.get(0), is(equalTo(firstColumn)));
+	assertThat(schemaOrder.get(1), is(equalTo(secondColumn)));
+	assertThat(schemaOrder.get(2), is(equalTo(thirdColumn)));
     }
 
 }

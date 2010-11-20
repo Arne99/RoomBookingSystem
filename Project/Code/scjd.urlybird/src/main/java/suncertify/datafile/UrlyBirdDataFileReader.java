@@ -1,5 +1,6 @@
 package suncertify.datafile;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -28,6 +29,10 @@ final class UrlyBirdDataFileReader implements ReadableRecordSource {
 
     @Override
     public Record getRecordAtIndex(final int index) throws IOException {
+
+	if (getIndexOfLastRecord() > index) {
+	    recordFactory.createRecordFrom(new byte[] {});
+	}
 
 	final RandomAccessFile reader = new RandomAccessFile(file, READ_MODE);
 

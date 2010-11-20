@@ -2,12 +2,13 @@ package suncertify.datafile;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 final class DataFileSchema {
 
     private final DataFileHeader header;
-    private final List<DataFileColumn> columnsInOrder;
+    private final List<DataFileColumn> columns;
     private final int recordLength;
     private final DeletedFlag deletedFlag;
 
@@ -17,13 +18,13 @@ final class DataFileSchema {
 	this.header = header;
 	this.recordLength = recordLength;
 	this.deletedFlag = deletedFlag;
-	this.columnsInOrder = new ArrayList<DataFileColumn>(columns);
+	this.columns = new ArrayList<DataFileColumn>(columns);
     }
 
     @Override
     public String toString() {
 	return "DataFileSchema" + " [ " + "header = " + header + "; columns = "
-		+ columnsInOrder + "; deletedFlag = " + deletedFlag + " ] ";
+		+ columns + "; deletedFlag = " + deletedFlag + " ] ";
     }
 
     @Override
@@ -37,7 +38,8 @@ final class DataFileSchema {
 	final DataFileSchema schema = (DataFileSchema) object;
 	return this.header.equals(schema.header)
 		&& this.deletedFlag == schema.deletedFlag
-		&& this.columnsInOrder.equals(schema.columnsInOrder);
+		&& this.columns.equals(schema.columns)
+		&& this.recordLength == schema.recordLength;
 
     };
 
@@ -46,13 +48,26 @@ final class DataFileSchema {
 	int result = 17;
 	result = 31 * result + this.deletedFlag.hashCode();
 	result = 31 * result + this.header.hashCode();
-	result = 31 * result + this.columnsInOrder.hashCode();
+	result = 31 * result + this.columns.hashCode();
+	result = 31 * result + this.recordLength;
 	return result;
     }
 
     List<DataFileColumn> getColumnsInDatabaseOrder() {
 
-	return Collections.unmodifiableList(columnsInOrder);
+	final ArrayList<DataFileColumn> columnsInOrder = new ArrayList<DataFileColumn>(
+		columns);
+
+	Collections.sort(columnsInOrder, new Comparator<DataFileColumn>() {
+
+	    @Override
+	    public int compare(final DataFileColumn columnOne,
+		    final DataFileColumn columnTwo) {
+		return columnOne.getStartIndex() - columnTwo.getStartIndex();
+	    }
+	});
+
+	return columnsInOrder;
     }
 
     int getOffset() {

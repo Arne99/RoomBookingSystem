@@ -9,6 +9,12 @@ import suncertify.db.DatabaseHandler;
 
 public final class DataFileAccess {
 
+    private static final DataFileAccess INSTANCE = new DataFileAccess();
+
+    public static final DataFileAccess instance() {
+	return INSTANCE;
+    }
+
     public DatabaseHandler getDatabaseHandler(final File dataFile)
 	    throws IOException, UnsupportedDataFileFormatException {
 

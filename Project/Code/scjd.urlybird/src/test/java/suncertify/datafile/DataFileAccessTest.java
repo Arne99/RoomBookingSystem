@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 import suncertify.db.DatabaseHandler;
+import suncertify.db.Record;
 import suncertify.db.RecordNotFoundException;
 
 import org.junit.After;
@@ -56,11 +57,12 @@ public final class DataFileAccessTest {
 
 	final DatabaseHandler handler = DataFileAccess.instance()
 		.getDatabaseHandler(dataFile);
-	final List<String> record = handler.readValidRecord(0);
+	final Record record = handler.readValidRecord(0);
 
 	final List<String> expectedReccord = Lists.newArrayList("Palace",
 		"Smallville", "2", "Y", "$150.00", "2005/07/27", "");
-	assertThat(record, is(equalTo(expectedReccord)));
+
+	assertThat(record.getValues(), is(equalTo(expectedReccord)));
     }
 
     /**
@@ -102,11 +104,11 @@ public final class DataFileAccessTest {
 
 	final DatabaseHandler handler = DataFileAccess.instance()
 		.getDatabaseHandler(dataFile);
-	final List<String> record = handler.readValidRecord(9);
+	final Record record = handler.readValidRecord(9);
 
 	final List<String> expectedReccord = Lists.newArrayList("Dew Drop Inn",
 		"Pleasantville", "6", "N", "$160.00", "2005/03/04", "");
-	assertThat(record, is(equalTo(expectedReccord)));
+	assertThat(record.getValues(), is(equalTo(expectedReccord)));
     }
 
     /**

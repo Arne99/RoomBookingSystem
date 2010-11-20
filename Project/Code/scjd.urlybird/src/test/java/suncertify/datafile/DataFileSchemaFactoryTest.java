@@ -114,18 +114,4 @@ public final class DataFileSchemaFactoryTest {
 		is(equalTo(Collections.<DataFileColumn> emptyList())));
     }
 
-    /**
-     * Should create a schema with all columns in database order.
-     * 
-     * @throws IOException
-     *             Signals that an I/O exception has occurred.
-     * @throws UnsupportedDataFileFormatException
-     *             the unsupported data file format exception
-     */
-    @Test
-    public void shouldCreateASchemaWithAllColumnsInDatabaseOrder()
-	    throws IOException, UnsupportedDataFileFormatException {
-
-	fail();
-    }
 }
