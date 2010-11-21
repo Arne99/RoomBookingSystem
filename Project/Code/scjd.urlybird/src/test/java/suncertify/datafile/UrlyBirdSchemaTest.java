@@ -11,9 +11,9 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 /**
- * Tests for the Class {@link DataFileSchema}.
+ * Tests for the Class {@link UrlyBirdSchema}.
  */
-public final class DataFileSchemaTest {
+public final class UrlyBirdSchemaTest {
 
     private final DeletedFlag deletedFlag = new DeletedFlag(1, (byte) 1);
 
@@ -23,7 +23,7 @@ public final class DataFileSchemaTest {
     @Test
     public void shouldBeEqualsToItself() {
 
-	final DataFileSchema schema = new DataFileSchema(new DataFileHeader(12,
+	final UrlyBirdSchema schema = new UrlyBirdSchema(new DataFileHeader(12,
 		1234), Lists.newArrayList(DataFileColumn
 		.create("Test", 12, 100)), deletedFlag, 12);
 	assertThat(schema, is(equalTo(schema)));
@@ -40,9 +40,9 @@ public final class DataFileSchemaTest {
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
 	final int recordLength = 123;
 
-	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaOne = new UrlyBirdSchema(header, columns,
 		deletedFlag, 123);
-	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaTwo = new UrlyBirdSchema(header, columns,
 		deletedFlag, recordLength);
 
 	assertThat(schemaOne, is(equalTo(schemaTwo)));
@@ -59,9 +59,9 @@ public final class DataFileSchemaTest {
 	final ArrayList<DataFileColumn> columns = Lists
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
 
-	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaOne = new UrlyBirdSchema(header, columns,
 		deletedFlag, 1);
-	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaTwo = new UrlyBirdSchema(header, columns,
 		deletedFlag, 2);
 
 	assertThat(schemaOne, is(not(equalTo(schemaTwo))));
@@ -78,9 +78,9 @@ public final class DataFileSchemaTest {
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
 	final int recordLength = 123;
 
-	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaOne = new UrlyBirdSchema(header, columns,
 		deletedFlag, 123);
-	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaTwo = new UrlyBirdSchema(header, columns,
 		deletedFlag, recordLength);
 
 	assertThat(schemaOne, is(equalTo(schemaTwo)));
@@ -97,9 +97,9 @@ public final class DataFileSchemaTest {
 	final ArrayList<DataFileColumn> columns = Lists
 		.newArrayList(DataFileColumn.create("Test", 12, 100));
 
-	final DataFileSchema schemaOne = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaOne = new UrlyBirdSchema(header, columns,
 		deletedFlag, 1);
-	final DataFileSchema schemaTwo = new DataFileSchema(header, columns,
+	final UrlyBirdSchema schemaTwo = new UrlyBirdSchema(header, columns,
 		deletedFlag, 2);
 
 	assertThat(schemaOne, is(not(equalTo(schemaTwo))));
@@ -118,7 +118,7 @@ public final class DataFileSchemaTest {
 
 	final ArrayList<DataFileColumn> columnsInWrongOrder = Lists
 		.newArrayList(secondColumn, firstColumn, thirdColumn);
-	final DataFileSchema schema = new DataFileSchema(header,
+	final DataFileMetadata schema = new UrlyBirdSchema(header,
 		columnsInWrongOrder, deletedFlag, 20);
 
 	final List<DataFileColumn> schemaOrder = schema

@@ -15,11 +15,11 @@ import suncertify.db.Record;
 final class UrlyBirdDataFileReader implements ReadableRecordSource {
 
     private static final String READ_MODE = "r";
-    private final DataFileSchema schema;
+    private final DataFileMetadata schema;
     private final File file;
     private final RecordFactory recordFactory;
 
-    UrlyBirdDataFileReader(final DataFileSchema schema, final File file,
+    UrlyBirdDataFileReader(final DataFileMetadata schema, final File file,
 	    final RecordFactory recordFactory) {
 	super();
 	this.recordFactory = recordFactory;
@@ -30,8 +30,8 @@ final class UrlyBirdDataFileReader implements ReadableRecordSource {
     @Override
     public Record getRecordAtIndex(final int index) throws IOException {
 
-	if (getIndexOfLastRecord() > index) {
-	    recordFactory.createRecordFrom(new byte[] {});
+	if (getIndexOfLastRecord() < index) {
+	    return recordFactory.createRecordFrom(new byte[] {});
 	}
 
 	final RandomAccessFile reader = new RandomAccessFile(file, READ_MODE);
@@ -39,9 +39,10 @@ final class UrlyBirdDataFileReader implements ReadableRecordSource {
 	byte[] recordBuffer = new byte[] {};
 	try {
 	    final int offset = schema.getOffset()
-		    + (index * schema.getRecordLength()) + 1;
+		    + (index * schema.getRecordLength());
 	    recordBuffer = new byte[schema.getRecordLength()];
-	    reader.readFully(recordBuffer, offset, schema.getRecordLength());
+	    reader.seek(offset);
+	    reader.readFully(recordBuffer);
 	} finally {
 	    reader.close();
 	}

@@ -11,8 +11,8 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ UrlyBirdDataFileReaderTest.class,
-	DataFileSchemaFactoryTest.class, DataFileHeaderTest.class,
-	DataFileColumnTest.class, DataFileSchemaTest.class,
+	UrlyBirdSchemaFactoryTest.class, DataFileHeaderTest.class,
+	DataFileColumnTest.class, UrlyBirdSchemaTest.class,
 	DataFileAccessTest.class })
 public class DataFileTestSuite {
 

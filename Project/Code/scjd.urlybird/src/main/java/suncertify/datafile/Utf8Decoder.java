@@ -13,7 +13,7 @@ final class Utf8Decoder implements BytesToStringDecoder {
 		builder.append((char) b);
 	    }
 	}
-	return builder.toString();
+	return builder.toString().trim();
     }
 
 }

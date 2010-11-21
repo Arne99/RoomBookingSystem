@@ -19,7 +19,7 @@ import com.google.common.collect.Lists;
 /**
  * The Tests for the Class DataFileSchemaFactory.
  */
-public final class DataFileSchemaFactoryTest {
+public final class UrlyBirdSchemaFactoryTest {
 
     /** The Constant SUPPORTED_IDENTIFIER. */
     private static final int SUPPORTED_IDENTIFIER = 257;
@@ -80,7 +80,7 @@ public final class DataFileSchemaFactoryTest {
 	when(decoder.decodeBytesToString((byte[]) anyVararg())).thenReturn(
 		"name", "age");
 	final DataFileSchemaFactory factory = new DataFileSchemaFactory(decoder);
-	final DataFileSchema schema = factory.createSchemaForDataFile(testFile);
+	final DataFileMetadata schema = factory.createSchemaForDataFile(testFile);
 
 	final DataFileColumn expectedColumnOne = DataFileColumn.create("name",
 		1, 160);
@@ -107,7 +107,7 @@ public final class DataFileSchemaFactoryTest {
 		testFile);
 
 	final DataFileSchemaFactory factory = new DataFileSchemaFactory(null);
-	final DataFileSchema schema = factory.createSchemaForDataFile(testFile);
+	final DataFileMetadata schema = factory.createSchemaForDataFile(testFile);
 
 	assertThat(schema, is(not(nullValue())));
 	assertThat(schema.getColumnsInDatabaseOrder(),

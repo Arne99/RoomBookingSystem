@@ -20,11 +20,11 @@ public final class DataFileAccess {
 
 	checkNotNull(dataFile, "dataFile");
 
-	final BytesToStringDecoder decoder = new Utf8Decoder();
+	final BytesToStringDecoder decoder = new Utf8DecoderTest();
 	final DataFileSchemaFactory schemaFactory = new DataFileSchemaFactory(
 		decoder);
 
-	final DataFileSchema schema = schemaFactory
+	final DataFileMetadata schema = schemaFactory
 		.createSchemaForDataFile(dataFile);
 
 	final RecordFactory recordFactory = new RecordFactory(schema, decoder);

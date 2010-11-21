@@ -48,11 +48,11 @@ final class DataFileSchemaFactory {
      * @throws InvalidDataFileFormatException
      *             the unsupported data source exception
      */
-    DataFileSchema createSchemaForDataFile(final File file) throws IOException,
+    DataFileMetadata createSchemaForDataFile(final File file) throws IOException,
 	    UnsupportedDataFileFormatException {
 
 	final RandomAccessFile reader = new RandomAccessFile(file, READ_MODE);
-	DataFileSchema schema = null;
+	DataFileMetadata schema = null;
 	try {
 	    schema = extractSchemaWithReader(reader);
 	} finally {
@@ -62,7 +62,7 @@ final class DataFileSchemaFactory {
 	return schema;
     }
 
-    private DataFileSchema extractSchemaWithReader(final RandomAccessFile reader)
+    private DataFileMetadata extractSchemaWithReader(final RandomAccessFile reader)
 	    throws IOException, UnsupportedDataFileFormatException {
 
 	final int dataFileFormatIdentifier = reader.readInt();
@@ -96,18 +96,18 @@ final class DataFileSchemaFactory {
 			(int) reader.getFilePointer()), columns, DELETED_FLAG);
     }
 
-    private DataFileSchema buildSchema(final DataFileHeader header,
+    private DataFileMetadata buildSchema(final DataFileHeader header,
 	    final List<DataFileColumn> columnsInDbOrder,
 	    final DeletedFlag deletedFlag) {
 
 	if (columnsInDbOrder.isEmpty()) {
-	    return new DataFileSchema(header,
+	    return new UrlyBirdSchema(header,
 		    Collections.<DataFileColumn> emptyList(), deletedFlag, 0);
 	}
 
 	final int recordLength = columnsInDbOrder.get(
 		columnsInDbOrder.size() - 1).getEndIndex() + 1;
-	return new DataFileSchema(header, columnsInDbOrder, deletedFlag,
+	return new UrlyBirdSchema(header, columnsInDbOrder, deletedFlag,
 		recordLength);
     }
 

@@ -10,10 +10,10 @@ import suncertify.db.Record;
 
 final class RecordFactory {
 
-    private final DataFileSchema schema;
+    private final DataFileMetadata schema;
     private final BytesToStringDecoder decoder;
 
-    public RecordFactory(final DataFileSchema schema,
+    public RecordFactory(final DataFileMetadata schema,
 	    final BytesToStringDecoder decoder) {
 	super();
 	this.schema = schema;
@@ -24,7 +24,7 @@ final class RecordFactory {
 
 	checkNotNull(buffer, "buffer");
 
-	if (schema.isBufferAValidRecord(buffer)) {
+	if (schema.isValidRecord(buffer)) {
 	    return createValidRecord(buffer);
 	}
 
@@ -34,14 +34,14 @@ final class RecordFactory {
     private Record createValidRecord(final byte[] buffer) {
 
 	final List<String> values = new ArrayList<String>();
-	for (final DataFileColumn column : schema.getColumnsInDatabaseOrder()) {
+	for (final DataFileColumn column : schema) {
 	    final byte[] bytesInColumn = Arrays.copyOfRange(buffer,
 		    column.getStartIndex(), column.getEndIndex());
 	    final String value = decoder.decodeBytesToString(bytesInColumn);
 	    values.add(value);
 	}
 
-	return new ValidRecord(values);
+	return new DataFileRecord(values);
     }
 
 }
